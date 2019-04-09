@@ -3,14 +3,21 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MainModule } from "./main/main.module";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FlexLayoutModule,
+    MainModule
   ],
   providers: [],
   bootstrap: [AppComponent]

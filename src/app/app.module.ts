@@ -8,6 +8,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MainModule } from "./main/main.module";
 
+import { ParticlesModule } from 'angular-particle';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +19,8 @@ import { MainModule } from "./main/main.module";
     BrowserModule,
     AppRoutingModule,
     FlexLayoutModule,
-    MainModule
+    MainModule,
+    ParticlesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

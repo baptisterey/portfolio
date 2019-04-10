@@ -4,12 +4,16 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { MainComponent } from './main.component';
 import { HomeComponent } from './home/home.component';
+import {FlexLayoutModule} from "@angular/flex-layout";
+import {ParticlesModule} from "angular-particle";
 
 @NgModule({
   declarations: [MainComponent, HomeComponent],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    FlexLayoutModule,
+    ParticlesModule
   ]
 })
 export class MainModule { }

@@ -1,31 +1,36 @@
-<div fxFill>
+<div fxFill fxLayout="column">
   <header fxLayout="column">
+
+    <div class="background-image">
+      <img src="./assets/images/background.jpg">
+    </div>
 
     <particles [params]="myParams" [style]="myStyle" [width]="width" [height]="height"></particles>
 
-    <div fxLayout="row" fxLayoutAlign="center start" >
-
-    <nav fxLayout="row" fxFlex="30" fxLayoutAlign="space-between center">
-        <a href="#about">About</a>
-        <a href="#work">Work</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-    </nav>
+    <div class="front-div" fxLayout="row" fxLayoutAlign="center center" >
+      <nav fxFlex="60" fxFlex.gt-md="30" fxFlex.lt-sm="80" [@fadeInOnEnter] fxLayout="row" fxLayoutAlign="space-between center">
+          <a href="#about">About</a>
+          <a href="#work">Work</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+      </nav>
     </div>
 
-    <div fxFlex="1 1 auto" fxLayout="column" fxLayoutAlign="center center" >
-      <h1>BAPTISTE REY</h1>
+    <div class="front-div"  fxFlex="1 1 auto" fxLayout="column" fxLayoutAlign="center center" >
+      <div fxLayout="column" fxLayoutAlign="start center" >
+        <h1 [@bounceInOnEnter]>BAPTISTE REY</h1>
+        <div class="header-wrapper">
+          <teximate *ngIf="showHeaderText" [enter]="enterAnimation" [text]="'PASSIONATE & POLYVALENT DEVELOPER'"></teximate>
+        </div>
+      </div>
     </div>
   </header>
 
-  <main>
-
-    <div fxLayout="column" fxLayoutAlign="start center" >
-
-      <section id="about">
+  <main fxFlex="1 1 auto" fxLayout="column" fxLayoutAlign="start center" >
+      <section class="about" id="about">
         <h2>About</h2>
         <p>
-          J'aime les patates
+          J'aime les patates mais en même c'est pas super top les patates, faut comprendre que c'est chaud de faire à manger avec tout le monde!
         </p>
       </section>
 
@@ -49,8 +54,14 @@
           Je sais faire des patates
         </p>
       </section>
-
-    </div>
   </main>
 
+  <footer fxLayout="column" fxLayoutAlign="start center" fxLayoutGap="10px">
+    <div fxLayout="row" fxLayoutAlign="center center">
+      <div>Made with <3 using Angular</div>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="center center">
+      <div>Baptiste Rey © 2019</div>
+    </div>
+  </footer>
 </div>

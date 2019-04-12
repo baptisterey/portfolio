@@ -1,5 +1,53 @@
-/* You can add global styles to this file, and also import other style files */
+$header-color: white;
+
+
+
 body {
   scroll-behavior: smooth;
   margin: 0px;
+
+  font-family: 'Lato', sans-serif;
+
+  background-color: #ffeddb;
 }
+
+header {
+  font-family: 'Concert One', cursive;
+
+  h1 {
+
+    text-transform: uppercase;
+
+    //background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+    //-webkit-background-clip: text;
+    //-webkit-text-fill-color: transparent;
+
+    color: $header-color;
+
+    font-size: 3em;
+
+    margin-bottom: 0.25em;
+    display:block;
+  }
+
+    teximate {
+      p {
+        text-transform: uppercase;
+        color: $header-color;
+        margin-top: 0;
+        font-size: 2em;
+      }
+  }
+}
+
+nav {
+  font-size: 1.5em;
+}
+
+h2 {
+  font-family: 'Concert One', cursive;
+  font-size: 2em;
+}
+
+
+

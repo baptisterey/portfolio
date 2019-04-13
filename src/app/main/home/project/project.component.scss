@@ -1,0 +1,21 @@
+:host {
+  height: 277px;
+  width: 350px;
+
+  margin: 15px;
+
+  cursor: pointer;
+}
+
+.main-div {
+  transition: all .2s ease-in-out;
+  box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+
+  border-radius: 10px;
+
+  &:hover {
+    transform: scale(1.075);
+  }
+
+  border: 1px solid red;
+}

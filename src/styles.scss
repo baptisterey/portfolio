@@ -1,7 +1,5 @@
 $header-color: white;
 
-
-
 body {
   scroll-behavior: smooth;
   margin: 0px;
@@ -26,7 +24,7 @@ header {
 
     font-size: 3em;
 
-    margin-bottom: 0.25em;
+    margin-bottom: 0px;
     display:block;
   }
 
@@ -35,6 +33,7 @@ header {
         text-transform: uppercase;
         color: $header-color;
         margin-top: 0;
+        margin-bottom: 12px;
         font-size: 2em;
       }
   }
@@ -47,6 +46,10 @@ nav {
 h2 {
   font-family: 'Concert One', cursive;
   font-size: 2em;
+}
+
+.mat-icon {
+  vertical-align: bottom !important;
 }
 
 

@@ -1,43 +1,56 @@
-import {Component, ElementRef, OnInit, ViewChild, AfterViewInit} from '@angular/core';
+import {Component, OnInit, AfterViewInit, ViewChildren, Renderer2} from '@angular/core';
 
-import { zoomInOnEnterAnimation, bounceInOnEnterAnimation,  fadeInOnEnterAnimation, fadeOutOnLeaveAnimation } from 'angular-animations';
+import {
+  bounceInOnEnterAnimation, fadeInLeftOnEnterAnimation,
+  fadeInOnEnterAnimation, fadeInRightOnEnterAnimation, fadeInUpAnimation,
+  fadeInUpOnEnterAnimation, rotateInDownRightOnEnterAnimation
+} from 'angular-animations';
 
 import { ParticleParams } from "./particleParams";
 
-import { Teximate, TextAnimation } from 'ngx-teximate';
-import {fadeIn, flipInY} from 'ng-animate';
+import { TextAnimation } from 'ngx-teximate';
+import { flipInY} from 'ng-animate';
+
+import { ProjectList } from "../projectList";
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
   animations: [
-    fadeInOnEnterAnimation({delay : 3200}),
-    bounceInOnEnterAnimation({delay : 400}),
-    zoomInOnEnterAnimation()
+    fadeInOnEnterAnimation({ delay : 0 }),
+    bounceInOnEnterAnimation({ delay : 400 }),
+    fadeInUpOnEnterAnimation({ anchor: 'fadeInUpOnEnter'}),
+    fadeInLeftOnEnterAnimation({ anchor: 'fadeInLeftOnEnter'}),
+    fadeInRightOnEnterAnimation({anchor : 'fadeInRightOnEnter'}),
+    rotateInDownRightOnEnterAnimation({anchor : 'rotateInDownRightOnEnter'})
   ]
 })
 export class HomeComponent implements OnInit, AfterViewInit {
 
   showHeaderText : boolean = false;
-
   enterAnimation: TextAnimation = {
     animation: flipInY,
     delay: 50,
     type: 'letter'
   };
 
-
   myStyle: object = {};
   myParams: object = {};
   width: number = 100;
   height: number = 100;
 
-  constructor() {
+  projectList : any;
 
+  sectionList = ['about', 'work', 'skills', 'contact'];
+  activeSections = [];
+
+  constructor(private renderer : Renderer2) {
   }
 
   ngOnInit() {
+
+    this.projectList = ProjectList;
 
     this.myStyle = {
       'position': 'absolute',
@@ -57,5 +70,18 @@ export class HomeComponent implements OnInit, AfterViewInit {
     setTimeout(function(){
       _this.showHeaderText = true;
     },1000);
+  }
+
+  public onIntersection({ target, visible }: { target: Element; visible: boolean }, divId : string): void {
+    if(visible && this.activeSections.indexOf(divId) === -1){
+      let position = this.sectionList.indexOf(divId);
+      for(let i = 0; i <= position;  i++){
+        this.activeSections.push(divId);
+      }
+    }
+  }
+
+  isSectionActive(section) : boolean {
+    return this.activeSections.indexOf(section) !== -1;
   }
 }

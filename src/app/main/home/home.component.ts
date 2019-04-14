@@ -1,8 +1,8 @@
-import {Component, OnInit, AfterViewInit, ViewChildren, Renderer2} from '@angular/core';
+import {Component, OnInit, AfterViewInit } from '@angular/core';
 
 import {
   bounceInOnEnterAnimation, fadeInLeftOnEnterAnimation,
-  fadeInOnEnterAnimation, fadeInRightOnEnterAnimation, fadeInUpAnimation,
+  fadeInOnEnterAnimation, fadeInRightOnEnterAnimation,
   fadeInUpOnEnterAnimation, rotateInDownRightOnEnterAnimation
 } from 'angular-animations';
 
@@ -12,6 +12,7 @@ import { TextAnimation } from 'ngx-teximate';
 import { flipInY} from 'ng-animate';
 
 import { ProjectList } from "../projectList";
+import {TranslateService} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-home',
@@ -45,7 +46,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   sectionList = ['about', 'work', 'skills', 'contact'];
   activeSections = [];
 
-  constructor(private renderer : Renderer2) {
+  constructor(public translate: TranslateService) {
   }
 
   ngOnInit() {
@@ -63,7 +64,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
     };
     this.myParams = ParticleParams;
   };
-
 
   ngAfterViewInit() {
     const _this = this;
@@ -83,5 +83,9 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   isSectionActive(section) : boolean {
     return this.activeSections.indexOf(section) !== -1;
+  }
+
+  getSubHeader() : string {
+    return this.translate.instant('sub-header')
   }
 }

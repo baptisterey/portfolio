@@ -5,32 +5,32 @@
 
       <div class="front-div" fxLayout="row" fxLayoutAlign="center center" >
         <nav fxFlex="60" fxFlex.gt-md="30" fxFlex.lt-sm="80" [@fadeInOnEnter] fxLayout="row" fxLayoutAlign="space-between center">
-            <a href="#about">About</a>
-            <a href="#work">Work</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
+            <a href="#about">{{ 'about' | translate }}</a>
+            <a href="#work">{{ 'work' | translate }}</a>
+            <a href="#skills">{{ 'skills' | translate }}</a>
+            <a href="#contact">{{ 'contact' | translate }}</a>
         </nav>
       </div>
 
       <div class="front-div"  fxFlex="1 1 auto" fxLayout="column" fxLayoutAlign="center center" >
         <div fxLayout="column" fxLayoutAlign="start center" >
-          <h1 [@bounceInOnEnter]>BAPTISTE REY</h1>
+          <h1 [@bounceInOnEnter]>{{'name' | translate}}</h1>
           <div class="sub-title-wrapper">
-            <teximate *ngIf="showHeaderText" [enter]="enterAnimation" [text]="'PASSIONATE & POLYVALENT DEVELOPER'"></teximate>
+            <teximate *ngIf="showHeaderText" [enter]="enterAnimation" [text]="getSubHeader()"></teximate>
           </div>
           <div fxLayout="row" fxLayoutGap="8px">
-            <img [@rotateInDownRightOnEnter]="{ value: '', params: { delay: 2500+(i * 150) } }" *ngFor="let i of [0, 1, 2, 3]" [src]=" 'assets/images/pokeballs/' + i + '.png'">
+            <img [@rotateInDownRightOnEnter]="{ value: '', params: { delay: 2500+(i * 150) } }" *ngFor="let i of [0, 1, 2, 3]" [src]=" 'assets/images/pokeballs/' + i + '.svg'">
           </div>
         </div>
       </div>
   </header>
 
-  <main fxFlex="1 1 auto" fxLayout="column" fxLayoutAlign="start center" >
+  <main fxFlex="1 1 auto" fxLayout="column" fxLayoutAlign="start center" fxLayoutGap="30px" >
       <section id="about" inViewport
                [inViewportOptions]="{ threshold: [1] }"
                (inViewportAction)="onIntersection($event, 'about')">
         <ng-container *ngIf="isSectionActive('about')">
-          <h2 [@fadeInLeftOnEnter]="{ value: '', params: { delay: 250 } }">About</h2>
+          <h2 [@fadeInLeftOnEnter]="{ value: '', params: { delay: 250 } }">{{ 'about' | translate }}</h2>
           <p [@fadeInUpOnEnter]="{ value: '', params: { delay: 750 } }">
             J'aime les patates mais en même c'est pas super top les patates, faut comprendre que c'est chaud de faire à manger avec tout le monde!
           </p>
@@ -41,7 +41,7 @@
                [inViewportOptions]="{ threshold: [1] }"
                (inViewportAction)="onIntersection($event, 'work')">
         <ng-container *ngIf="isSectionActive('work')">
-          <h2 [@fadeInRightOnEnter]="{ value: '', params: { delay: 250 } }">Work</h2>
+          <h2 [@fadeInRightOnEnter]="{ value: '', params: { delay: 250 } }">{{ 'work' | translate }}</h2>
           <div class="project-wrapper" fxLayout="row wrap" fxLayoutAlign="center center">
 
               <app-project [@fadeInUpOnEnter]="{ value: '', params: { delay: 750+(i * 100) } }" *ngFor="let project of projectList; let i = index" [projectData]="project"></app-project>
@@ -53,7 +53,7 @@
       <section id="skills" inViewport
                [inViewportOptions]="{ threshold: [0.25] }"
                (inViewportAction)="onIntersection($event, 'skills')">
-        <h2>Skills</h2>
+        <h2>{{ 'skills' | translate }}</h2>
         <p>
           Je sais faire des patates
         </p>
@@ -62,7 +62,7 @@
       <section id="contact" inViewport
                [inViewportOptions]="{ threshold: [0.25] }"
                (inViewportAction)="onIntersection($event, 'contact')">
-        <h2>Contact</h2>
+        <h2>{{ 'contact' | translate }}</h2>
         <p>
           Je sais faire des patates
         </p>

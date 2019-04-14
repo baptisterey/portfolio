@@ -1,6 +1,20 @@
-<div class="main-div" fxFill fxLayout="column" fxLayoutAlign="center center">
+<div (click)="openModal()" (mouseenter)="showDetails = true" (mouseleave)="showDetails = false" class="main-div" fxFill fxLayout="column" fxLayoutAlign="center center">
 
   <div>
     {{ projectData }}
   </div>
+
+  <div [@fadeInOnEnter] [@fadeOutOnLeave] *ngIf="showDetails" class="project-details" fxLayout="column">
+
+    <h4>
+      Infinite Torpor
+    </h4>
+
+    <div>
+      Dungeon Crawler made from strach using SDL.
+    </div>
+
+    <div><i>Game development - SDL - C++</i></div>
+  </div>
+
 </div>

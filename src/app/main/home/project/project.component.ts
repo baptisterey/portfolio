@@ -1,17 +1,35 @@
 import {Component, Input, OnInit} from '@angular/core';
+import { MatDialog } from '@angular/material';
+import { fadeInOnEnterAnimation, fadeOutOnLeaveAnimation } from "angular-animations";
+import {ProjectModalComponent} from "./project-modal/project-modal.component";
 
 @Component({
   selector: 'app-project',
   templateUrl: './project.component.html',
-  styleUrls: ['./project.component.scss']
+  styleUrls: ['./project.component.scss'],
+  animations: [
+    fadeInOnEnterAnimation({duration : 200}),
+    fadeOutOnLeaveAnimation({duration : 200}),
+  ]
 })
 export class ProjectComponent implements OnInit {
 
   @Input('projectData') projectData : any;
+  showDetails = false;
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit() {
+  }
+
+  openModal(){
+    const dialogRef = this.dialog.open(ProjectModalComponent, {
+      width: '1050px',
+      minHeight : '550px',
+      data: {
+        projectData: this.projectData
+      }
+    });
   }
 
 }

@@ -26,9 +26,14 @@ header {
 
   img {
     width: 46px;
-    height: auto;
-    
-    rotation: 20deg;
+    height: 46px;
+
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      transform: rotate(20deg);
+    }
   }
 }
 
@@ -59,10 +64,27 @@ footer {
 }
 
 section {
+  position: relative;
+
   min-height: 150px;
   p {
-    padding: 0 24px;
+    padding: 0 15px;
     max-width: 700px;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%);
+
+    width: 300px;
+    height: 1px;
+
+    background: rgba(117,81,125,0.15);
   }
 }
 
@@ -75,7 +97,8 @@ section#about {
 
 section#work {
   .project-wrapper {
-    max-width: 1400px;
+    width: 1400px;
+    max-width: 80vw;
   }
 }
 

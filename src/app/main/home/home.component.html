@@ -1,7 +1,7 @@
 <div fxFill fxLayout="column">
   <header [config]="{axis: 'Y', speed: .25}" parallax class="background-image" fxLayout="column">
 
-      <particles [params]="myParams" [style]="myStyle" [width]="width" [height]="height"></particles>
+      <particles [params]="myParticleParams" [style]="myParticleStyle"></particles>
 
       <div class="front-div" fxLayout="row" fxLayoutAlign="center center" >
         <nav fxFlex="60" fxFlex.gt-md="30" fxFlex.lt-sm="95" [@fadeInOnEnter] fxLayout="row" fxLayoutAlign="space-between center">
@@ -16,54 +16,66 @@
         <div fxLayout="column" fxLayoutAlign="start center" >
           <h1 [@bounceInOnEnter]>{{'name' | translate}}</h1>
           <div class="sub-title-wrapper">
-            <teximate *ngIf="showHeaderText" [enter]="enterAnimation" [text]="getSubHeader()"></teximate>
+            <teximate *ngIf="showHeaderText" [enter]="enterTextAnimation" [text]="getSubHeader()"></teximate>
           </div>
           <div fxLayout="row" fxLayoutGap="8px">
-            <img [alt]="'pokeball_' + i" [@rotateInDownRightOnEnter]="{ value: '', params: { delay: 2500+(i * 150) } }" *ngFor="let i of [0, 1, 2, 3]" [src]=" 'assets/images/pokeballs/' + i + '.svg'">
+            <img class="pokeball" [alt]="'pokeball_' + i" [@rotateInDownRightOnEnter]="{ value: '', params: { delay: 2500+(i * 150) } }" *ngFor="let i of [0, 1, 2, 3]" [src]=" 'assets/images/pokeballs/' + i + '.svg'">
           </div>
         </div>
       </div>
   </header>
 
   <main fxFlex="1 1 auto" fxLayout="column" fxLayoutAlign="start center" fxLayoutGap="30px" >
-      <section id="about" inViewport
-               [inViewportOptions]="{ threshold: [1] }"
+      <section id="about" >
+        <ng-container>
+          <div class="view-port-trigger"
+               inViewport
+               [inViewportOptions]="inViewportOptions"
                (inViewportAction)="onIntersection($event, 'about')">
-        <ng-container *ngIf="isSectionActive('about')">
-          <h2 [@fadeInLeftOnEnter]="{ value: '', params: { delay: 250 } }">{{ 'about' | translate }}</h2>
-          <p [@fadeInUpOnEnter]="{ value: '', params: { delay: 750 } }">
+          </div>
+          <h2 #aboutHeader [@fadeInLeft]="{ value: isSectionActive('about'), params: { delay: 250 }, opacity : 1 }" (@fadeInLeft.done)="setOpacity(aboutHeader, 'about')">{{ 'about' | translate }}</h2>
+          <p #aboutParagraph [@fadeInUp]="{ value: isSectionActive('about'), params: { delay: 750 }, opacity : 1}" (@fadeInUp.done)="setOpacity(aboutParagraph, 'about')">
             J'aime les patates mais en même c'est pas super top les patates, faut comprendre que c'est chaud de faire à manger avec tout le monde!
           </p>
         </ng-container>
       </section>
 
-      <section id="work" inViewport
-               [inViewportOptions]="{ threshold: [1] }"
+      <section id="work">
+        <ng-container>
+          <div class="view-port-trigger"
+               inViewport
+               [inViewportOptions]="inViewportOptions"
                (inViewportAction)="onIntersection($event, 'work')">
-        <ng-container *ngIf="isSectionActive('work')">
-          <h2 [@fadeInRightOnEnter]="{ value: '', params: { delay: 250 } }">{{ 'work' | translate }}</h2>
+          </div>
+          <h2 #workHeader [@fadeInRight]="{ value: isSectionActive('work'), params: { delay: 250 }, opacity : 1 }" (@fadeInRight.done)="setOpacity(workHeader, 'work')">{{ 'work' | translate }}</h2>
           <div class="project-wrapper" fxLayout="row wrap" fxLayoutAlign="center center">
-
-              <app-project [@fadeInUpOnEnter]="{ value: '', params: { delay: 750+(i * 100) } }" *ngFor="let project of projectList; let i = index" [projectData]="project"></app-project>
-
+              <div class="project-div"  #workProject (@fadeInUp.done)="setOpacity(workProject, 'work')" [@fadeInUp]="{ value: isSectionActive('work'), params: { delay: 750+(i * 100) }, opacity : 1 }" *ngFor="let project of projectList; let i = index">
+                <app-project [projectData]="project"></app-project>
+              </div>
           </div>
         </ng-container>
       </section>
 
-      <section id="skills" inViewport
-               [inViewportOptions]="{ threshold: [1] }"
-               (inViewportAction)="onIntersection($event, 'skills')">
-        <h2>{{ 'skills' | translate }}</h2>
-        <p>
+      <section id="skills">
+        <div class="view-port-trigger"
+             inViewport
+             [inViewportOptions]="inViewportOptions"
+             (inViewportAction)="onIntersection($event, 'skills')">
+        </div>
+        <h2 #skillsHeader [@fadeInLeft]="{ value: isSectionActive('skills'), params: { delay: 250 }, opacity : 1 }" (@fadeInLeft.done)="setOpacity(skillsHeader, 'skills')">{{ 'skills' | translate }}</h2>
+        <p #skillsParagraph [@fadeInUp]="{ value: isSectionActive('skills'), params: { delay: 750 }, opacity : 1}" (@fadeInUp.done)="setOpacity(skillsParagraph, 'skills')">
           Je sais faire des patates
         </p>
       </section>
 
-      <section id="contact" inViewport
-               [inViewportOptions]="{ threshold: [1] }"
-               (inViewportAction)="onIntersection($event, 'contact')">
-        <h2>{{ 'contact' | translate }}</h2>
-        <p>
+      <section id="contact">
+        <div class="view-port-trigger"
+             inViewport
+             [inViewportOptions]="inViewportOptions"
+             (inViewportAction)="onIntersection($event, 'contact')">
+        </div>
+        <h2 #contactHeader [@fadeInLeft]="{ value: isSectionActive('contact'), params: { delay: 250 }, opacity : 1 }" (@fadeInLeft.done)="setOpacity(contactHeader, 'contact')">{{ 'contact' | translate }}</h2>
+        <p #contactParagraph [@fadeInUp]="{ value: isSectionActive('contact'), params: { delay: 750 }, opacity : 1}" (@fadeInUp.done)="setOpacity(contactParagraph, 'contact')">
           Je sais faire des patates
         </p>
       </section>

@@ -5,10 +5,10 @@
 
       <div class="front-div" fxLayout="row" fxLayoutAlign="center center" >
         <nav fxFlex="60" fxFlex.gt-md="30" fxFlex.lt-sm="95" [@fadeInOnEnter] fxLayout="row" fxLayoutAlign="space-between center">
-            <a href="#about">{{ 'about' | translate }}</a>
-            <a href="#work">{{ 'work' | translate }}</a>
-            <a href="#skills">{{ 'skills' | translate }}</a>
-            <a href="#contact">{{ 'contact' | translate }}</a>
+            <a href="#about">{{ 'about.header' | translate }}</a>
+            <a href="#work">{{ 'work.header' | translate }}</a>
+            <a href="#skills">{{ 'skills.header' | translate }}</a>
+            <a href="#contact">{{ 'contact.header' | translate }}</a>
         </nav>
       </div>
 
@@ -33,10 +33,9 @@
                [inViewportOptions]="inViewportOptions"
                (inViewportAction)="onIntersection($event, 'about')">
           </div>
-          <h2 #aboutHeader [@fadeInLeft]="{ value: isSectionActive('about'), params: { delay: 250 }, opacity : 1 }" (@fadeInLeft.done)="setOpacity(aboutHeader, 'about')">{{ 'about' | translate }}</h2>
-          <p #aboutParagraph [@fadeInUp]="{ value: isSectionActive('about'), params: { delay: 750 }, opacity : 1}" (@fadeInUp.done)="setOpacity(aboutParagraph, 'about')">
-            J'aime les patates mais en même c'est pas super top les patates, faut comprendre que c'est chaud de faire à manger avec tout le monde!
-          </p>
+          <h2 #aboutHeader [@fadeInLeft]="{ value: isSectionActive('about'), params: { delay: headerAnimationDelay }, opacity : 1 }" (@fadeInLeft.done)="setOpacity(aboutHeader, 'about')">{{ "about.header" | translate }}</h2>
+          <div class="content" #aboutParagraph [@fadeInUp]="{ value: isSectionActive('about'), params: { delay: contentAnimationDelay }, opacity : 1}" (@fadeInUp.done)="setOpacity(aboutParagraph, 'about')" [innerHTML]="translate.instant('about.content')">
+          </div>
         </ng-container>
       </section>
 
@@ -47,9 +46,9 @@
                [inViewportOptions]="inViewportOptions"
                (inViewportAction)="onIntersection($event, 'work')">
           </div>
-          <h2 #workHeader [@fadeInRight]="{ value: isSectionActive('work'), params: { delay: 250 }, opacity : 1 }" (@fadeInRight.done)="setOpacity(workHeader, 'work')">{{ 'work' | translate }}</h2>
+          <h2 #workHeader [@fadeInRight]="{ value: isSectionActive('work'), params: { delay: headerAnimationDelay }, opacity : 1 }" (@fadeInRight.done)="setOpacity(workHeader, 'work')">{{ 'work.header' | translate }}</h2>
           <div class="project-wrapper" fxLayout="row wrap" fxLayoutAlign="center center">
-              <div class="project-div"  #workProject (@fadeInUp.done)="setOpacity(workProject, 'work')" [@fadeInUp]="{ value: isSectionActive('work'), params: { delay: 750+(i * 100) }, opacity : 1 }" *ngFor="let project of projectList; let i = index">
+              <div class="project-div"  #workProject (@fadeInUp.done)="setOpacity(workProject, 'work')" [@fadeInUp]="{ value: isSectionActive('work'), params: { delay: contentAnimationDelay + (i * 100) }, opacity : 1 }" *ngFor="let project of projectList; let i = index">
                 <app-project [projectData]="project"></app-project>
               </div>
           </div>
@@ -62,8 +61,8 @@
              [inViewportOptions]="inViewportOptions"
              (inViewportAction)="onIntersection($event, 'skills')">
         </div>
-        <h2 #skillsHeader [@fadeInLeft]="{ value: isSectionActive('skills'), params: { delay: 250 }, opacity : 1 }" (@fadeInLeft.done)="setOpacity(skillsHeader, 'skills')">{{ 'skills' | translate }}</h2>
-        <p #skillsParagraph [@fadeInUp]="{ value: isSectionActive('skills'), params: { delay: 750 }, opacity : 1}" (@fadeInUp.done)="setOpacity(skillsParagraph, 'skills')">
+        <h2 #skillsHeader [@fadeInLeft]="{ value: isSectionActive('skills'), params: { delay: headerAnimationDelay }, opacity : 1 }" (@fadeInLeft.done)="setOpacity(skillsHeader, 'skills')">{{ 'skills.header' | translate }}</h2>
+        <p #skillsParagraph [@fadeInUp]="{ value: isSectionActive('skills'), params: { delay: contentAnimationDelay }, opacity : 1}" (@fadeInUp.done)="setOpacity(skillsParagraph, 'skills')">
           Je sais faire des patates
         </p>
       </section>
@@ -74,8 +73,8 @@
              [inViewportOptions]="inViewportOptions"
              (inViewportAction)="onIntersection($event, 'contact')">
         </div>
-        <h2 #contactHeader [@fadeInLeft]="{ value: isSectionActive('contact'), params: { delay: 250 }, opacity : 1 }" (@fadeInLeft.done)="setOpacity(contactHeader, 'contact')">{{ 'contact' | translate }}</h2>
-        <p #contactParagraph [@fadeInUp]="{ value: isSectionActive('contact'), params: { delay: 750 }, opacity : 1}" (@fadeInUp.done)="setOpacity(contactParagraph, 'contact')">
+        <h2 #contactHeader [@fadeInRight]="{ value: isSectionActive('contact'), params: { delay: headerAnimationDelay }, opacity : 1 }" (@fadeInRight.done)="setOpacity(contactHeader, 'contact')">{{ 'contact.header' | translate }}</h2>
+        <p #contactParagraph [@fadeInUp]="{ value: isSectionActive('contact'), params: { delay: contentAnimationDelay }, opacity : 1}" (@fadeInUp.done)="setOpacity(contactParagraph, 'contact')">
           Je sais faire des patates
         </p>
       </section>

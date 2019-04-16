@@ -1,8 +1,17 @@
 {
-	"about": "",
-	"contact": "",
+	"about": {
+		"header": ""
+	},
+	"app-title": "",
+	"contact": {
+		"header": ""
+	},
 	"name": "",
-	"skills": "",
+	"skills": {
+		"header": ""
+	},
 	"sub-header": "",
-	"work": ""
+	"work": {
+		"header": ""
+	}
 }

@@ -1,8 +1,17 @@
 {
-	"about": "About",
-	"contact": "Contact",
+	"about": {
+		"header": "About"
+	},
+	"app-title": "Baptiste Rey",
+	"contact": {
+		"header": "Contact"
+	},
 	"name": "Baptiste Rey",
-	"skills": "Skills",
-	"sub-header": "Passionate & Polyvalent Developer",
-	"work": "Work"
+	"skills": {
+		"header": "Skills"
+	},
+	"sub-header": "Passionate & Polyvalent developer",
+	"work": {
+		"header": "Work"
+	}
 }

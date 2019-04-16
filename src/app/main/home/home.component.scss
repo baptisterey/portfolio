@@ -82,12 +82,16 @@ footer {
 
 section {
   position: relative;
+  min-height: 150px;
 
   h2 {
     opacity: 0;
   }
 
-  min-height: 150px;
+  .content {
+    opacity: 0;
+  }
+
   p {
     opacity: 0;
     padding: 0 15px;

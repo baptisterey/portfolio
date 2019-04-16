@@ -12,14 +12,14 @@ import {
   fadeInOnEnterAnimation, fadeInRightAnimation, fadeInUpAnimation, rotateInDownRightOnEnterAnimation
 } from 'angular-animations';
 
-import { ParticleParams } from "./particleParams";
+import { ParticleParams, ParticleStyle } from "./particleParams";
 
 import { TextAnimation } from 'ngx-teximate';
 import { flipInY} from 'ng-animate';
 
 import { ProjectList } from "../projectList";
 import {TranslateService} from "@ngx-translate/core";
-import {InViewportConfigOptions} from "ng-in-viewport";
+import { InViewportConfigOptions } from "ng-in-viewport";
 
 @Component({
   selector: 'app-home',
@@ -46,20 +46,18 @@ export class HomeComponent implements OnInit, AfterViewInit {
     type: 'letter'
   };
 
-  myParticleStyle: object = {
-    'position': 'absolute',
-    'width': '100%',
-    'height': '100%',
-    'top': 0,
-    'left': 0,
-    'right': 0,
-    'bottom': 0,
-  };
+  headerAnimationDelay : number = 250;
+  contentAnimationDelay : number = 750;
+
+
+  myParticleStyle: object = ParticleStyle;
   myParticleParams: object = ParticleParams;
 
   projectList : any = ProjectList;
 
-  inViewportOptions: InViewportConfigOptions;
+  inViewportOptions: InViewportConfigOptions = {
+    threshold: Array(101).fill(null).map((v, k) => k / 100)
+  };
 
   sectionList = ['about', 'work', 'skills', 'contact'];
   activeSections = [];
@@ -71,9 +69,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {
-    this.inViewportOptions = {
-      threshold: Array(101).fill(null).map((v, k) => k / 100)
-    }
+
   }
 
   ngAfterViewInit() {

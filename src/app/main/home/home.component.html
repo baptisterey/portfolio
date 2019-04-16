@@ -4,7 +4,7 @@
       <particles [params]="myParams" [style]="myStyle" [width]="width" [height]="height"></particles>
 
       <div class="front-div" fxLayout="row" fxLayoutAlign="center center" >
-        <nav fxFlex="60" fxFlex.gt-md="30" fxFlex.lt-sm="80" [@fadeInOnEnter] fxLayout="row" fxLayoutAlign="space-between center">
+        <nav fxFlex="60" fxFlex.gt-md="30" fxFlex.lt-sm="95" [@fadeInOnEnter] fxLayout="row" fxLayoutAlign="space-between center">
             <a href="#about">{{ 'about' | translate }}</a>
             <a href="#work">{{ 'work' | translate }}</a>
             <a href="#skills">{{ 'skills' | translate }}</a>
@@ -19,7 +19,7 @@
             <teximate *ngIf="showHeaderText" [enter]="enterAnimation" [text]="getSubHeader()"></teximate>
           </div>
           <div fxLayout="row" fxLayoutGap="8px">
-            <img [@rotateInDownRightOnEnter]="{ value: '', params: { delay: 2500+(i * 150) } }" *ngFor="let i of [0, 1, 2, 3]" [src]=" 'assets/images/pokeballs/' + i + '.svg'">
+            <img [alt]="'pokeball_' + i" [@rotateInDownRightOnEnter]="{ value: '', params: { delay: 2500+(i * 150) } }" *ngFor="let i of [0, 1, 2, 3]" [src]=" 'assets/images/pokeballs/' + i + '.svg'">
           </div>
         </div>
       </div>
@@ -51,7 +51,7 @@
       </section>
 
       <section id="skills" inViewport
-               [inViewportOptions]="{ threshold: [0.25] }"
+               [inViewportOptions]="{ threshold: [1] }"
                (inViewportAction)="onIntersection($event, 'skills')">
         <h2>{{ 'skills' | translate }}</h2>
         <p>
@@ -60,7 +60,7 @@
       </section>
 
       <section id="contact" inViewport
-               [inViewportOptions]="{ threshold: [0.25] }"
+               [inViewportOptions]="{ threshold: [1] }"
                (inViewportAction)="onIntersection($event, 'contact')">
         <h2>{{ 'contact' | translate }}</h2>
         <p>

@@ -15,7 +15,7 @@ import {ProjectModalComponent} from "./project-modal/project-modal.component";
 export class ProjectComponent implements OnInit {
 
   @Input('projectData') projectData : any;
-  showDetails = false;
+  showDetails = true;
 
   constructor(public dialog: MatDialog) { }
 
@@ -26,6 +26,7 @@ export class ProjectComponent implements OnInit {
     const dialogRef = this.dialog.open(ProjectModalComponent, {
       width: '1050px',
       minHeight : '550px',
+      maxHeight : '80vh',
       data: {
         projectData: this.projectData
       }

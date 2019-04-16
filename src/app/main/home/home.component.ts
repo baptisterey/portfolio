@@ -67,9 +67,13 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     const _this = this;
+
+
     setTimeout(function(){
       _this.showHeaderText = true;
     },1000);
+
+
   }
 
   public onIntersection({ target, visible }: { target: Element; visible: boolean }, divId : string): void {

@@ -1,13 +1,24 @@
 {
 	"about": {
+		"content": "",
 		"header": ""
 	},
 	"app-title": "",
 	"contact": {
-		"header": ""
+		"email": "",
+		"header": "",
+		"other": ""
+	},
+	"footer": {
+		"made-with": "",
+		"using-angular": ""
 	},
 	"name": "",
+	"project": {
+		"more-coming": ""
+	},
 	"skills": {
+		"content": "",
 		"header": ""
 	},
 	"sub-header": "",

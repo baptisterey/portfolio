@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { MatIconModule } from '@angular/material/icon';
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { MatDialogModule } from '@angular/material/dialog';
 
@@ -17,6 +16,11 @@ import { ProjectModalComponent } from './home/project/project-modal/project-moda
 import { SwiperModule } from 'ngx-swiper-wrapper';
 import { TranslateModule } from '@ngx-translate/core';
 
+import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faBookmark, faHeart } from "@fortawesome/free-solid-svg-icons";
+
 @NgModule({
   declarations: [MainComponent, HomeComponent, ProjectComponent, ProjectModalComponent],
   imports: [
@@ -26,12 +30,16 @@ import { TranslateModule } from '@ngx-translate/core';
     ParticlesModule,
     TeximateModule,
     ParallaxScrollModule,
-    MatIconModule,
     InViewportModule,
     MatDialogModule,
     SwiperModule,
-    TranslateModule
+    TranslateModule,
+    FontAwesomeModule
   ],
   entryComponents : [ ProjectModalComponent ]
 })
-export class MainModule { }
+export class MainModule {
+  constructor(){
+    library.add(faGithub, faLinkedin, faBookmark, faHeart)
+  }
+}

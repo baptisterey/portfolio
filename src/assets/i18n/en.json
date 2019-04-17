@@ -1,13 +1,24 @@
 {
 	"about": {
+		"content": "<p>I am currently completing a <b>master's degree</b> in <b>computer science</b> at the <b>UTT</b> (Université Technologique de Troyes) in <b>France</b>. </p> <p>I am deeply passionate about programming as I spend most of my time <b>building things</b>.</br>Currently, I am working on <b>games</b>, you can take a look at them below!</p>",
 		"header": "About"
 	},
 	"app-title": "Baptiste Rey",
 	"contact": {
-		"header": "Contact"
+		"email": "Don't hesitate to drop me an email at",
+		"header": "Contact",
+		"other": "You can find me on"
+	},
+	"footer": {
+		"made-with": "Made with ",
+		"using-angular": " using Angular"
 	},
 	"name": "Baptiste Rey",
+	"project": {
+		"more-coming": "More coming soon"
+	},
 	"skills": {
+		"content": "",
 		"header": "Skills"
 	},
 	"sub-header": "Passionate & Polyvalent developer",

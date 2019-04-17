@@ -1,30 +1,36 @@
 import {
-  Component,
-  OnInit,
   AfterViewInit,
   ChangeDetectorRef,
+  Component,
+  OnInit,
+  Renderer2,
   ViewChild,
-  Renderer2
+  ViewEncapsulation
 } from '@angular/core';
 
 import {
-  bounceInOnEnterAnimation, fadeInLeftAnimation,
-  fadeInOnEnterAnimation, fadeInRightAnimation, fadeInUpAnimation, rotateInDownRightOnEnterAnimation
+  bounceInOnEnterAnimation,
+  fadeInLeftAnimation,
+  fadeInOnEnterAnimation,
+  fadeInRightAnimation,
+  fadeInUpAnimation,
+  rotateInDownRightOnEnterAnimation
 } from 'angular-animations';
 
-import { ParticleParams, ParticleStyle } from "./particleParams";
+import {ParticleParams, ParticleStyle} from "./particleParams";
 
-import { TextAnimation } from 'ngx-teximate';
-import { flipInY} from 'ng-animate';
+import {TextAnimation} from 'ngx-teximate';
+import {flipInY} from 'ng-animate';
 
-import { ProjectList } from "../projectList";
+import {ProjectList} from "../projectList";
 import {TranslateService} from "@ngx-translate/core";
-import { InViewportConfigOptions } from "ng-in-viewport";
+import {InViewportConfigOptions} from "ng-in-viewport";
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
+  encapsulation: ViewEncapsulation.None,
   animations: [
     fadeInOnEnterAnimation({ delay : 0 }),
     bounceInOnEnterAnimation({ delay : 400 }),
@@ -53,7 +59,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   myParticleStyle: object = ParticleStyle;
   myParticleParams: object = ParticleParams;
 
-  projectList : any = ProjectList;
+  projectList : Array<string> = ProjectList;
 
   inViewportOptions: InViewportConfigOptions = {
     threshold: Array(101).fill(null).map((v, k) => k / 100)
@@ -100,7 +106,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   setOpacity(element, section: string){
-    console.log(element);
     if(this.isSectionActive(section)){
       this.renderer.setStyle(element, 'opacity', 1);
     }

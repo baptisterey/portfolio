@@ -38,10 +38,10 @@
                (inViewportAction)="onIntersection($event, 'about')">
           </div>
           <h2 #aboutHeader [@fadeInLeft]="{ value: isSectionActive('about'), params: { delay: headerAnimationDelay },
-           opacity : 1 }" (@fadeInLeft.done)="setOpacity(aboutHeader, 'about')">{{ "about.header" | translate }}</h2>
+           opacity : 1 }" (@fadeInLeft.done)="setAfterAnimationStyles(aboutHeader, 'about')">{{ "about.header" | translate }}</h2>
           <div class="content" #aboutParagraph
-               [@fadeInUp]="{ value: isSectionActive('about'), params: { delay: contentAnimationDelay }, opacity : 1}"
-               (@fadeInUp.done)="setOpacity(aboutParagraph, 'about')" innerHTML="{{ 'about.content' | translate }}">
+               [@fadeIn]="{ value: isSectionActive('about'), params: { delay: contentAnimationDelay }, opacity : 1}"
+               (@fadeIn.done)="setAfterAnimationStyles(aboutParagraph, 'about')" innerHTML="{{ 'about.content' | translate }}">
           </div>
         </ng-container>
       </section>
@@ -55,10 +55,10 @@
           </div>
           <h2 #workHeader
               [@fadeInRight]="{ value: isSectionActive('work'), params: { delay: headerAnimationDelay }, opacity : 1 }"
-              (@fadeInRight.done)="setOpacity(workHeader, 'work')">{{ 'work.header' | translate }}</h2>
+              (@fadeInRight.done)="setAfterAnimationStyles(workHeader, 'work')">{{ 'work.header' | translate }}</h2>
           <div class="project-wrapper" fxLayout="row wrap" fxLayoutAlign="center center">
               <div class="project-div"
-                   #workProject (@fadeInUp.done)="setOpacity(workProject, 'work')"
+                   #workProject (@fadeInUp.done)="setAfterAnimationStyles(workProject, 'work')"
                    [@fadeInUp]="{ value: isSectionActive('work'),
                    params: { delay: contentAnimationDelay + (i * 100) }, opacity : 1 }"
 
@@ -68,11 +68,11 @@
 
             <div #moreComingSoon
                  class="project-div"
-                 (@fadeInUp.done)="setOpacity(moreComingSoon, 'work')"
+                 (@fadeInUp.done)="setAfterAnimationStyles(moreComingSoon, 'work')"
                  [@fadeInUp]="{ value: isSectionActive('work'),
                      params: { delay: contentAnimationDelay + (projectList.length * 100) }, opacity : 1}"
                  fxLayout="column" fxLayoutAlign="center center">
-              <p><u>{{'project.more-coming' | translate}}...</u></p>
+              <div class="more-coming">{{'project.more-coming' | translate}}...</div>
             </div>
           </div>
         </ng-container>
@@ -86,10 +86,10 @@
         </div>
         <h2 #skillsHeader
             [@fadeInLeft]="{ value: isSectionActive('skills'), params: { delay: headerAnimationDelay }, opacity : 1 }"
-            (@fadeInLeft.done)="setOpacity(skillsHeader, 'skills')">{{ 'skills.header' | translate }}</h2>
+            (@fadeInLeft.done)="setAfterAnimationStyles(skillsHeader, 'skills')">{{ 'skills.header' | translate }}</h2>
         <div class="content" #skillsParagraph
-           [@fadeInUp]="{ value: isSectionActive('skills'), params: { delay: contentAnimationDelay }, opacity : 1}"
-           (@fadeInUp.done)="setOpacity(skillsParagraph, 'skills')" innerHTML="{{'skills.content' | translate}}">
+             [@fadeIn]="{ value: isSectionActive('skills'), params: { delay: contentAnimationDelay }, opacity : 1}"
+             (@fadeIn.done)="setAfterAnimationStyles(skillsParagraph, 'skills')" innerHTML="{{'skills.content' | translate}}">
         </div>
       </section>
 
@@ -101,10 +101,10 @@
         </div>
         <h2 #contactHeader
             [@fadeInRight]="{ value: isSectionActive('contact'), params: { delay: headerAnimationDelay }, opacity : 1 }"
-            (@fadeInRight.done)="setOpacity(contactHeader, 'contact')">{{ 'contact.header' | translate }}</h2>
+            (@fadeInRight.done)="setAfterAnimationStyles(contactHeader, 'contact')">{{ 'contact.header' | translate }}</h2>
         <div class="content" #contactParagraph
-           [@fadeInUp]="{ value: isSectionActive('contact'), params: { delay: contentAnimationDelay }, opacity : 1}"
-           (@fadeInUp.done)="setOpacity(contactParagraph, 'contact')" fxLayout="column" fxLayoutGap="25px">
+             [@fadeIn]="{ value: isSectionActive('contact'), params: { delay: contentAnimationDelay }, opacity : 1}"
+             (@fadeIn.done)="setAfterAnimationStyles(contactParagraph, 'contact')" fxLayout="column" fxLayoutGap="25px">
 
           <div fxLayout="column" fxLayoutGap="8px">
             <div>{{'contact.email' | translate}}</div>

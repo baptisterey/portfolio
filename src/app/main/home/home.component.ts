@@ -9,7 +9,7 @@ import {
 } from '@angular/core';
 
 import {
-  bounceInOnEnterAnimation,
+  bounceInOnEnterAnimation, fadeInAnimation,
   fadeInLeftAnimation,
   fadeInOnEnterAnimation,
   fadeInRightAnimation,
@@ -33,6 +33,7 @@ import {InViewportConfigOptions} from "ng-in-viewport";
   encapsulation: ViewEncapsulation.None,
   animations: [
     fadeInOnEnterAnimation({ delay : 0 }),
+    fadeInAnimation({anchor : 'fadeIn'}),
     bounceInOnEnterAnimation({ delay : 400 }),
     fadeInUpAnimation({ anchor: 'fadeInUp'}),
     fadeInLeftAnimation({ anchor: 'fadeInLeft'}),
@@ -53,7 +54,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   };
 
   headerAnimationDelay : number = 250;
-  contentAnimationDelay : number = 750;
+  contentAnimationDelay : number = 1350;
 
 
   myParticleStyle: object = ParticleStyle;
@@ -105,9 +106,10 @@ export class HomeComponent implements OnInit, AfterViewInit {
     return this.translate.instant('sub-header')
   }
 
-  setOpacity(element, section: string){
+  setAfterAnimationStyles(element, section: string){
     if(this.isSectionActive(section)){
       this.renderer.setStyle(element, 'opacity', 1);
+      this.renderer.addClass(element, 'active');
     }
   }
 }

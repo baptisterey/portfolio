@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import { MatDialog } from '@angular/material';
-import { fadeInOnEnterAnimation, fadeOutOnLeaveAnimation } from "angular-animations";
+import {fadeInOnEnterAnimation, fadeInUpOnEnterAnimation, fadeOutOnLeaveAnimation} from "angular-animations";
 import {ProjectModalComponent} from "./project-modal/project-modal.component";
 
 @Component({
@@ -10,12 +10,13 @@ import {ProjectModalComponent} from "./project-modal/project-modal.component";
   animations: [
     fadeInOnEnterAnimation({duration : 200}),
     fadeOutOnLeaveAnimation({duration : 200}),
+    fadeInUpOnEnterAnimation({duration : 400})
   ]
 })
 export class ProjectComponent implements OnInit {
 
   @Input('projectData') projectData : any;
-  showDetails = true;
+  showDetails = false;
 
   constructor(public dialog: MatDialog) { }
 

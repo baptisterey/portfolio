@@ -1,25 +1,4 @@
-
-
-/*
-$primary-color: #011640;
-$primary-2-color: #2d5873;
-$primary-3-color: #7ba696;
-
-$accent-color: #bf9663;
-*/
-
-$primary-color: #1976d2;
-$primary-light-color: #63a4ff;
-$primary-dark-color: #004ba0;
-
-$accent-color: #512da8;
-$accent-dark-color: #140078;
-$accent-light-color: #8559da;
-
-$text-color: #011640;
-$header-color: white;
-$background-color: #fff5ed;
-
+@import "~src/styles";
 
 body {
   scroll-behavior: smooth;
@@ -46,9 +25,17 @@ h2 {
     margin: 10px auto auto auto;
     content: '';
     height: 4px;
-    width: 40px;
-    background-color: $accent-color;
+    width: 0px;
+    background-color: $accent-light-color;
     box-shadow: 0px 2px 20px 0px rgba(78, 50, 240, 0.8);
+
+    transition: width ease 0.2s;
+  }
+}
+
+h2.active {
+  &:after {
+    width: 40px;
   }
 }
 
@@ -259,7 +246,7 @@ section#contact {
   transition: color ease-in-out 0.2s;
 
   &:hover {
-    color: $accent-light-color;
+    color: $primary-color;
   }
 }
 
@@ -270,3 +257,8 @@ section#contact {
   transition: transform .2s ease-in-out;
 }
 
+.more-coming {
+  padding: 5px;
+  font-size: 1.3em;
+  border-bottom: 3px solid $primary-color;
+}

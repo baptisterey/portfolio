@@ -54,8 +54,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
     type: 'letter'
   };
 
-  headerAnimationDelay : number = 250;
-  contentAnimationDelay : number = 1350;
+  headerAnimationDelay : number = 0;
+  contentAnimationDelay : number = 1150;
 
 
   myParticleStyle: object = ParticleStyle;

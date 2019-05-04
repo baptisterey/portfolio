@@ -32,15 +32,14 @@ h2 {
     height: 4px;
     width: 0px;
     background-color: $accent-light-color;
-    box-shadow: 0px 2px 20px 0px rgba(78, 50, 240, 0.8);
 
-    transition: width ease 0.2s;
+    transition: width ease-in-out 0.3s;
   }
 }
 
 h2.active {
   &:after {
-    width: 40px;
+    width: 60px;
   }
 }
 
@@ -65,7 +64,6 @@ nav {
       height: 0px;
       width: 100%;
       background-color: $accent-light-color;
-      box-shadow: 0px 2px 20px 0px rgba(78, 50, 240, 0.8);
 
       position: absolute;
 
@@ -227,7 +225,7 @@ section#work {
       height: 320px;
       width: 395px;
 
-      margin: 15px;
+      margin: 18px;
 
       position: relative;
 

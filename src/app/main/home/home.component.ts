@@ -25,6 +25,7 @@ import {flipInY} from 'ng-animate';
 import {ProjectList} from "../projectList";
 import {TranslateService} from "@ngx-translate/core";
 import {InViewportConfigOptions} from "ng-in-viewport";
+import {ProjectData} from "./models/project-data.model";
 
 @Component({
   selector: 'app-home',
@@ -60,7 +61,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   myParticleStyle: object = ParticleStyle;
   myParticleParams: object = ParticleParams;
 
-  projectList : Array<string> = ProjectList;
+  projectList : Array<ProjectData> = ProjectList;
 
   inViewportOptions: InViewportConfigOptions = {
     threshold: Array(101).fill(null).map((v, k) => k / 100)

@@ -1,8 +1,19 @@
-:host {
+@import "~src/styles";
+
+.project-modal {
+
   overflow: auto;
+  color: $text-color;
+
+  h2 {
+    text-align: center;
+    margin-top: 0;
+  }
+
+  .paragraph-wrapper {
+    p:first-of-type {
+      margin-top: 0px;
+    }
+  }
 }
 
-h2 {
-  text-align: center;
-  margin-top: 0;
-}

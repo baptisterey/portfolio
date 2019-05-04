@@ -1,23 +1,21 @@
-<div (click)="openModal()" (mouseenter)="showDetails = true" (mouseleave)="showDetails = false" class="main-div" fxFill fxLayout="column" fxLayoutAlign="center center">
+<div (click)="openModal()" (mouseenter)="showDetails = true" (mouseleave)="showDetails = false" class="main-div" fxFill
+     fxLayout="column" fxLayoutAlign="center center"
+     [ngStyle]="{ 'background-image': 'url(assets/images/projects/' + projectData.name + '/thumbnail.png)'}">
 
-  <div>
-    <!--{{ projectData }}-->
-  </div>
+  <div></div>
 
   <div class="project-details" fxLayout="column">
 
-    <h4>
-      Infinite Torpor
-    </h4>
+    <h4>{{ 'projects.' + projectData.name + '.title' | translate }}</h4>
 
     <div>
-      Dungeon Crawler made from strach using SDL.
+      {{ 'projects.' + projectData.name + '.sub-title' | translate }}
     </div>
 
-    <div><i>Game development - SDL - C++</i></div>
+    <div><i>{{ 'projects.' + projectData.name + '.tags' | translate }}</i></div>
   </div>
 
-  <div *ngIf="showDetails" class="view-project">
+  <!--<div *ngIf="showDetails" class="view-project">
     <div [@fadeInUpOnEnter]>View project</div>
-  </div>
+  </div>-->
 </div>

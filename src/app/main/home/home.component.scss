@@ -20,6 +20,17 @@ body {
   overflow: auto;
 }
 
+a {
+  text-decoration: none;
+  color: $link-color;
+
+  background-color: transparent;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 
 h2 {
   font-family: 'Concert One', cursive;
@@ -31,7 +42,7 @@ h2 {
     content: '';
     height: 4px;
     width: 0px;
-    background-color: $accent-light-color;
+    background-color: $accent-color;
 
     transition: width ease-in-out 0.3s;
   }
@@ -51,7 +62,7 @@ nav {
   font-size: 1.8em;
   padding: 20px 0;
 
-  a{
+  a {
     color: $header-color;
     position: relative;
 
@@ -59,11 +70,12 @@ nav {
 
     &:after {
       display: block;
-      margin: 3px auto auto auto;
+      margin: 1px auto auto auto;
       content: '';
       height: 0px;
       width: 100%;
-      background-color: $accent-light-color;
+      background-color: $accent-color;
+
 
       position: absolute;
 
@@ -74,13 +86,16 @@ nav {
       &:after {
         height: 4px;
       }
+
+      color: $accent-color;
+      text-decoration: none;
     }
 
     text-decoration: none;
   }
 }
 
-.view-port-trigger{
+.view-port-trigger {
   position: absolute;
 
   height: 1px;
@@ -104,8 +119,8 @@ header {
     padding: 15px;
   }
 
-  .sub-title-wrapper{
-    min-height: 3em;
+  .sub-title-wrapper {
+    min-height: 4em;
   }
 
   .pokeball {
@@ -133,7 +148,7 @@ header {
     font-size: 3em;
 
     margin-bottom: 0px;
-    display:block;
+    display: block;
   }
 
   teximate {
@@ -147,7 +162,7 @@ header {
   }
 }
 
-.background-image{
+.background-image {
   background-image: url("../../../assets/images/background.jpg");
   background-size: cover;
 }
@@ -160,7 +175,7 @@ header {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0,0,0, 0.4);
+  background: rgba(0, 0, 0, 0.4);
   transition: all .3s linear;
 }
 
@@ -203,7 +218,7 @@ section {
     width: 300px;
     height: 1px;
 
-    background: rgba(117,81,125,0.15);
+    background: rgba(117, 81, 125, 0.15);
   }
 }
 
@@ -230,7 +245,7 @@ section#work {
       position: relative;
 
       @media (max-width: 660px) {
-        width : 80vw;
+        width: 80vw;
         height: 56.25vw;
       }
     }
@@ -249,13 +264,13 @@ section#contact {
   transition: color ease-in-out 0.2s;
 
   &:hover {
-    color: $accent-light-color;
+    color: $accent-color;
   }
 }
 
 .icon-heart {
   cursor: pointer;
-  color : #F44336;
+  color: #F44336;
 
   transition: transform .2s ease-in-out;
 }
@@ -263,5 +278,5 @@ section#contact {
 .more-coming {
   padding: 5px;
   font-size: 1.3em;
-  border-bottom: 3px solid $accent-light-color;
+  border-bottom: 3px solid $accent-color;
 }

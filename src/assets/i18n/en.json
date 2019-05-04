@@ -31,7 +31,7 @@
       "sub-title": "Dungeon Crawler made from strach in C++ using SDL.",
       "tags": "Game development - SDL - C++",
       "modal": {
-        "body": "<p>Explore <b>procedurally generated</b> dungeons, fight back and try to find a way out!</p><p>This was a <b>personal project</b> with my little brother (game artist).</p><p> I built the game engine <b>from scratch</b> (game loop, collisions detection, buttons...), and developed <b>game mechanics</b> (combat system, enemies behavior...).</br>The game is <b>procedurally generated</b> based on hand-crafted rooms.</p><p>Made in <b>C++</b> with only <b>SDL2</b>.</p><p><a>See the source code on Github</a></p>"
+        "body": "<p>Explore <b>procedurally generated</b> dungeons, fight back and try to find a way out!</p><p>This was a <b>personal project</b> with my little brother (game artist).</p><p> I built the game engine <b>from scratch</b> (game loop, collisions detection, buttons...), and developed <b>game mechanics</b> (combat system, enemies behavior...).</br>The game is <b>procedurally generated</b> based on hand-crafted rooms.</p><p>Made in <b>C++</b> with only <b>SDL2</b>.</p><p><a target=\"_blank\" href=\"https://github.com/Civetdelapin/InfiniteTorpor\" rel=\"noreferrer\">See the source code on Github</a></p>"
       }
     },
     "this-is-the-life": {

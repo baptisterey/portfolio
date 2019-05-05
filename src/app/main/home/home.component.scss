@@ -2,7 +2,7 @@
 
 body {
   scroll-behavior: smooth;
-  margin: 0px;
+  margin: 0;
 
   font-family: 'Lato', sans-serif;
 
@@ -41,7 +41,7 @@ h2 {
     margin: 10px auto auto auto;
     content: '';
     height: 4px;
-    width: 0px;
+    width: 0;
     background-color: $accent-color;
 
     transition: width ease-in-out 0.3s;
@@ -72,7 +72,7 @@ nav {
       display: block;
       margin: 1px auto auto auto;
       content: '';
-      height: 0px;
+      height: 0;
       width: 100%;
       background-color: $accent-color;
 
@@ -147,7 +147,7 @@ header {
 
     font-size: 3em;
 
-    margin-bottom: 0px;
+    margin-bottom: 0;
     display: block;
   }
 
@@ -223,6 +223,7 @@ section {
 }
 
 section#about {
+  //noinspection CssOverwrittenProperties
   p {
     text-align: left;
     text-align: justify;
@@ -232,7 +233,7 @@ section#about {
 section#work {
   .project-wrapper {
     width: 1400px;
-    max-width: 80vw;
+    max-width: 90vw;
 
     .project-div {
       opacity: 0;

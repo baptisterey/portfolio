@@ -39,7 +39,7 @@
       "sub-title": "Game jam submission made in 72h with Unity.",
       "tags": "Game Jam - Unity - C#",
       "modal": {
-        "body": ""
+        "body": "<p><b>Control</b> your claw as the <b>baby Grim Reaper</b> and try to <b>catch</b> as many <b>tiny humans</b> as you can !<br/>Be careful, this is <b>not a easy task</b>!</p><p>This was a <b>personal project</b> with my little brother (game artist)</p><p>I worked on the <b>programming</b> and <b>game designing</b> part.</p><p>Made with <b>Unity</b> in <b>C#</b> in 72h for the <b>GDL - July Jam</b>.</p><p><a href=\"https://superfondue.itch.io/tldr-this-is-the-life\" rel=\"noreferrer\" target=\"_blank\">PLAY on itch.io</a></p> <!--<p><a rel=\"noreferrer\" href=\"https://play.google.com/store/apps/details?id=com.ReyBrothers.ThisIsTheLife\" target=\"_blank\">Download the game for Android</a></p>-->"
       }
     },
     "magicless": {
@@ -47,7 +47,7 @@
       "sub-title": "Metroidvania made with Unity.",
       "tags": "Adventure - Unity - C#",
       "modal": {
-        "body": ""
+        "body": "<p><b>MagicLess</b> is a </b>2D pixel-art Metroidvania</b> with <b>strong</b> and <b>unique enemies</b>, <b>exploration</b>, <b>NPC dialogues</b>, <b>quests</b> and even <b>one boss</b> (hooray \uD83C\uDF89)!</p><p>This was a <b>personal project</b> with my little brother. <br/> <br/> I worked on the <b>programming</b> and <b>game designing</b> part.</p><p>Made with <b>Unity</b> in <b>C#</b>.</p><p><a href=\"https://www.youtube.com/watch?v=7pzSjvDpcTY\" rel=\"noreferrer\" target=\"_blank\">See the trailer on Youtube</a></p><p><a rel=\"noreferrer\" href=\"https://civetdelapin.itch.io/magicless\" target=\"_blank\">See more on itch.io</a></p>"
       }
     },
     "crazy-eights": {
@@ -55,15 +55,15 @@
       "sub-title": "Card game made in Java.",
       "tags": "School Project - Java - GUI - Multiple Threads",
       "modal": {
-        "body": ""
+        "body": "<p>Play the famous <b>Crazy Eights</b> game against a <b>computer</b>! <br/>You can play with a <b>GUI</b> or a <b>command line interface</b> and even both at the <b>same time</b>. <br/>You can even play with <b>different rules</b>.</p><p>This was a <b>school project</b> with a team of 2 people.</p><p>The code uses the <b>MVC</b> pattern and is <b>object-oriented</b>.<br/>In order to run the <b>concurrent interfaces</b>, the game uses <b>multiple threads</b>.</p><p>Made in <b>Java</b> and <b>Swing</b> for the GUI.</p><p><a rel=\"noreferrer\" href=\"https://github.com/Civetdelapin/8americain\" target=\"_blank\">See the source code on Github</a>\"</p>"
       }
     },
     "fight-for-fight": {
       "title": "Fight for... FIGHT!",
       "sub-title": "Made in 48h with Pygame for a school game jam.",
-      "tags": "School Project - Game Jam - Python",
+      "tags": "School Project - Game Jam - Python - Pygame",
       "modal": {
-        "body": ""
+        "body": "<p>Play with up to four friends and compete against each other in this couch versus game! Summons <b>powerful and unique arrows</b>, dodge projectiles with your dash and be the <b>last one alive</b>!</p><p>You can even create your <b>own arenas</b>!</p>\n                              <p>It was a <b>school project</b> with a team of 5 people.</p><p>I <b>managed</b> the project by ensuring that every member worked on something different in a <b>coherent whole</b>. I also worked on the <b>core-engine</b> of the game and the main menu.</br>We designed the classes in an object-oriented way.</p><p>Made in <b>Python</b> and with <b>Pygame</b> in 72h for a <b>school game jam</b>.</p><p><a rel=\"noreferrer\" href=\"https://www.youtube.com/watch?v=Q0SkNE5GFcE\" target=\"_blank\">See the trailer on Youtube</a></p><p><a rel=\"noreferrer\" href=\"https://github.com/Civetdelapin/fightforfight\" target=\"_blank\">See the source code on Github</a></p>"
       }
     },
     "monopoly": {
@@ -71,7 +71,7 @@
       "sub-title": "Recreated the famous board game in Java.",
       "tags": "School Project - Java - GUI",
       "modal": {
-        "body": ""
+        "body": "<p>Destroy friendship while playing <b>Monopoly</b> against your <b>friends</b>! <br/>All the <b>mechanics</b> of the <b>original game</b> are included.</b></p><p>It was a <b>school project</b> with a team of 3 people.</p><p>The code uses the <b>MVC</b> pattern and is <b>object-oriented</b>.</p><p>Made in <b>Java</b> and <b>Swing</b> for the GUI.</p>"
       }
     }
   }

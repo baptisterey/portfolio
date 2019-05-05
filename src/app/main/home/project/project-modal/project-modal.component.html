@@ -5,7 +5,9 @@
   <div fxLayout.lt-md="column" fxLayout="row" fxLayoutAlign="center start" fxLayoutGap="15px">
 
     <swiper fxFlex.lt-md="1 1 auto" fxFlex="60">
-      <img src="http://placekitten.com/300/200" *ngFor="let img of Array(projectData.nbImage).fill(1); let index = index">
+      <img *ngFor="let img of projectData.images; let index = index"
+           [src]="'assets/images/projects/'+projectData.name+'/dialog/'+img.url"
+           [alt]="img.alt">
     </swiper>
 
     <div fxFlex.lt-md="1 1 auto" fxFlex="35">

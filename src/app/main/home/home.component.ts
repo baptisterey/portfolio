@@ -13,7 +13,7 @@ import {
   fadeInLeftAnimation,
   fadeInOnEnterAnimation,
   fadeInRightAnimation,
-  fadeInUpAnimation,
+  fadeInUpAnimation, hueRotateAnimation,
   rotateInDownRightOnEnterAnimation
 } from 'angular-animations';
 
@@ -26,6 +26,7 @@ import {ProjectList} from "../projectList";
 import {TranslateService} from "@ngx-translate/core";
 import {InViewportConfigOptions} from "ng-in-viewport";
 import {ProjectData} from "./models/project-data.model";
+import {IParams} from "angular-particle/lib";
 
 @Component({
   selector: 'app-home',
@@ -39,7 +40,7 @@ import {ProjectData} from "./models/project-data.model";
     fadeInUpAnimation({ anchor: 'fadeInUp'}),
     fadeInLeftAnimation({ anchor: 'fadeInLeft'}),
     fadeInRightAnimation({anchor : 'fadeInRight'}),
-    rotateInDownRightOnEnterAnimation({anchor : 'rotateInDownRightOnEnter'})
+    rotateInDownRightOnEnterAnimation({anchor : 'rotateInDownRightOnEnter'}),
   ]
 })
 export class HomeComponent implements OnInit, AfterViewInit {

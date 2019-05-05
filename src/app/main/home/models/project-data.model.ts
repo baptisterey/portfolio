@@ -1,4 +1,9 @@
 export class ProjectData {
   name: string;
-  nbImage: number;
+  images: Array<Image>;
+}
+
+export class Image {
+  url: string;
+  alt: string;
 }

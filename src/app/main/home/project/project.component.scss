@@ -1,8 +1,8 @@
 @import "~src/styles";
 
 .main-div {
-  transition: all .2s ease-in-out;
-  box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  transition: transform .2s ease-in-out;
+  box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 8px;
   cursor: pointer;
 
@@ -13,23 +13,14 @@
 
   position: relative;
 
+
   &:hover {
     transform: scale(1.075);
-
-    /*&:after {
-      content: '';
-      position: absolute;
-
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-
-      background-color: rgba(0, 0, 0, 0.9);;
-    }*/
   }
 
-  .project-details{
+  .project-details {
+    user-select: none;
+
     position: absolute;
     left: 3%;
     bottom: 3%;
@@ -42,7 +33,7 @@
 
     border-radius: 4px;
 
-    background-color: rgba(0,0,0,.65);
+    background-color: rgba(0, 0, 0, .65);
     color: white;
 
     h4 {

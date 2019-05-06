@@ -1,9 +1,28 @@
 @import "~src/styles";
+@import '~swiper/dist/css/swiper.min.css';
 
 .project-modal {
 
   overflow: auto;
   color: $text-color;
+
+  position: relative;
+
+  .close-button {
+    position: absolute;
+
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+
+    color: $text-color;
+
+    top: 0;
+    right: 0;
+  }
 
   h2 {
     text-align: center;
@@ -14,6 +33,38 @@
     p:first-of-type {
       margin-top: 0;
     }
+  }
+
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .swiper-button-prev{
+    background: none;
+
+    color: $accent-color;
+  }
+
+  .swiper-button-next{
+    background: none;
+    color: $accent-color;
+  }
+
+
+  .swiper-pagination-bullet{
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 100%;
+    background: transparent;
+    border: 2px solid $accent-color;
+    opacity: 1;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: $accent-color;
   }
 }
 

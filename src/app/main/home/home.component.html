@@ -58,6 +58,7 @@
         <h2 #workHeader
             [@fadeInRight]="{ value: isSectionActive('work'), params: { delay: headerAnimationDelay }, opacity : 1 }"
             (@fadeInRight.done)="setAfterAnimationStyles(workHeader, 'work')">{{ 'work.header' | translate }}</h2>
+
         <div class="project-wrapper" fxLayout="row wrap" fxLayoutAlign="center center">
           <div class="project-div"
                #workProject (@fadeInUp.done)="setAfterAnimationStyles(workProject, 'work')"
@@ -77,6 +78,7 @@
             <div class="more-coming">{{'project.more-coming' | translate}}...</div>
           </div>
         </div>
+
       </ng-container>
     </section>
 

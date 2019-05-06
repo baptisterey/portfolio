@@ -1,14 +1,30 @@
 <div fxFill fxLayout="column" class="project-modal">
 
-  <h2>{{ 'projects.' + projectData.name + '.title' | translate }}</h2>
+  <button class="close-button" matDialogClose>
+    <fa-icon size="2x" [icon]="['fas', 'times']"></fa-icon>
+  </button>
+
+  <h2 #modalTitle>{{ 'projects.' + projectData.name + '.title' | translate }}</h2>
 
   <div fxLayout.lt-md="column" fxLayout="row" fxLayoutAlign="center start" fxLayoutGap="15px">
 
-    <swiper fxFlex.lt-md="1 1 auto" fxFlex="60">
-      <img *ngFor="let img of projectData.images; let index = index"
-           [src]="'assets/images/projects/'+projectData.name+'/dialog/'+img.url"
-           [alt]="img.alt">
-    </swiper>
+    <div fxFlex.lt-md="1 1 auto" fxFlex="60" class="swiper-container" [swiper]="swiperConfig" [(index)]="swiperIndex">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" *ngFor="let img of projectData.images; let index = index">
+          <img [src]="'assets/images/projects/'+projectData.name+'/dialog/'+img.url" [alt]="img.alt">
+        </div>
+      </div>
+
+      <div class="swiper-button-prev">
+        <fa-icon size="3x" [icon]="['fas', 'chevron-left']"></fa-icon>
+      </div>
+      <div class="swiper-button-next">
+        <fa-icon size="3x" [icon]="['fas', 'chevron-right']"></fa-icon>
+      </div>
+
+      <div class="swiper-pagination"></div>
+    </div>
+
 
     <div fxFlex.lt-md="1 1 auto" fxFlex="35">
       <div class="paragraph-wrapper" [innerHTML]="'projects.' + projectData.name + '.modal.body' | translate"></div>

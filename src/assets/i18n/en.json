@@ -55,7 +55,7 @@
       "sub-title": "Card game made in Java.",
       "tags": "School Project - Java - GUI - Multiple Threads",
       "modal": {
-        "body": "<p>Play the famous <b>Crazy Eights</b> game against a <b>computer</b>! <br/>You can play with a <b>GUI</b> or a <b>command line interface</b> and even both at the <b>same time</b>. <br/>You can even play with <b>different rules</b>.</p><p>This was a <b>school project</b> with a team of 2 people.</p><p>The code uses the <b>MVC</b> pattern and is <b>object-oriented</b>.<br/>In order to run the <b>concurrent interfaces</b>, the game uses <b>multiple threads</b>.</p><p>Made in <b>Java</b> and <b>Swing</b> for the GUI.</p><p><a rel=\"noreferrer\" href=\"https://github.com/Civetdelapin/8americain\" target=\"_blank\">See the source code on Github</a>\"</p>"
+        "body": "<p>Play the famous <b>Crazy Eights</b> game against a <b>computer</b>! <br/>You can play with a <b>GUI</b> or a <b>command line interface</b> and even both at the <b>same time</b>. <br/>You can even play with <b>different rules</b>.</p><p>This was a <b>school project</b> with a team of 2 people.</p><p>The code uses the <b>MVC</b> pattern and is <b>object-oriented</b>.<br/>In order to run the <b>concurrent interfaces</b>, the game uses <b>multiple threads</b>.</p><p>Made in <b>Java</b> and <b>Swing</b> for the GUI.</p><p><a rel=\"noreferrer\" href=\"https://github.com/Civetdelapin/8americain\" target=\"_blank\">See the source code on Github</a></p>"
       }
     },
     "fight-for-fight": {

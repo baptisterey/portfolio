@@ -37,6 +37,7 @@
     "intersection-observer": "^0.5.1",
     "ng-animate": "^0.3.4",
     "ng-in-viewport": "^6.0.3",
+    "ng-lazyload-image": "^5.1.2",
     "ng2-parallaxscroll": "^2.0.4",
     "ngx-swiper-wrapper": "^7.2.1",
     "ngx-teximate": "^0.3.0",

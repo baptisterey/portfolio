@@ -8,7 +8,26 @@
 
   <div fxLayout.lt-md="column" fxLayout="row" fxLayoutAlign="center start" fxLayoutGap="15px">
 
-    <div fxFlex.lt-md="1 1 auto" fxFlex="60" class="swiper-container" [swiper]="swiperConfig" [(index)]="swiperIndex">
+    <div class="swiper-div" fxFlex.lt-md="1 1 auto" fxFlex="60">
+      <swiper #swiperComponent [config]="swiperConfig" [(index)]="swiperIndex">
+        <div *ngFor="let img of projectData.images; let index = index">
+          <img [src]="'assets/images/projects/'+projectData.name+'/dialog/'+img.url" [alt]="img.alt">
+        </div>
+      </swiper>
+
+
+      <div class="swiper-button-prev" (click)=" swiperComponent.index = Math.max(swiperComponent.index - 1, 0)">
+        <fa-icon size="3x" [icon]="['fas', 'chevron-left']"></fa-icon>
+      </div>
+      <div class="swiper-button-next"
+           (click)="swiperComponent.index = Math.min(swiperComponent.index + 1, projectData.images.length - 1)">
+        <fa-icon size="3x" [icon]="['fas', 'chevron-right']"></fa-icon>
+      </div>
+    </div>
+
+
+    <!-- CANT USE THE DIRECTIVE AS IT TRHOWS AN ERROR WHEN THE DIALOG IS CLOSED -->
+    <!--<div fxFlex.lt-md="1 1 auto" fxFlex="60" class="swiper-container" [swiper]="swiperConfig" [(index)]="swiperIndex">
       <div class="swiper-wrapper">
         <div class="swiper-slide" *ngFor="let img of projectData.images; let index = index">
           <img [src]="'assets/images/projects/'+projectData.name+'/dialog/'+img.url" [alt]="img.alt">
@@ -23,7 +42,7 @@
       </div>
 
       <div class="swiper-pagination"></div>
-    </div>
+    </div>-->
 
 
     <div fxFlex.lt-md="1 1 auto" fxFlex="35">

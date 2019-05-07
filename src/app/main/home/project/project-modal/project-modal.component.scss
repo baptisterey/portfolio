@@ -41,6 +41,15 @@
     height: auto;
   }
 
+  .swiper-div {
+    position: relative;
+
+    swiper {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
   .swiper-button-prev{
     background: none;
 
@@ -59,8 +68,10 @@
     display: inline-block;
     border-radius: 100%;
     background: transparent;
-    border: 2px solid $accent-color;
-    opacity: 1;
+    border: 2px solid $accent-color !important;
+    opacity: 1 !important;
+
+    transition: all ease-in-out 0.2s;
   }
 
   .swiper-pagination-bullet-active {

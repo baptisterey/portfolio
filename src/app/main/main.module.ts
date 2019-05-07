@@ -21,6 +21,7 @@ import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 import {library} from "@fortawesome/fontawesome-svg-core";
 import {faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons";
 import {faBookmark, faHeart, faTimes, faChevronRight, faChevronLeft} from "@fortawesome/free-solid-svg-icons";
+import {LazyLoadImageModule} from "ng-lazyload-image";
 
 @NgModule({
   declarations: [MainComponent, HomeComponent, ProjectComponent, ProjectModalComponent],

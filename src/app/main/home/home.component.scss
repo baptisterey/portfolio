@@ -101,7 +101,7 @@ nav {
   height: 1px;
   width: 1px;
   left: 50%;
-  top: 35vh;
+  top: 20vh;
 }
 
 header {
@@ -159,6 +159,16 @@ header {
       margin-bottom: 12px;
       font-size: 2em;
     }
+  }
+
+  .arrow-down-icon{
+    position: absolute;
+
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10px;
+
+    color: $header-color;
   }
 }
 

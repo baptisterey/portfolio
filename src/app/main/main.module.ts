@@ -20,8 +20,14 @@ import {TranslateModule} from '@ngx-translate/core';
 import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 import {library} from "@fortawesome/fontawesome-svg-core";
 import {faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons";
-import {faBookmark, faHeart, faTimes, faChevronRight, faChevronLeft} from "@fortawesome/free-solid-svg-icons";
-import {LazyLoadImageModule} from "ng-lazyload-image";
+import {
+  faBookmark,
+  faHeart,
+  faTimes,
+  faChevronRight,
+  faChevronLeft,
+  faArrowDown
+} from "@fortawesome/free-solid-svg-icons";
 
 @NgModule({
   declarations: [MainComponent, HomeComponent, ProjectComponent, ProjectModalComponent],
@@ -43,6 +49,6 @@ import {LazyLoadImageModule} from "ng-lazyload-image";
 })
 export class MainModule {
   constructor() {
-    library.add(faGithub, faLinkedin, faBookmark, faHeart, faTimes, faChevronRight, faChevronLeft)
+    library.add(faGithub, faLinkedin, faBookmark, faHeart, faTimes, faChevronRight, faChevronLeft, faArrowDown)
   }
 }

@@ -4,11 +4,11 @@
     <particles [params]="myParticleParams" [style]="myParticleStyle"></particles>
 
     <div class="front-div" fxLayout="row" fxLayoutAlign="center center">
-      <nav fxFlex="60" fxFlex.gt-md="30" fxFlex.lt-sm="95" [@fadeInOnEnter]
+      <nav fxFlex="50" fxFlex.gt-md="20" fxFlex.lt-sm="90" [@fadeInOnEnter]
            fxLayout="row" fxLayoutAlign="space-between start">
         <a href="#about">{{ 'about.header' | translate }}</a>
         <a href="#work">{{ 'work.header' | translate }}</a>
-        <a href="#skills">{{ 'skills.header' | translate }}</a>
+        <!--<a href="#skills">{{ 'skills.header' | translate }}</a>-->
         <a href="#contact">{{ 'contact.header' | translate }}</a>
       </nav>
     </div>
@@ -27,6 +27,7 @@
         </div>
       </div>
     </div>
+    <!--<fa-icon class="arrow-down-icon" size="3x" [icon]="['fas', 'arrow-down']"></fa-icon>-->
   </header>
 
   <main fxFlex="1 1 auto" fxLayout="column" fxLayoutAlign="start center" fxLayoutGap="30px">
@@ -82,7 +83,7 @@
       </ng-container>
     </section>
 
-    <section id="skills">
+    <!--<section id="skills">
       <div class="view-port-trigger"
            inViewport
            [inViewportOptions]="inViewportOptions"
@@ -96,7 +97,7 @@
            (@fadeIn.done)="setAfterAnimationStyles(skillsParagraph, 'skills')"
            innerHTML="{{'skills.content' | translate}}">
       </div>
-    </section>
+    </section>-->
 
     <section id="contact">
       <div class="view-port-trigger"

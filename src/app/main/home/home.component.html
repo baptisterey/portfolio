@@ -1,5 +1,11 @@
 <div fxFill fxLayout="column">
-  <header [config]="{axis: 'Y', speed: .25}" parallax class="background-image" fxLayout="column">
+  <header #headerDiv fxLayout="column">
+
+    <div class="background-image" *ngIf="!deviceService.isMobile()" [config]="{axis: 'Y', speed: .25}" parallax>
+    </div>
+
+    <div class="background-image" *ngIf="deviceService.isMobile()">
+    </div>
 
     <particles [params]="myParticleParams" [style]="myParticleStyle"></particles>
 

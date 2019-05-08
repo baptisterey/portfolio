@@ -28,6 +28,7 @@ import {
   faChevronLeft,
   faArrowDown
 } from "@fortawesome/free-solid-svg-icons";
+import {DeviceDetectorModule} from "ngx-device-detector";
 
 @NgModule({
   declarations: [MainComponent, HomeComponent, ProjectComponent, ProjectModalComponent],
@@ -43,7 +44,8 @@ import {
     SwiperModule,
     TranslateModule,
     FontAwesomeModule,
-    MatButtonModule
+    MatButtonModule,
+    DeviceDetectorModule.forRoot()
   ],
   entryComponents: [ProjectModalComponent]
 })

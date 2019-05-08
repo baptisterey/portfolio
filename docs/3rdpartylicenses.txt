@@ -317,6 +317,9 @@ SOFTWARE.
 ng2-parallaxscroll
 MIT
 
+ngx-device-detector
+MIT
+
 ngx-swiper-wrapper
 MIT
 The MIT License

@@ -112,11 +112,35 @@ header {
 
   position: relative;
   text-align: center;
-  background-size: cover;
 
   .front-div {
     z-index: 10;
     padding: 15px;
+  }
+
+
+  .background-image {
+    background-image: url("../../../assets/images/background.jpg");
+    background-size: cover;
+    background-position: center;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .background-image:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.4);
+    transition: all .3s linear;
   }
 
   .sub-title-wrapper {
@@ -161,7 +185,7 @@ header {
     }
   }
 
-  .arrow-down-icon{
+  .arrow-down-icon {
     position: absolute;
 
     left: 50%;
@@ -172,22 +196,6 @@ header {
   }
 }
 
-.background-image {
-  background-image: url("../../../assets/images/background.jpg");
-  background-size: cover;
-}
-
-.background-image:before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.4);
-  transition: all .3s linear;
-}
 
 main {
   text-align: center;

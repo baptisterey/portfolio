@@ -2,7 +2,7 @@ import {
   AfterViewInit,
   ChangeDetectionStrategy,
   ChangeDetectorRef,
-  Component,
+  Component, ElementRef,
   OnInit,
   Renderer2,
   ViewChild,
@@ -28,13 +28,13 @@ import {ProjectList} from "../projectList";
 import {TranslateService} from "@ngx-translate/core";
 import {InViewportConfigOptions} from "ng-in-viewport";
 import {ProjectData} from "./models/project-data.model";
+import {DeviceDetectorService} from "ngx-device-detector";
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
   encapsulation: ViewEncapsulation.None,
-  changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [
     fadeInOnEnterAnimation({ delay : 0 }),
     fadeInAnimation({anchor : 'fadeIn'}),
@@ -48,6 +48,7 @@ import {ProjectData} from "./models/project-data.model";
 export class HomeComponent implements OnInit, AfterViewInit {
 
   @ViewChild('mainDiv') mainDiv;
+  @ViewChild('headerDiv') headerDiv: ElementRef
 
   showHeaderText : boolean = false;
 
@@ -75,7 +76,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   constructor(public translate: TranslateService,
               private changeDetector: ChangeDetectorRef,
-              private renderer : Renderer2
+              private renderer : Renderer2,
+              public deviceService: DeviceDetectorService
               ) {
   }
 
@@ -88,9 +90,13 @@ export class HomeComponent implements OnInit, AfterViewInit {
     const _this = this;
     setTimeout(function(){
       _this.showHeaderText = true;
+      _this.changeDetector.detectChanges();
     },1000);
 
-    this.changeDetector.detectChanges();
+
+    if(this.deviceService.isMobile()){
+      this.renderer.setStyle(this.headerDiv.nativeElement, 'height', '600px');
+    }
   }
 
   public onIntersection({ target, visible }: { target: Element; visible: boolean }, divId : string): void {

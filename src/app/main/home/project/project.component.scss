@@ -13,11 +13,6 @@
 
   position: relative;
 
-
-  &:hover {
-    transform: scale(1.075);
-  }
-
   .project-details {
     user-select: none;
 
@@ -40,6 +35,12 @@
       margin: 0;
       font-size: 1.25em;
     }
+  }
+}
+
+@media (hover: hover) {
+  .main-div:hover {
+    transform: scale(1.075);
   }
 }
 

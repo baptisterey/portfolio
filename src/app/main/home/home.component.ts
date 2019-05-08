@@ -1,5 +1,6 @@
 import {
   AfterViewInit,
+  ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
   OnInit,
@@ -9,11 +10,12 @@ import {
 } from '@angular/core';
 
 import {
-  bounceInOnEnterAnimation, fadeInAnimation,
+  bounceInOnEnterAnimation,
+  fadeInAnimation,
   fadeInLeftAnimation,
   fadeInOnEnterAnimation,
   fadeInRightAnimation,
-  fadeInUpAnimation, hueRotateAnimation,
+  fadeInUpAnimation,
   rotateInDownRightOnEnterAnimation
 } from 'angular-animations';
 
@@ -26,13 +28,13 @@ import {ProjectList} from "../projectList";
 import {TranslateService} from "@ngx-translate/core";
 import {InViewportConfigOptions} from "ng-in-viewport";
 import {ProjectData} from "./models/project-data.model";
-import {IParams} from "angular-particle/lib";
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
   encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [
     fadeInOnEnterAnimation({ delay : 0 }),
     fadeInAnimation({anchor : 'fadeIn'}),

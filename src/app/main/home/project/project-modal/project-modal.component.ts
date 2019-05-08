@@ -1,5 +1,5 @@
 import {
-  AfterViewChecked, AfterViewInit, ChangeDetectorRef,
+  AfterViewChecked, AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef,
   Component,
   ElementRef,
   Inject,
@@ -16,7 +16,8 @@ import {SwiperComponent, SwiperConfigInterface} from "ngx-swiper-wrapper";
   selector: 'app-project-modal',
   templateUrl: './project-modal.component.html',
   styleUrls: ['./project-modal.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProjectModalComponent implements OnInit, AfterViewInit {
 

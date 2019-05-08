@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
 import { MatDialog } from '@angular/material';
 import {fadeInOnEnterAnimation, fadeInUpOnEnterAnimation, fadeOutOnLeaveAnimation} from "angular-animations";
 import {ProjectModalComponent} from "./project-modal/project-modal.component";
@@ -12,7 +12,8 @@ import {ProjectData} from "../models/project-data.model";
     fadeInOnEnterAnimation({duration : 200}),
     fadeOutOnLeaveAnimation({duration : 200}),
     fadeInUpOnEnterAnimation({duration : 400})
-  ]
+  ],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProjectComponent implements OnInit {
 

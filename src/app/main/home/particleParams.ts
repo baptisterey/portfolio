@@ -11,7 +11,7 @@ export const ParticleParams = {
       "value": "#a5a5a5"
     },
     "shape": {
-      "type": "circle",
+      "type": "edge",
       "stroke": {
         "width": 0,
         "color": "#000000"
@@ -21,6 +21,8 @@ export const ParticleParams = {
       },
       "image": {
         "src": "img/github.svg",
+
+        
         "width": 100,
         "height": 100
       }

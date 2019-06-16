@@ -1,6 +1,5 @@
 import {
   AfterViewInit,
-  ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component, ElementRef,
   OnInit,
@@ -26,7 +25,6 @@ import {flipInY} from 'ng-animate';
 
 import {ProjectList} from "../projectList";
 import {TranslateService} from "@ngx-translate/core";
-import {InViewportConfigOptions} from "ng-in-viewport";
 import {ProjectData} from "./models/project-data.model";
 import {DeviceDetectorService} from "ngx-device-detector";
 
@@ -36,13 +34,13 @@ import {DeviceDetectorService} from "ngx-device-detector";
   styleUrls: ['./home.component.scss'],
   encapsulation: ViewEncapsulation.None,
   animations: [
-    fadeInOnEnterAnimation({ delay : 0 }),
-    fadeInAnimation({anchor : 'fadeIn'}),
-    bounceInOnEnterAnimation({ delay : 400 }),
-    fadeInUpAnimation({ anchor: 'fadeInUp'}),
-    fadeInLeftAnimation({ anchor: 'fadeInLeft'}),
-    fadeInRightAnimation({anchor : 'fadeInRight'}),
-    rotateInDownRightOnEnterAnimation({anchor : 'rotateInDownRightOnEnter'}),
+    fadeInOnEnterAnimation({delay: 0}),
+    fadeInAnimation({anchor: 'fadeIn'}),
+    bounceInOnEnterAnimation({delay: 400}),
+    fadeInUpAnimation({anchor: 'fadeInUp'}),
+    fadeInLeftAnimation({anchor: 'fadeInLeft'}),
+    fadeInRightAnimation({anchor: 'fadeInRight'}),
+    rotateInDownRightOnEnterAnimation({anchor: 'rotateInDownRightOnEnter'}),
   ]
 })
 export class HomeComponent implements OnInit, AfterViewInit {
@@ -50,7 +48,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   @ViewChild('mainDiv') mainDiv;
   @ViewChild('headerDiv') headerDiv: ElementRef
 
-  showHeaderText : boolean = false;
+  showHeaderText: boolean = false;
 
   enterTextAnimation: TextAnimation = {
     animation: flipInY,
@@ -58,27 +56,22 @@ export class HomeComponent implements OnInit, AfterViewInit {
     type: 'letter'
   };
 
-  headerAnimationDelay : number = 0;
-  contentAnimationDelay : number = 1150;
-
+  headerAnimationDelay: number = 0;
+  contentAnimationDelay: number = 1150;
 
   myParticleStyle: object = ParticleStyle;
   myParticleParams: object = ParticleParams;
 
-  projectList : Array<ProjectData> = ProjectList;
-
-  inViewportOptions: InViewportConfigOptions = {
-    threshold: Array(101).fill(null).map((v, k) => k / 100)
-  };
+  projectList: Array<ProjectData> = ProjectList;
 
   sectionList = ['about', 'work', 'skills', 'contact'];
   activeSections = [];
 
   constructor(public translate: TranslateService,
               private changeDetector: ChangeDetectorRef,
-              private renderer : Renderer2,
+              private renderer: Renderer2,
               public deviceService: DeviceDetectorService
-              ) {
+  ) {
   }
 
   ngOnInit() {
@@ -88,36 +81,36 @@ export class HomeComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
 
     const _this = this;
-    setTimeout(function(){
+    setTimeout(function () {
       _this.showHeaderText = true;
       _this.changeDetector.detectChanges();
-    },1000);
+    }, 1000);
 
 
-    if(this.deviceService.isMobile()){
+    if (this.deviceService.isMobile()) {
       this.renderer.setStyle(this.headerDiv.nativeElement, 'height', '600px');
     }
   }
 
-  public onIntersection({ target, visible }: { target: Element; visible: boolean }, divId : string): void {
-    if(visible && this.activeSections.indexOf(divId) === -1){
+  public onIntersection(divId: string): void {
+    if (this.activeSections.indexOf(divId) === -1) {
       let position = this.sectionList.indexOf(divId);
-      for(let i = 0; i <= position;  i++){
+      for (let i = 0; i <= position; i++) {
         this.activeSections.push(this.sectionList[i]);
       }
     }
   }
 
-  isSectionActive(section) : boolean {
+  isSectionActive(section): boolean {
     return this.activeSections.indexOf(section) !== -1;
   }
 
-  getSubHeader() : string {
+  getSubHeader(): string {
     return this.translate.instant('sub-header')
   }
 
-  setAfterAnimationStyles(element, section: string){
-    if(this.isSectionActive(section)){
+  setAfterAnimationStyles(element, section: string) {
+    if (this.isSectionActive(section)) {
       this.renderer.setStyle(element, 'opacity', 1);
       this.renderer.addClass(element, 'active');
     }

@@ -16,7 +16,6 @@ import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 import { HttpClient, HttpClientModule } from "@angular/common/http";
 import { TranslateLoader, TranslateModule } from "@ngx-translate/core";
-import {intersectionObserverPreset, LazyLoadImageModule} from "ng-lazyload-image";
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
@@ -51,6 +50,7 @@ export function createTranslateLoader(http: HttpClient) {
       }
     })
   ],
+  exports: [],
   providers: [{
     provide: SWIPER_CONFIG,
     useValue: DEFAULT_SWIPER_CONFIG

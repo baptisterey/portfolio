@@ -12,7 +12,6 @@ import {ProjectComponent} from './home/project/project.component';
 import {ParticlesModule} from "angular-particle";
 import {TeximateModule} from 'ngx-teximate';
 import {ParallaxScrollModule} from 'ng2-parallaxscroll';
-import {InViewportModule} from 'ng-in-viewport';
 import {ProjectModalComponent} from './home/project/project-modal/project-modal.component';
 import {SwiperModule} from 'ngx-swiper-wrapper';
 import {TranslateModule} from '@ngx-translate/core';
@@ -29,9 +28,10 @@ import {
   faArrowDown
 } from "@fortawesome/free-solid-svg-icons";
 import {DeviceDetectorModule} from "ngx-device-detector";
+import {IntersectionObserverDirective} from "../directives/intersection-observer.directive";
 
 @NgModule({
-  declarations: [MainComponent, HomeComponent, ProjectComponent, ProjectModalComponent],
+  declarations: [MainComponent, HomeComponent, ProjectComponent, ProjectModalComponent, IntersectionObserverDirective],
   imports: [
     CommonModule,
     RouterModule,
@@ -39,13 +39,13 @@ import {DeviceDetectorModule} from "ngx-device-detector";
     ParticlesModule,
     TeximateModule,
     ParallaxScrollModule,
-    InViewportModule,
     MatDialogModule,
     SwiperModule,
     TranslateModule,
     FontAwesomeModule,
     MatButtonModule,
-    DeviceDetectorModule.forRoot()
+    DeviceDetectorModule.forRoot(),
+
   ],
   entryComponents: [ProjectModalComponent]
 })

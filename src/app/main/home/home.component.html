@@ -39,10 +39,7 @@
   <main fxFlex="1 1 auto" fxLayout="column" fxLayoutAlign="start center" fxLayoutGap="30px">
     <section id="about">
       <ng-container>
-        <div class="view-port-trigger"
-             inViewport
-             [inViewportOptions]="inViewportOptions"
-             (inViewportAction)="onIntersection($event, 'about')">
+        <div class="view-port-trigger" appIntersectionObserver (onIntersection)="onIntersection('about')">
         </div>
         <h2 #aboutHeader [@fadeInLeft]="{ value: isSectionActive('about'), params: { delay: headerAnimationDelay },
            opacity : 1 }"
@@ -57,10 +54,7 @@
 
     <section id="work">
       <ng-container>
-        <div class="view-port-trigger"
-             inViewport
-             [inViewportOptions]="inViewportOptions"
-             (inViewportAction)="onIntersection($event, 'work')">
+        <div class="view-port-trigger" appIntersectionObserver (onIntersection)="onIntersection('work')">
         </div>
         <h2 #workHeader
             [@fadeInRight]="{ value: isSectionActive('work'), params: { delay: headerAnimationDelay }, opacity : 1 }"
@@ -91,9 +85,7 @@
 
     <!--<section id="skills">
       <div class="view-port-trigger"
-           inViewport
-           [inViewportOptions]="inViewportOptions"
-           (inViewportAction)="onIntersection($event, 'skills')">
+           appIntersectionObserver (onIntersection)="onIntersection('skills')">
       </div>
       <h2 #skillsHeader
           [@fadeInLeft]="{ value: isSectionActive('skills'), params: { delay: headerAnimationDelay }, opacity : 1 }"
@@ -106,10 +98,7 @@
     </section>-->
 
     <section id="contact">
-      <div class="view-port-trigger"
-           inViewport
-           [inViewportOptions]="inViewportOptions"
-           (inViewportAction)="onIntersection($event, 'contact')">
+      <div class="view-port-trigger" appIntersectionObserver (onIntersection)="onIntersection('contact')">
       </div>
       <h2 #contactHeader
           [@fadeInRight]="{ value: isSectionActive('contact'), params: { delay: headerAnimationDelay }, opacity : 1 }"

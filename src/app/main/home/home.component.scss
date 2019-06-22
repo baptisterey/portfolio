@@ -297,3 +297,12 @@ section#contact {
   font-size: 1.3em;
   border-bottom: 3px solid $accent-color;
 }
+
+
+.cdk-overlay-pane {
+  height: 90vh;
+
+  mat-dialog-container {
+    overflow: auto;
+  }
+}

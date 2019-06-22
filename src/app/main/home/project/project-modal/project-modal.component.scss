@@ -12,11 +12,11 @@
     position: absolute;
 
     background-color: Transparent;
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     border: none;
-    cursor:pointer;
+    cursor: pointer;
     overflow: hidden;
-    outline:none;
+    outline: none;
 
     color: $text-color;
 
@@ -29,7 +29,13 @@
     margin-top: 0;
   }
 
+  .content-wrapper {
+    overflow: auto;
+  }
+
   .paragraph-wrapper {
+    overflow: auto;
+
     p:first-of-type {
       margin-top: 0;
     }
@@ -51,19 +57,19 @@
     }
   }
 
-  .swiper-button-prev{
+  .swiper-button-prev {
     background: none;
 
     color: $accent-color;
   }
 
-  .swiper-button-next{
+  .swiper-button-next {
     background: none;
     color: $accent-color;
   }
 
 
-  .swiper-pagination-bullet{
+  .swiper-pagination-bullet {
     width: 10px;
     height: 10px;
     display: inline-block;

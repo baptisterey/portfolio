@@ -6,7 +6,7 @@
 
   <h2 #modalTitle>{{ 'projects.' + projectData.name + '.title' | translate }}</h2>
 
-  <div fxLayout.lt-md="column" fxLayout="row" fxLayoutAlign="center start" fxLayoutGap="15px">
+  <div class="content-wrapper" fxLayout.lt-md="column" fxLayout="row" fxLayoutAlign="center start" fxLayoutGap="15px">
 
     <div class="swiper-div" fxFlex.lt-md="1 1 auto" fxFlex="60">
       <swiper #swiperComponent [config]="swiperConfig" [(index)]="swiperIndex">
@@ -45,8 +45,8 @@
     </div>-->
 
 
-    <div fxFlex.lt-md="1 1 auto" fxFlex="35">
-      <div class="paragraph-wrapper" [innerHTML]="'projects.' + projectData.name + '.modal.body' | translate"></div>
+    <div fxFlex.lt-md="1 1 auto" fxFlex="35" class="paragraph-wrapper">
+      <div [innerHTML]="'projects.' + projectData.name + '.modal.body' | translate"></div>
     </div>
 
   </div>

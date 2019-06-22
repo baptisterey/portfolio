@@ -29,6 +29,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import {DeviceDetectorModule} from "ngx-device-detector";
 import {IntersectionObserverDirective} from "../directives/intersection-observer.directive";
+import {MatCardModule} from "@angular/material";
 
 @NgModule({
   declarations: [MainComponent, HomeComponent, ProjectComponent, ProjectModalComponent, IntersectionObserverDirective],
@@ -45,6 +46,7 @@ import {IntersectionObserverDirective} from "../directives/intersection-observer
     FontAwesomeModule,
     MatButtonModule,
     DeviceDetectorModule.forRoot(),
+    MatCardModule,
 
   ],
   entryComponents: [ProjectModalComponent]

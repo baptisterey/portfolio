@@ -248,8 +248,27 @@ section#about {
 
 section#work {
   .project-wrapper {
-    width: 1400px;
+    width: 1050px;
     max-width: 90vw;
+
+    text-align: left;
+
+    .card-wrapper {
+      opacity: 0;
+
+      h4 {
+        margin: 0;
+        font-size: 1.25em;
+      }
+
+      p {
+        padding: 0;
+      }
+
+      p:first-of-type {
+        margin-top: 0;
+      }
+    }
 
     .project-div {
       opacity: 0;

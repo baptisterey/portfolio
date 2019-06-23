@@ -60,48 +60,17 @@
             [@fadeInRight]="{ value: isSectionActive('work'), params: { delay: headerAnimationDelay }, opacity : 1 }"
             (@fadeInRight.done)="setAfterAnimationStyles(workHeader, 'work')">{{ 'work.header' | translate }}</h2>
 
-        <div class="project-wrapper" fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutAlign="center start"
+        <div class="project-wrapper" fxLayout="row wrap" fxLayoutAlign="center stretch"
              fxLayoutGap="1em grid">
 
-          <div class="card-wrapper" fxFlex="33.33" fxFlex.lt-md="50" fxFlex.lt-sm="1 1 auto"
+          <div fxLayout class="card-wrapper" fxFlex="33.33" fxFlex.lt-md="50" fxFlex.lt-sm="100"
                *ngFor="let project of projectList; let i = index"
                #workProject (@fadeInUp.done)="setAfterAnimationStyles(workProject, 'work')"
                [@fadeInUp]="{ value: isSectionActive('work'),
                    params: { delay: contentAnimationDelay + (i * 100) }, opacity : 1 }">
-            <mat-card>
-              <mat-card-header>
-                <div mat-card-avatar class="example-header-image"></div>
-                <mat-card-title>{{ 'projects.' + project.name + '.title' | translate }}</mat-card-title>
-              </mat-card-header>
-              <img mat-card-image [src]="'assets/images/projects/' + project.name + '/thumbnail.png'"
-                   alt="Photo of a Shiba Inu">
-              <mat-card-content>
 
-                <p>
-                  {{ 'projects.' + project.name + '.sub-title' | translate }}
-                </p>
-
-                <p><i>{{ 'projects.' + project.name + '.tags' | translate }}</i></p>
-              </mat-card-content>
-            </mat-card>
-          </div>
-          <!--<div class="project-div"
-               #workProject (@fadeInUp.done)="setAfterAnimationStyles(workProject, 'work')"
-               [@fadeInUp]="{ value: isSectionActive('work'),
-                   params: { delay: contentAnimationDelay + (i * 100) }, opacity : 1 }"
-
-               *ngFor="let project of projectList; let i = index">
             <app-project [projectData]="project"></app-project>
           </div>
-
-          <div #moreComingSoon
-               class="project-div"
-               (@fadeInUp.done)="setAfterAnimationStyles(moreComingSoon, 'work')"
-               [@fadeInUp]="{ value: isSectionActive('work'),
-                     params: { delay: contentAnimationDelay + (projectList.length * 100) }, opacity : 1}"
-               fxLayout="column" fxLayoutAlign="center center">
-            <div class="more-coming">{{'project.more-coming' | translate}}...</div>
-          </div>-->
         </div>
 
       </ng-container>
@@ -139,13 +108,16 @@
         <div fxLayout="column" fxLayoutGap="8px">
           <div>{{'contact.other' | translate}}</div>
           <div fxLayout="row" fxLayoutAlign="center start" fxLayoutGap="15px">
-            <a class="icon-contact" target="_blank" href="https://github.com/Civetdelapin" rel="noreferrer">
+            <a class="icon-contact" title="Github" target="_blank" href="https://github.com/Civetdelapin"
+               rel="noreferrer">
               <fa-icon size="2x" [icon]="['fab', 'github']"></fa-icon>
             </a>
-            <a class="icon-contact" target="_blank" href="https://www.linkedin.com/in/baptiste-rey/" rel="noreferrer">
+            <a class="icon-contact" title="LinkedIn" target="_blank" href="https://www.linkedin.com/in/baptiste-rey/"
+               rel="noreferrer">
               <fa-icon size="2x" [icon]="['fab', 'linkedin']"></fa-icon>
             </a>
-            <a class="icon-contact" target="_blank" href="https://www.senscritique.com/Civetdelapin" rel="noreferrer">
+            <a class="icon-contact" title="Senscritique" target="_blank"
+               href="https://www.senscritique.com/Civetdelapin" rel="noreferrer">
               <fa-icon size="2x" [icon]="['fas', 'bookmark']"></fa-icon>
             </a>
           </div>

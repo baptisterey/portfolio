@@ -1,17 +1,19 @@
-<div (click)="openModal()" (mouseenter)="showDetails = true" (mouseleave)="showDetails = false" class="main-div" fxFill
-     fxLayout="column" fxLayoutAlign="center center"
-     [ngStyle]="{ 'background-image': 'url(assets/images/projects/' + projectData.name + '/thumbnail.png)'}">
+<mat-card fxLayout="column" class="project-card" (click)="openModal()" (mouseenter)="showDetails = true"
+          (mouseleave)="showDetails = false">
+  <mat-card-header>
+    <div mat-card-avatar
+         [ngStyle]="{ 'background-image': 'url(' + 'assets/images/projects/' + projectData.name + '/header.png' + ')'}"></div>
+    <mat-card-title
+      class="single-line-ellipsis">{{ 'projects.' + projectData.name + '.title' | translate }}</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image [src]="'assets/images/projects/' + projectData.name + '/thumbnail.png'"
+       [alt]="projectData.name+' thumbnail'">
+  <mat-card-content fxLayout="column" fxFlex="1 1 auto">
 
-  <div></div>
-
-  <div class="project-details" fxLayout="column">
-
-    <h4>{{ 'projects.' + projectData.name + '.title' | translate }}</h4>
-
-    <div>
+    <p fxFlex="1 1 auto">
       {{ 'projects.' + projectData.name + '.sub-title' | translate }}
-    </div>
+    </p>
 
-    <div><i>{{ 'projects.' + projectData.name + '.tags' | translate }}</i></div>
-  </div>
-</div>
+    <p class="project-tags"><i>{{ 'projects.' + projectData.name + '.tags' | translate }}</i></p>
+  </mat-card-content>
+</mat-card>

@@ -247,6 +247,9 @@ section#about {
 }
 
 section#work {
+
+  padding-bottom: 22px;
+
   .project-wrapper {
     width: 1050px;
     max-width: 90vw;
@@ -305,10 +308,7 @@ section#contact {
 }
 
 .icon-heart {
-  cursor: pointer;
   color: #F44336;
-
-  transition: transform .2s ease-in-out;
 }
 
 .more-coming {
@@ -324,4 +324,14 @@ section#contact {
   mat-dialog-container {
     overflow: auto;
   }
+}
+
+.single-line-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mat-card-header-text {
+  overflow: hidden;
 }

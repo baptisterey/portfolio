@@ -25,12 +25,24 @@
   mat-card-header {
     padding-bottom: 8px;
 
+
     mat-card-title {
       font-family: 'Concert One', cursive;
 
       font-size: 1.3em;
+
+      margin-bottom: 8px;
     }
 
+    mat-card-subtitle {
+      margin-bottom: 4px;
+    }
+
+  }
+
+  img {
+    border-bottom: 1px solid #dbdbdb;
+    border-top: 1px solid #dbdbdb;
   }
 
 

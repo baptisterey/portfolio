@@ -8,7 +8,7 @@
 
   <div class="content-wrapper" fxLayout.lt-md="column" fxLayout="row" fxLayoutAlign="center start" fxLayoutGap="15px">
 
-    <div class="swiper-div" fxFlex.lt-md="1 1 auto" fxFlex="60">
+    <div class="swiper-div" fxFlex.lt-md="1 1 auto" fxFlex="65">
       <swiper #swiperComponent [config]="swiperConfig" [(index)]="swiperIndex">
         <div *ngFor="let img of projectData.images; let index = index">
           <img [src]="'assets/images/projects/'+projectData.name+'/dialog/'+img.url" [alt]="img.alt">

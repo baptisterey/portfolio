@@ -39,7 +39,8 @@ export class ProjectModalComponent implements OnInit, AfterViewInit {
     mousewheel: true,
     scrollbar: false,
     navigation: false,
-    pagination: true
+    pagination: true,
+    loop: true
   };
 
 

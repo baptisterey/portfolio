@@ -21,6 +21,6 @@ export class AppComponent implements OnInit {
 
     this.translateService.get('app-title').subscribe(result =>{
       this.titleService.setTitle(result);
-    })
+    });
   }
 }

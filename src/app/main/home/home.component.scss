@@ -293,6 +293,9 @@ section#work {
 
 section#contact {
   font-size: 1.2em;
+  &:after {
+    content: none;
+  }
 }
 
 .icon-contact {
@@ -318,9 +321,9 @@ section#contact {
 }
 
 
-.cdk-overlay-pane {
-  height: 90vh;
+// ---------- GLOBAL STYLES -----------
 
+.cdk-overlay-pane {
   mat-dialog-container {
     overflow: auto;
   }
@@ -335,3 +338,9 @@ section#contact {
 .mat-card-header-text {
   overflow: hidden;
 }
+
+swiper > .swiper.s-wrapper .swiper-wrapper .swiper-slide {
+  overflow: hidden !important;
+}
+
+// ----------------------------------------

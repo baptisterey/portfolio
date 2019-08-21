@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NotFoundComponent } from './not-found/not-found.component';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MainModule } from "./main/main.module";
@@ -33,7 +32,6 @@ export function createTranslateLoader(http: HttpClient) {
 @NgModule({
   declarations: [
     AppComponent,
-    NotFoundComponent,
   ],
   imports: [
     BrowserModule,

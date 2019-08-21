@@ -18,7 +18,7 @@ import {TranslateModule} from '@ngx-translate/core';
 
 import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 import {library} from "@fortawesome/fontawesome-svg-core";
-import {faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons";
+import {faGithub, faLinkedin, faItchIo} from "@fortawesome/free-brands-svg-icons";
 import {
   faBookmark,
   faHeart,
@@ -53,6 +53,6 @@ import {MatCardModule} from "@angular/material";
 })
 export class MainModule {
   constructor() {
-    library.add(faGithub, faLinkedin, faBookmark, faHeart, faTimes, faChevronRight, faChevronLeft, faArrowDown)
+    library.add(faGithub, faLinkedin, faBookmark, faHeart, faTimes, faChevronRight, faChevronLeft, faArrowDown, faItchIo);
   }
 }

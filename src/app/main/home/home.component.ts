@@ -94,7 +94,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   public onIntersection(divId: string): void {
     if (this.activeSections.indexOf(divId) === -1) {
-      let position = this.sectionList.indexOf(divId);
+      const position = this.sectionList.indexOf(divId);
       for (let i = 0; i <= position; i++) {
         this.activeSections.push(this.sectionList[i]);
       }
@@ -114,5 +114,9 @@ export class HomeComponent implements OnInit, AfterViewInit {
       this.renderer.setStyle(element, 'opacity', 1);
       this.renderer.addClass(element, 'active');
     }
+  }
+
+  toggleLang(){
+    this.translate.use('fr');
   }
 }

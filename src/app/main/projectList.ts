@@ -1,9 +1,12 @@
-import {ProjectData} from "./home/models/project-data.model";
+import {ProjectData} from './home/models/project-data.model';
 
 export const ProjectList: Array<ProjectData> = [
   {
     name: 'infinite-torpor',
     images: [{
+      url: '1.gif',
+      alt: 'Infinite Torpor GIF 1'
+    }, {
       url: '1.png',
       alt: 'Infinite Torpor ScreenShot 1'
     },
@@ -19,9 +22,13 @@ export const ProjectList: Array<ProjectData> = [
   {
     name: 'this-is-the-life',
     images: [{
-      url: '1.png',
-      alt: 'This is the Life ScreenShot 1'
+      url: '1.gif',
+      alt: 'This is the Life GIF 1'
     },
+      {
+        url: '1.png',
+        alt: 'This is the Life ScreenShot 1'
+      },
       {
         url: '2.png',
         alt: 'This is the Life ScreenShot 2'

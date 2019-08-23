@@ -1,28 +1,28 @@
 {
 	"about": {
-		"content": "",
-		"header": ""
+		"content": "<p>Je suis actuellement en cursus d'ingénieur en informatique à l'<b>UTT</b> (Université Technologique de Troyes).</p><p>Durant de nombreux projets en équipe ou en solo, j'ai pu acquérir des connaissances techniques dans de nombreux domaines de l'informatique.</br> J'ai ainsi oeuvré à la spécification, réalisation et au management de ces projets.</p> <p>De plus, êtant vraiment passionné par la programmation, je passe la plupart de mon temps à travailler sur des projets personnels en dehors de ceux réalisés dans le cadre scolaire.</p><p>En ce moment je travaille sur plusieurs jeux (voir plus bas).</p>",
+		"header": "À propos"
 	},
-	"app-title": "",
+	"app-title": "Baptiste Rey",
 	"contact": {
-		"email": "",
-		"header": "",
-		"other": ""
+		"email": "Je suis joignable facilement par mail",
+		"header": "Contact",
+		"other": "Retrouvez-moi également sur"
 	},
 	"footer": {
-		"made-with": "",
-		"using-angular": ""
+		"made-with": "Développé avec",
+		"using-angular": "grâce à Angular 7"
 	},
-	"name": "",
+	"name": "Baptiste Rey",
 	"project": {
 		"more-coming": ""
 	},
 	"skills": {
 		"content": "",
-		"header": ""
+		"header": "Compétances"
 	},
-	"sub-header": "",
+	"sub-header": "Développeur passioné & polyvalent",
 	"work": {
-		"header": ""
+		"header": "Projets"
 	}
 }

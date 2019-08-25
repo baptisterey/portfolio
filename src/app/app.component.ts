@@ -1,6 +1,7 @@
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
-import { Title } from "@angular/platform-browser";
+import {TranslateService} from '@ngx-translate/core';
+import {Title} from '@angular/platform-browser';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -11,15 +12,24 @@ import { Title } from "@angular/platform-browser";
 export class AppComponent implements OnInit {
 
   constructor(private translateService: TranslateService,
-              private titleService : Title) {
+              private titleService: Title,
+              private route: ActivatedRoute) {
 
   }
 
-  ngOnInit(){
+  ngOnInit() {
     this.translateService.setDefaultLang('en');
     this.translateService.use('en');
 
-    this.translateService.get('app-title').subscribe(result =>{
+    this.route.paramMap.subscribe(params => {
+      const lang = params.get('lang');
+      if (lang === 'fr' || lang === 'FR') {
+        this.translateService.use('fr');
+      }
+    });
+
+
+    this.translateService.get('app-title').subscribe(result => {
       this.titleService.setTitle(result);
     });
   }

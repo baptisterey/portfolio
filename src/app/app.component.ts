@@ -21,12 +21,13 @@ export class AppComponent implements OnInit {
     this.translateService.setDefaultLang('en');
     this.translateService.use('en');
 
-    this.route.paramMap.subscribe(params => {
-      const lang = params.get('lang');
+    this.route.queryParams.subscribe(params => {
+      const lang = params['lang']
       if (lang === 'fr' || lang === 'FR') {
         this.translateService.use('fr');
       }
     });
+
 
 
     this.translateService.get('app-title').subscribe(result => {

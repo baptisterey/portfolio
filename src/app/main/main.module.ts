@@ -25,7 +25,7 @@ import {
   faTimes,
   faChevronRight,
   faChevronLeft,
-  faArrowDown
+  faAngleDoubleDown
 } from "@fortawesome/free-solid-svg-icons";
 import {DeviceDetectorModule} from "ngx-device-detector";
 import {IntersectionObserverDirective} from "../directives/intersection-observer.directive";
@@ -53,6 +53,6 @@ import {MatCardModule} from "@angular/material";
 })
 export class MainModule {
   constructor() {
-    library.add(faGithub, faLinkedin, faBookmark, faHeart, faTimes, faChevronRight, faChevronLeft, faArrowDown, faItchIo);
+    library.add(faGithub, faLinkedin, faBookmark, faHeart, faTimes, faChevronRight, faChevronLeft, faAngleDoubleDown, faItchIo);
   }
 }

@@ -190,9 +190,11 @@ header {
 
     left: 50%;
     transform: translateX(-50%);
-    bottom: 10px;
+    bottom: 0px;
 
-    color: $header-color;
+    color: #ffffffde;
+
+    font-size: 3.30em;
   }
 }
 

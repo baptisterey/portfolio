@@ -24,6 +24,8 @@ import {TextAnimation} from 'ngx-teximate';
 import {flipInY} from 'ng-animate';
 
 import {ProjectList} from "../projectList";
+import {OldProjectList} from "../projectList";
+
 import {TranslateService} from "@ngx-translate/core";
 import {ProjectData} from "./models/project-data.model";
 import {DeviceDetectorService} from "ngx-device-detector";
@@ -63,9 +65,12 @@ export class HomeComponent implements OnInit, AfterViewInit {
   myParticleParams: object = ParticleParams;
 
   projectList: Array<ProjectData> = ProjectList;
+  oldProjectList: Array<ProjectData> = OldProjectList;
 
   sectionList = ['about', 'work', 'skills', 'contact'];
   activeSections = [];
+
+  showOldProjects = false;
 
   constructor(public translate: TranslateService,
               private changeDetector: ChangeDetectorRef,

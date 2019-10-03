@@ -23,7 +23,8 @@
   },
   "sub-header": "Passionate & Polyvalent developer",
   "work": {
-    "header": "Work"
+    "header": "Work",
+    "show-older-projects": "Show older projects"
   },
   "projects": {
     "infinite-torpor": {

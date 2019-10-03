@@ -23,6 +23,7 @@
 	},
 	"sub-header": "Développeur passioné & polyvalent",
 	"work": {
-		"header": "Projets"
+		"header": "Projets",
+    "show-older-projects": "Voir les anciens projets"
 	}
 }

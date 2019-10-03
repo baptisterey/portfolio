@@ -60,7 +60,11 @@ export const ProjectList: Array<ProjectData> = [
         url: '5.png',
         alt: 'MagicLess ScreenShot 5'
       }]
-  }, {
+  }
+];
+
+export const OldProjectList: Array<ProjectData> = [
+  {
     name: 'crazy-eights',
     images: [
       {

@@ -33,7 +33,7 @@
         </div>
       </div>
     </div>
-   <fa-icon class="arrow-down-icon" [icon]="['fas', 'angle-double-down']"></fa-icon>
+    <fa-icon class="arrow-down-icon" [icon]="['fas', 'angle-double-down']"></fa-icon>
   </header>
 
   <main fxFlex="1 1 auto" fxLayout="column" fxLayoutAlign="start center" fxLayoutGap="30px">
@@ -71,7 +71,24 @@
 
             <app-project [projectData]="project"></app-project>
           </div>
+
+
+
+          <ng-container *ngIf="showOldProjects">
+            <div fxLayout class="card-wrapper" fxFlex="33.33" fxFlex.lt-md="50" fxFlex.lt-sm="100"
+                 *ngFor="let project of oldProjectList; let i = index"
+                 #oldProject (@fadeInUp.done)="setAfterAnimationStyles(oldProject, 'work')"
+                 [@fadeInUp]="{ value: true,
+                   params: { delay: contentAnimationDelay + (i * 100) }, opacity : 1 }">
+
+              <app-project [projectData]="project"></app-project>
+            </div>
+          </ng-container>
         </div>
+
+        <!--<button mat-button (click)="showOldProjects = true" *ngIf="!showOldProjects">{{ 'work.show-older-projects' | translate }}</button>-->
+
+        <div class="interactive" (click)="showOldProjects = true" *ngIf="!showOldProjects">{{ 'work.show-older-projects' | translate }}</div>
 
       </ng-container>
     </section>

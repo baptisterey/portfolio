@@ -72,23 +72,27 @@
             <app-project [projectData]="project"></app-project>
           </div>
 
-
-
           <ng-container *ngIf="showOldProjects">
             <div fxLayout class="card-wrapper" fxFlex="33.33" fxFlex.lt-md="50" fxFlex.lt-sm="100"
                  *ngFor="let project of oldProjectList; let i = index"
                  #oldProject (@fadeInUp.done)="setAfterAnimationStyles(oldProject, 'work')"
-                 [@fadeInUp]="{ value: true,
-                   params: { delay: contentAnimationDelay + (i * 100) }, opacity : 1 }">
+                 [@fadeInUp]="{ value:  isSectionActive('work'),
+                   params: { delay: (i * 100) }, opacity : 1 }">
 
               <app-project [projectData]="project"></app-project>
             </div>
           </ng-container>
         </div>
 
-        <!--<button mat-button (click)="showOldProjects = true" *ngIf="!showOldProjects">{{ 'work.show-older-projects' | translate }}</button>-->
-
-        <div class="interactive" (click)="showOldProjects = true" *ngIf="!showOldProjects">{{ 'work.show-older-projects' | translate }}</div>
+        <div
+            #showOldProject
+            *ngIf="!showOldProjects"
+            class="interactive"
+            (click)="showOldProjects = true"
+            [@fadeInShowOldProject]="{ value: isSectionActive('work'), params: { delay: contentAnimationDelay + (projectList.length * 430), opacity : 1 }}"
+            (@fadeInShowOldProject.done)="$event.toState ? renderer.setStyle(showOldProject, 'opacity', 1) : ''; ">
+          {{ 'work.show-older-projects' | translate }}
+        </div>
 
       </ng-container>
     </section>

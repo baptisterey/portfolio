@@ -38,6 +38,7 @@ import {DeviceDetectorService} from "ngx-device-detector";
   animations: [
     fadeInOnEnterAnimation({delay: 0}),
     fadeInAnimation({anchor: 'fadeIn'}),
+    fadeInAnimation({anchor: 'fadeInShowOldProject'}),
     bounceInOnEnterAnimation({delay: 400}),
     fadeInUpAnimation({anchor: 'fadeInUp'}),
     fadeInLeftAnimation({anchor: 'fadeInLeft'}),
@@ -80,7 +81,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {
-
   }
 
   ngAfterViewInit() {
@@ -123,5 +123,9 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   toggleLang(){
     this.translate.use('fr');
+  }
+
+  printEvent(event){
+    console.log(event);
   }
 }

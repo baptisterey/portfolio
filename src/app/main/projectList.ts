@@ -2,6 +2,24 @@ import {ProjectData} from './home/models/project-data.model';
 
 export const ProjectList: Array<ProjectData> = [
   {
+    name: 'chicken-panic',
+    images: [{
+      url: '0.png',
+      alt: 'Chicken Panic! ScreenShot 0'
+    }, {
+      url: '1.png',
+      alt: 'Chicken Panic! ScreenShot 1'
+    },
+      {
+        url: '2.png',
+        alt: 'Chicken Panic! ScreenShot 2'
+      },
+      {
+        url: '3.png',
+        alt: 'Chicken Panic! ScreenShot 3'
+      }]
+  },
+  {
     name: 'infinite-torpor',
     images: [{
       url: '1.gif',

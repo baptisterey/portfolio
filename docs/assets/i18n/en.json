@@ -1,6 +1,6 @@
 {
   "about": {
-    "content": "<p>I am currently completing a <b>master's degree</b> in <b>computer science</b> at the <b>UTT</b> (Université Technologique de Troyes) in <b>France</b>. </p> <p>I am deeply passionate about programming as I spend most of my time <b>building things</b>.</br>Currently, I am working on <b>games</b>, you can take a look at them below!</p>",
+    "content": "<p>I am currently completing a <b>master's degree</b> in <b>computer science</b> with a focus in <b>Video Games development</b> at the <b>UQAC</b> (Université du Quèbec à Chicoutimi) in <b>Canada</b>. </p> <p>I am deeply passionate about programming as I spend most of my time <b>building things</b>.</br>Currently, I am working on <b>games</b>, you can take a look at them below!</p>",
     "header": "About"
   },
   "app-title": "Baptiste Rey",
@@ -24,9 +24,18 @@
   "sub-header": "Passionate & Polyvalent developer",
   "work": {
     "header": "Work",
-    "show-older-projects": "Show older projects"
+    "show-older-projects": "Show old projects"
   },
   "projects": {
+    "chicken-panic": {
+      "title": "Chicken Panic! \uD83E\uDD9C",
+      "sub-title": "Couch versus game with pirates and chickens!",
+      "tags": "Local Multi-player - Pirates - Unity - C#",
+      "modal": {
+        "body": "<p><b>Chicken Panic!</b> is a couch co-op and versus game where two teams of two players compete to be <b>last crew standing</b> by <b>shooting chickens</b> through cannons.</p><p>I worked on the <b>programming</b> and <b>game designing</b> part.</p><p>I also managed the project with a <b>agile approach</b>, setting objectives via <b>weekly meetings</b>.</p><p>This was a <b>personal project</b> with my little brother Paul Rey (game artist).</p><p>Made with <b>Unity</b> in <b>C#</b>.</p><p><a href=\"https://www.youtube.com/watch?v=Zf4m8rSr51M\" rel=\"noreferrer\" target=\"_blank\">See the trailer on Youtube</a></p><p><a rel=\"noreferrer\" href=\"https://civetdelapin.itch.io/chicken-panic\" target=\"_blank\">See more and download on itch.io</a></p>"
+      },
+      "period" : "March 2019 - Nov. 2019"
+    },
     "infinite-torpor": {
       "title": "Infinite Torpor",
       "sub-title": "Dungeon Crawler made from scratch in C++ using SDL.",
@@ -41,7 +50,7 @@
       "sub-title": "Game jam submission made in 72h with Unity.",
       "tags": "Game Jam - Unity - C#",
       "modal": {
-        "body": "<p><b>Control</b> your claw as the <b>baby Grim Reaper</b> and try to <b>catch</b> as many <b>tiny humans</b> as you can !<br/>Be careful, this is <b>not a easy task</b>!</p><p>This was a <b>personal project</b> with my little brother (game artist)</p><p>I worked on the <b>programming</b> and <b>game designing</b> part.</p><p>Made with <b>Unity</b> in <b>C#</b> in 72h for the <b>GDL - July Jam</b>.</p><p><a href=\"https://superfondue.itch.io/tldr-this-is-the-life\" rel=\"noreferrer\" target=\"_blank\">PLAY on itch.io</a></p> <!--<p><a rel=\"noreferrer\" href=\"https://play.google.com/store/apps/details?id=com.ReyBrothers.ThisIsTheLife\" target=\"_blank\">Download the game for Android</a></p>-->"
+        "body": "<p><b>Control</b> your claw as the <b>baby Grim Reaper</b> and try to <b>catch</b> as many <b>tiny humans</b> as you can !<br/>Be careful, this is <b>not a easy task</b>!</p><p>This was a <b>personal project</b> with my little brother Paul Rey (game artist).</p><p>I worked on the <b>programming</b> and <b>game designing</b> part.</p><p>Made with <b>Unity</b> in <b>C#</b> in 72h for the <b>GDL - July Jam</b>.</p><p><a href=\"https://superfondue.itch.io/tldr-this-is-the-life\" rel=\"noreferrer\" target=\"_blank\">PLAY on itch.io</a></p> <!--<p><a rel=\"noreferrer\" href=\"https://play.google.com/store/apps/details?id=com.ReyBrothers.ThisIsTheLife\" target=\"_blank\">Download the game for Android</a></p>-->"
       },
       "period" : "July 2018"
     },
@@ -50,7 +59,7 @@
       "sub-title": "Metroidvania made with Unity.",
       "tags": "Adventure - Unity - C#",
       "modal": {
-        "body": "<p><b>MagicLess</b> is a </b>2D pixel-art Metroidvania</b> with <b>strong</b> and <b>unique enemies</b>, <b>exploration</b>, <b>NPC dialogues</b>, <b>quests</b> and even <b>one boss</b> (hooray \uD83C\uDF89)!</p><p>This was a <b>personal project</b> with my little brother. <br/> <br/> I worked on the <b>programming</b> and <b>game designing</b> part.</p><p>Made with <b>Unity</b> in <b>C#</b>.</p><p><a href=\"https://www.youtube.com/watch?v=7pzSjvDpcTY\" rel=\"noreferrer\" target=\"_blank\">See the trailer on Youtube</a></p><p><a rel=\"noreferrer\" href=\"https://civetdelapin.itch.io/magicless\" target=\"_blank\">See more and PLAY on itch.io</a></p>"
+        "body": "<p><b>MagicLess</b> is a </b>2D pixel-art Metroidvania</b> with <b>strong</b> and <b>unique enemies</b>, <b>exploration</b>, <b>NPC dialogues</b>, <b>quests</b> and even <b>one boss</b> (hooray \uD83C\uDF89)!</p><p>This was a <b>personal project</b> with my little brother Paul Rey (game artist). <br/> <br/> I worked on the <b>programming</b> and <b>game designing</b> part.</p><p>Made with <b>Unity</b> in <b>C#</b>.</p><p><a href=\"https://www.youtube.com/watch?v=7pzSjvDpcTY\" rel=\"noreferrer\" target=\"_blank\">See the trailer on Youtube</a></p><p><a rel=\"noreferrer\" href=\"https://civetdelapin.itch.io/magicless\" target=\"_blank\">See more and PLAY on itch.io</a></p>"
       },
       "period" : "Jan. 2018 - April 2018"
     },

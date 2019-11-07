@@ -1,6 +1,6 @@
 {
   "about": {
-    "content": "<p>I am currently completing a <b>master's degree</b> in <b>computer science</b> with a focus in <b>Video Games development</b> at the <b>UQAC</b> (Université du Quèbec à Chicoutimi) in <b>Canada</b>. </p><p>I have a <b>deep interest</b> in anything programming related but more especially in <b>video game development</b>. </br> I try to create fun games and learn a lot along the journey!</p> <p>I am looking to start a career in the game industry via an <b>internship</b> of 6 months starting <b>July 2020</b>.</p>",
+    "content": "<p>I am currently completing a <b>master's degree</b> in <b>computer science</b> with a focus in <b>Video Games development</b> at the <b>UQAC</b> (Université du Quèbec à Chicoutimi) in <b>Canada</b>. </p><p>I have a <b>deep interest</b> in anything programming related but more especially in <b>video game development</b>. </br>I try to create fun games and I learn a lot along the journey!</p> <p>I am looking for an 6 months <b>internship</b> starting <b>July 2020</b> or later.</p>",
     "header": "About"
   },
   "app-title": "Baptiste Rey",
@@ -23,8 +23,11 @@
   },
   "sub-header": "Passionate & Polyvalent developer",
   "work": {
-    "header": "Work",
+    "header": "Games",
     "show-older-projects": "Show old projects"
+  },
+  "work2": {
+    "header": "Other projects"
   },
   "projects": {
     "chicken-panic": {
@@ -34,7 +37,16 @@
       "modal": {
         "body": "<p><b>Chicken Panic!</b> is a couch co-op and versus game where two teams of two players compete to be <b>last crew standing</b> by <b>shooting chickens</b> through cannons.</p><p>I worked on the <b>programming</b> and <b>game designing</b> part.</p><p>I also managed the project with a <b>agile approach</b>, setting objectives via <b>weekly meetings</b>.</p><p>This was a <b>personal project</b> with my little brother Paul Rey (game artist).</p><p>Made with <b>Unity</b> in <b>C#</b>.</p><p><a href=\"https://www.youtube.com/watch?v=Zf4m8rSr51M\" rel=\"noreferrer\" target=\"_blank\">See the trailer on Youtube</a></p><p><a rel=\"noreferrer\" href=\"https://civetdelapin.itch.io/chicken-panic\" target=\"_blank\">See more and download on itch.io</a></p>"
       },
-      "period" : "March 2019 - Nov. 2019"
+      "period": "March 2019 - Nov. 2019"
+    },
+    "keep-your-head-above-water": {
+      "title": "Keep your head above water",
+      "sub-title": "Climb for your life by cooperating or betraying! ⚔️",
+      "tags": "Game Jam - Local Multi-player - Unity - C#",
+      "modal": {
+        "body": "<p><b>Chicken Panic!</b> is a couch co-op and versus game where two teams of two players compete to be <b>last crew standing</b> by <b>shooting chickens</b> through cannons.</p><p>I worked on the <b>programming</b> and <b>game designing</b> part.</p><p>I also managed the project with a <b>agile approach</b>, setting objectives via <b>weekly meetings</b>.</p><p>This was a <b>personal project</b> with my little brother Paul Rey (game artist).</p><p>Made with <b>Unity</b> in <b>C#</b>.</p><p><a href=\"https://www.youtube.com/watch?v=Zf4m8rSr51M\" rel=\"noreferrer\" target=\"_blank\">See the trailer on Youtube</a></p><p><a rel=\"noreferrer\" href=\"https://petitc00kie.itch.io/get-your-head-above-water\" target=\"_blank\">See more and download on itch.io</a></p>"
+      },
+      "period": "Oct. 2019"
     },
     "infinite-torpor": {
       "title": "Infinite Torpor",
@@ -43,16 +55,16 @@
       "modal": {
         "body": "<p>Explore <b>procedurally generated</b> dungeons, fight back and try to find a way out!</p><p>This was a <b>personal project</b>.</p><p> I built the game engine <b>from scratch</b> (game loop, collisions detection, buttons...), and developed <b>game mechanics</b> (combat system, enemies behavior...).</br>The game is <b>procedurally generated</b> based on hand-crafted rooms.</p><p>Made in <b>C++</b> with only <b>SDL2</b>.</p><p><a target=\"_blank\" href=\"https://github.com/Civetdelapin/InfiniteTorpor\" rel=\"noreferrer\">See the source code on Github</a></p> <p><a target=\"_blank\" href=\"https://opengameart.org/users/calciumtrice\", rel=\"noreferrer\">Art by calciumtrice</a></p>"
       },
-      "period" : "Sept. 2018 - Nov. 2018"
+      "period": "Sept. 2018 - Nov. 2018"
     },
     "this-is-the-life": {
       "title": "TL; DR: This is the life",
       "sub-title": "Game jam submission made in 72h with Unity.",
       "tags": "Game Jam - Unity - C#",
       "modal": {
-        "body": "<p><b>Control</b> your claw as the <b>baby Grim Reaper</b> and try to <b>catch</b> as many <b>tiny humans</b> as you can !<br/>Be careful, this is <b>not a easy task</b>!</p><p>This was a <b>personal project</b> with my little brother Paul Rey (game artist).</p><p>I worked on the <b>programming</b> and <b>game designing</b> part.</p><p>Made with <b>Unity</b> in <b>C#</b> in 72h for the <b>GDL - July Jam</b>.</p><p><a href=\"https://superfondue.itch.io/tldr-this-is-the-life\" rel=\"noreferrer\" target=\"_blank\">PLAY on itch.io</a></p> <!--<p><a rel=\"noreferrer\" href=\"https://play.google.com/store/apps/details?id=com.ReyBrothers.ThisIsTheLife\" target=\"_blank\">Download the game for Android</a></p>-->"
+        "body": "<p><b>Control</b> your claw as the <b>baby Grim Reaper</b> and try to <b>catch</b> as many <b>tiny humans</b> as you can !<br/>Be careful, this is <b>not a easy task</b>!</p><p>This was a <b>personal project</b> with my little brother Paul Rey (game artist).</p><p>I worked on the <b>programming</b> and <b>game designing</b> part.</p><p>Made with <b>Unity</b> in <b>C#</b> in 72h for the <b>GDL - July Jam</b>.</p><p><a href=\"https://superfondue.itch.io/tldr-this-is-the-life\" rel=\"noreferrer\" target=\"_blank\">PLAY on itch.io</a></p> <p><a rel=\"noreferrer\" href=\"https://play.google.com/store/apps/details?id=com.ReyBrothers.ThisIsTheLife2\" target=\"_blank\">Download the game for Android</a></p>"
       },
-      "period" : "July 2018"
+      "period": "July 2018"
     },
     "magicless": {
       "title": "MagicLess",
@@ -61,7 +73,7 @@
       "modal": {
         "body": "<p><b>MagicLess</b> is a </b>2D pixel-art Metroidvania</b> with <b>strong</b> and <b>unique enemies</b>, <b>exploration</b>, <b>NPC dialogues</b>, <b>quests</b> and even <b>one boss</b> (hooray \uD83C\uDF89)!</p><p>This was a <b>personal project</b> with my little brother Paul Rey (game artist). <br/> <br/> I worked on the <b>programming</b> and <b>game designing</b> part.</p><p>Made with <b>Unity</b> in <b>C#</b>.</p><p><a href=\"https://www.youtube.com/watch?v=7pzSjvDpcTY\" rel=\"noreferrer\" target=\"_blank\">See the trailer on Youtube</a></p><p><a rel=\"noreferrer\" href=\"https://civetdelapin.itch.io/magicless\" target=\"_blank\">See more and PLAY on itch.io</a></p>"
       },
-      "period" : "Jan. 2018 - April 2018"
+      "period": "Jan. 2018 - April 2018"
     },
     "crazy-eights": {
       "title": "Crazy Eights!",
@@ -70,16 +82,16 @@
       "modal": {
         "body": "<p>Play the famous <b>Crazy Eights</b> game against a <b>computer</b>! <br/>You can play with a <b>GUI</b> or a <b>command line interface</b> and even both at the <b>same time</b>. <br/>You can even play with <b>different rules</b>.</p><p>This was a <b>school project</b> with a team of 2 people.</p><p>The code uses the <b>MVC</b> pattern and is <b>object-oriented</b>.<br/>In order to run the <b>concurrent interfaces</b>, the game uses <b>multiple threads</b>.</p><p>Made in <b>Java</b> and <b>Swing</b> for the GUI.</p><p><a rel=\"noreferrer\" href=\"https://github.com/Civetdelapin/8americain\" target=\"_blank\">See the source code on Github</a></p>"
       },
-      "period" : "Sept. 2017 - Dec. 2017"
+      "period": "Sept. 2017 - Dec. 2017"
     },
     "fight-for-fight": {
       "title": "Fight for... FIGHT!",
       "sub-title": "Made in 48h with Pygame for a school game jam.",
       "tags": "School Project - Game Jam - Python - Pygame",
       "modal": {
-        "body": "<p>Play with up to four friends and compete against each other in this couch versus game! Summons <b>powerful and unique arrows</b>, dodge projectiles with your dash and be the <b>last one alive</b>!</p><p>You can even create your <b>own arenas</b>!</p>\n                              <p>It was a <b>school project</b> with a team of 5 people.</p><p>I <b>managed</b> the project by ensuring that every member worked on something different in a <b>coherent whole</b>. I also worked on the <b>core-engine</b> of the game and the main menu.</br>We designed the classes in an object-oriented way.</p><p>Made in <b>Python</b> and with <b>Pygame</b> in 72h for a <b>school game jam</b>.</p><p><a rel=\"noreferrer\" href=\"https://www.youtube.com/watch?v=Q0SkNE5GFcE\" target=\"_blank\">See the trailer on Youtube</a></p><p><a rel=\"noreferrer\" href=\"https://github.com/Civetdelapin/fightforfight\" target=\"_blank\">See the source code on Github</a></p>"
+        "body": "<p>Play with up to four friends and compete against each other in this couch versus game! Summons <b>powerful and unique arrows</b>, dodge projectiles with your dash and be the <b>last one alive</b>!</p><p>You can even create your <b>own arenas</b>!</p>\n<p>It was a <b>school project</b> with a team of 5 people.</p><p>I <b>managed</b> the project by ensuring that every member worked on something different in a <b>coherent whole</b>. I also worked on the <b>core-engine</b> of the game and the main menu.</br>We designed the classes in an object-oriented way.</p><p>Made in <b>Python</b> and with <b>Pygame</b> in 72h for a <b>school game jam</b>.</p><p><a rel=\"noreferrer\" href=\"https://www.youtube.com/watch?v=Q0SkNE5GFcE\" target=\"_blank\">See the trailer on Youtube</a></p><p><a rel=\"noreferrer\" href=\"https://github.com/Civetdelapin/fightforfight\" target=\"_blank\">See the source code on Github</a></p>"
       },
-      "period" : "Feb. 2017"
+      "period": "Feb. 2017"
     },
     "monopoly": {
       "title": "Monopoly",
@@ -88,7 +100,34 @@
       "modal": {
         "body": "<p>Destroy friendship while playing <b>Monopoly</b> against your <b>friends</b>! <br/>All the <b>mechanics</b> of the <b>original game</b> are included.</b></p><p>It was a <b>school project</b> with a team of 3 people.</p><p>The code uses the <b>MVC</b> pattern and is <b>object-oriented</b>.</p><p>Made in <b>Java</b> and <b>Swing</b> for the GUI.</p>"
       },
-      "period" : "April 2016 - Jun 2016"
+      "period": "April 2016 - Jun 2016"
+    },
+    "portfolio": {
+      "title": "Portfolio",
+      "sub-title": "Personal portfolio made with Angular 7.",
+      "tags": "Front End - TypeScript - Angular",
+      "modal": {
+        "body": "<p>For my portfolio, I chose to make it myself with <b>Angular</b> because I like the framework and wanted to experiment with the animation system.</p><p>I <b>designed</b> the website and made most of the HTML and CSS using <b>flexbox</b> for its awesome layout system. </br> The website is fully <b>responsive</b> and works on desktops, phones and tablets.</p> <p>After some failures with the native animations system, I finally used <a target=\"_blank\" href='https://github.com/filipows/angular-animations'>angular-animations</a>. This library is very great and works very well with the Angular's eco-system.</p><p>To <b>trigger the animations</b> at the right time, I initially did it via Javascript but I wasn't satisfied with the result.</br> I ended up using the <a target=\"_blank\" href='https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API'>Intersection Observer API</a> via a <b>custom directive</b>.</p>"
+      },
+      "period": "Apr. 2019 - Now"
+    },
+    "jsjs": {
+      "title": "JeSaisJeSais",
+      "sub-title": "Platform for consulting and creating online courses with serious games mechanics.",
+      "tags": "Full-Stack - Angular - Django",
+      "modal": {
+        "body": "<p></p>"
+      },
+      "period": "Jan. 2019 - July 2019"
+    },
+    "filmder": {
+      "title": "Filmder",
+      "sub-title": "Movie picking made easy!",
+      "tags": "Android - iOS - Mobile development",
+      "modal": {
+        "body": "<p><b>Filmder</b> is an application for both Android and iOS that allows users to find easily movies to watch.</p><p><b>Key features</b> : <ul><li>Save or discard movies by swapping right or left</li><li>Discover movies based on custom search criteria.</li><li>Get a quick overview of movies by showing users score, director and casting.</li><li>Keep track of movies to watch and movies watched.</li></ul></p> <p>This was a <b>school project</b> made by Nicolas Guevara and me.</p><p>We developed two versions of the app, using <b>Android Studio</b> for the Android version and <b>xCode</b> for the iOS version. </p><p>Finally, we used the <a target=\"_blank\" href='https://www.themoviedb.org/?language=en-US'>The Movie DB</a> API to populate the app with movies.</p> "
+      },
+      "period": "Nov. 2018 - Jan. 2019"
     }
   }
 }

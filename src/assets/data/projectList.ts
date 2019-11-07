@@ -1,6 +1,7 @@
 import {ProjectData} from '../../app/main/home/models/project-data.model';
 
 export const ProjectList: Array<ProjectData> = [
+
   {
     name: 'chicken-panic',
     images: [{
@@ -17,6 +18,24 @@ export const ProjectList: Array<ProjectData> = [
       {
         url: '3.png',
         alt: 'Chicken Panic! ScreenShot 3'
+      }]
+  },
+  {
+    name: 'keep-your-head-above-water',
+    images: [{
+      url: '0.png',
+      alt: 'KYHAW ScreenShot 0'
+    }, {
+      url: '1.png',
+      alt: 'KYHAW ScreenShot 1'
+    },
+      {
+        url: '2.png',
+        alt: 'KYHAW ScreenShot 2'
+      },
+      {
+        url: '3.png',
+        alt: 'KYHAW ScreenShot 3'
       }]
   },
   {
@@ -82,7 +101,34 @@ export const ProjectList: Array<ProjectData> = [
 ];
 export const OldProjectList: Array<ProjectData> = [];
 
-
+export const ProjectList2: Array<ProjectData> = [
+  {
+    name: 'jsjs',
+    images: []
+  }, {
+    name: 'portfolio',
+    images: []
+  },
+  {
+    name: 'filmder',
+    images: [{
+      url: '1.png',
+      alt: 'Filmder ScreenShot 1'
+    },
+      {
+        url: '2.png',
+        alt: 'Filmder ScreenShot 2'
+      },
+      {
+        url: '3.png',
+        alt: 'Filmder ScreenShot 3'
+      },
+      {
+        url: '4.png',
+        alt: 'Filmder ScreenShot 4'
+      }]
+  }
+];
 export const OldProjectList2: Array<ProjectData> = [
   {
     name: 'crazy-eights',

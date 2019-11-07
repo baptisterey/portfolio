@@ -39,7 +39,7 @@ export const SkillList: Array<SkillData> = [
     },
 
     {
-      content: 'Angular / Django / Backbone',
+      content: 'Angular / Backbone / Django',
       icon: {
         category: 'fas',
         name: 'project-diagram'

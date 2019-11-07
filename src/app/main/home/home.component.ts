@@ -25,6 +25,10 @@ import {flipInY} from 'ng-animate';
 
 import {ProjectList} from '../../../assets/data/projectList';
 import {OldProjectList} from '../../../assets/data/projectList';
+
+import {ProjectList2} from '../../../assets/data/projectList';
+import {OldProjectList2} from '../../../assets/data/projectList';
+
 import {SkillList} from '../../../assets/data/skillList';
 
 import {TranslateService} from '@ngx-translate/core';
@@ -66,7 +70,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   headerIconsAnimationDelay: number = 1600;
 
   sectionHeaderAnimationSpeed: number = 650;
-  contentAnimationDelay: number = 800;
+  contentAnimationDelay: number = 700;
 
   myParticleStyle: object = ParticleStyle;
   myParticleParams: object = ParticleParams;
@@ -74,12 +78,16 @@ export class HomeComponent implements OnInit, AfterViewInit {
   projectList: Array<ProjectData> = ProjectList;
   oldProjectList: Array<ProjectData> = OldProjectList;
 
+  projectList2: Array<ProjectData> = ProjectList2;
+  oldProjectList2: Array<ProjectData> = OldProjectList2;
+
   skillList: Array<SkillData> = SkillList;
 
-  sectionList = ['about', 'skills', 'work', , 'contact'];
+  sectionList = ['about', 'skills', 'work', 'work2' , 'contact'];
   activeSections = [];
 
   showOldProjects = false;
+  showOldProjects2 = false;
 
   constructor(public translate: TranslateService,
               private changeDetector: ChangeDetectorRef,

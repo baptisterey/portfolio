@@ -107,7 +107,7 @@
              *ngFor="let skillData of skillList; let i = index"
              #skill (@fadeInUp.done)="setAfterAnimationStyles(skill, 'skills')"
              [@fadeInUp]="{ value:  isSectionActive('skills'),
-                   params: { delay: contentAnimationDelay + (i * 100) }, opacity : 1 }">
+                   params: { duration: 500, delay: contentAnimationDelay + (i * 100) }, opacity : 1 }">
           <app-skill [skillData]="skillData"></app-skill>
         </div>
       </div>
@@ -153,6 +153,51 @@
             (click)="showOldProjects = true"
             [@fadeInShowOldProject]="{ value: isSectionActive('work'), params: { delay: contentAnimationDelay + (projectList.length * 430), opacity : 1 }}"
             (@fadeInShowOldProject.done)="$event.toState ? renderer.setStyle(showOldProject, 'opacity', 1) : ''; ">
+          {{ 'work.show-older-projects' | translate }}
+        </div>
+
+      </ng-container>
+    </section>
+
+    <section id="work2">
+      <ng-container>
+        <div class="view-port-trigger" appIntersectionObserver (onIntersection)="onIntersection('work2')">
+        </div>
+        <h2 #workHeader2
+            [@fadeInLeft]="{ value: isSectionActive('work2'), params: {duration: sectionHeaderAnimationSpeed, delay: headerAnimationDelay }, opacity : 1 }"
+            (@fadeInLeft.done)="setAfterAnimationStyles(workHeader2, 'work2')">{{ 'work2.header' | translate }}</h2>
+
+        <div class="projects-wrapper" fxLayout="row wrap" fxLayoutAlign="center stretch"
+             fxLayoutGap="1em grid">
+
+          <div fxLayout class="card-wrapper" fxFlex="33.33" fxFlex.lt-md="50" fxFlex.lt-sm="100"
+               *ngFor="let project of projectList2; let i = index"
+               #workProject (@fadeInUp.done)="setAfterAnimationStyles(workProject, 'work2')"
+               [@fadeInUp]="{ value: isSectionActive('work2'),
+                   params: { delay: contentAnimationDelay + (i * 100) }, opacity : 1 }">
+
+            <app-project [projectData]="project"></app-project>
+          </div>
+
+          <ng-container *ngIf="showOldProjects2">
+            <div fxLayout class="card-wrapper" fxFlex="33.33" fxFlex.lt-md="50" fxFlex.lt-sm="100"
+                 *ngFor="let project of oldProjectList2; let i = index"
+                 #oldProject (@fadeInUp.done)="setAfterAnimationStyles(oldProject, 'work2')"
+                 [@fadeInUp]="{ value:  isSectionActive('work2'),
+                   params: { delay: (i * 100) }, opacity : 1 }">
+
+              <app-project [projectData]="project"></app-project>
+            </div>
+          </ng-container>
+        </div>
+
+        <div
+            #showOldProject2
+            *ngIf="!showOldProjects2 && oldProjectList2.length > 0"
+            class="interactive"
+            (click)="showOldProjects2 = true"
+            [@fadeInShowOldProject]="{ value: isSectionActive('work2'), params: { delay: contentAnimationDelay + (projectList2.length * 430), opacity : 1 }}"
+            (@fadeInShowOldProject.done)="$event.toState ? renderer.setStyle(showOldProject2, 'opacity', 1) : ''; ">
           {{ 'work.show-older-projects' | translate }}
         </div>
 

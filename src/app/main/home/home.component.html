@@ -25,11 +25,45 @@
         <div class="sub-title-wrapper">
           <teximate *ngIf="showHeaderText" [enter]="enterTextAnimation" [text]="getSubHeader()"></teximate>
         </div>
-        <div fxLayout="row" fxLayoutGap="8px">
+
+        <!--<div fxLayout="row" fxLayoutGap="8px">
           <img class="pokeball" [alt]="'pokeball_' + i"
                [@rotateInDownRightOnEnter]="{ value: '', params: { delay: 2500+(i * 150) } }"
                *ngFor="let i of [0, 1, 2, 3]"
                [src]=" 'assets/images/pokeballs/' + i + '.svg'">
+        </div>-->
+
+        <div fxLayout="row" fxLayoutAlign="center start" fxLayoutGap="15px">
+          <a class="icon-header" title="Github" target="_blank" href="https://github.com/Civetdelapin"
+             rel="noreferrer"
+             [@rotateInDownRightOnEnter]="{ value: '', params: { delay: headerIconsAnimationDelay + (0 * 150) } }">
+            <fa-icon [icon]="['fab', 'github']"></fa-icon>
+          </a>
+          <a class="icon-header" title="LinkedIn" target="_blank" href="https://www.linkedin.com/in/baptiste-rey/"
+             rel="noreferrer"
+             [@rotateInDownRightOnEnter]="{ value: '', params: { delay: headerIconsAnimationDelay + (1 * 150) } }">
+            <fa-icon [icon]="['fab', 'linkedin']"></fa-icon>
+          </a>
+
+          <!--<a class="icon-contact" title="Senscritique" target="_blank"
+             href="https://www.senscritique.com/Civetdelapin" rel="noreferrer">
+            <fa-icon [icon]="['fas', 'bookmark']"></fa-icon>
+          </a>-->
+
+          <a class="icon-header" title="Itch.io" target="_blank"
+             href="https://civetdelapin.itch.io/"
+             rel="noreferrer"
+             [@rotateInDownRightOnEnter]="{ value: '', params: { delay: headerIconsAnimationDelay + (2 * 150) } }">
+            <fa-icon [icon]="['fab', 'itch-io']"></fa-icon>
+          </a>
+
+          <a class="icon-header" title="Email" target="_blank"
+             href="mailto:baptiste.rey05@gmail.com"
+             rel="noreferrer"
+             [@rotateInDownRightOnEnter]="{ value: '', params: { delay: headerIconsAnimationDelay + (3 * 150) } }">
+            <fa-icon [icon]="['fas', 'envelope']"></fa-icon>
+          </a>
+
         </div>
       </div>
     </div>
@@ -41,7 +75,7 @@
       <ng-container>
         <div class="view-port-trigger" appIntersectionObserver (onIntersection)="onIntersection('about')">
         </div>
-        <h2 #aboutHeader [@fadeInLeft]="{ value: isSectionActive('about'), params: { delay: headerAnimationDelay },
+        <h2 #aboutHeader [@fadeInLeft]="{ value: isSectionActive('about'), params: {duration: sectionHeaderAnimationSpeed, delay: headerAnimationDelay },
            opacity : 1 }"
             (@fadeInLeft.done)="setAfterAnimationStyles(aboutHeader, 'about')">{{ "about.header" | translate }}</h2>
         <div class="content" #aboutParagraph
@@ -52,15 +86,43 @@
       </ng-container>
     </section>
 
+    <section id="skills">
+      <div class="view-port-trigger"
+           appIntersectionObserver (onIntersection)="onIntersection('skills')">
+      </div>
+      <h2 #skillsHeader
+          [@fadeInRight]="{ value: isSectionActive('skills'), params: {duration: sectionHeaderAnimationSpeed, delay: headerAnimationDelay }, opacity : 1 }"
+          (@fadeInRight.done)="setAfterAnimationStyles(skillsHeader, 'skills')">{{ 'skills.header' | translate }}</h2>
+      <div class="content" #skillsParagraph
+           [@fadeIn]="{ value: isSectionActive('skills'), params: { delay: contentAnimationDelay }, opacity : 1}"
+           (@fadeIn.done)="setAfterAnimationStyles(skillsParagraph, 'skills')"
+           innerHTML="{{'skills.content' | translate}}">
+      </div>
+
+      <div class="skills-wrapper"
+           fxLayout="row wrap"
+           fxLayoutAlign="center stretch"
+           fxLayoutGap="1em grid">
+        <div fxLayout class="card-wrapper" fxFlex="50" fxFlex.lt-md="50" fxFlex.lt-sm="100"
+             *ngFor="let skillData of skillList; let i = index"
+             #skill (@fadeInUp.done)="setAfterAnimationStyles(skill, 'skills')"
+             [@fadeInUp]="{ value:  isSectionActive('skills'),
+                   params: { delay: contentAnimationDelay + (i * 100) }, opacity : 1 }">
+          <app-skill [skillData]="skillData"></app-skill>
+        </div>
+      </div>
+
+    </section>
+
     <section id="work">
       <ng-container>
         <div class="view-port-trigger" appIntersectionObserver (onIntersection)="onIntersection('work')">
         </div>
         <h2 #workHeader
-            [@fadeInRight]="{ value: isSectionActive('work'), params: { delay: headerAnimationDelay }, opacity : 1 }"
-            (@fadeInRight.done)="setAfterAnimationStyles(workHeader, 'work')">{{ 'work.header' | translate }}</h2>
+            [@fadeInLeft]="{ value: isSectionActive('work'), params: {duration: sectionHeaderAnimationSpeed, delay: headerAnimationDelay }, opacity : 1 }"
+            (@fadeInLeft.done)="setAfterAnimationStyles(workHeader, 'work')">{{ 'work.header' | translate }}</h2>
 
-        <div class="project-wrapper" fxLayout="row wrap" fxLayoutAlign="center stretch"
+        <div class="projects-wrapper" fxLayout="row wrap" fxLayoutAlign="center stretch"
              fxLayoutGap="1em grid">
 
           <div fxLayout class="card-wrapper" fxFlex="33.33" fxFlex.lt-md="50" fxFlex.lt-sm="100"
@@ -86,7 +148,7 @@
 
         <div
             #showOldProject
-            *ngIf="!showOldProjects"
+            *ngIf="!showOldProjects && oldProjectList.length > 0"
             class="interactive"
             (click)="showOldProjects = true"
             [@fadeInShowOldProject]="{ value: isSectionActive('work'), params: { delay: contentAnimationDelay + (projectList.length * 430), opacity : 1 }}"
@@ -97,25 +159,11 @@
       </ng-container>
     </section>
 
-    <!--<section id="skills">
-      <div class="view-port-trigger"
-           appIntersectionObserver (onIntersection)="onIntersection('skills')">
-      </div>
-      <h2 #skillsHeader
-          [@fadeInLeft]="{ value: isSectionActive('skills'), params: { delay: headerAnimationDelay }, opacity : 1 }"
-          (@fadeInLeft.done)="setAfterAnimationStyles(skillsHeader, 'skills')">{{ 'skills.header' | translate }}</h2>
-      <div class="content" #skillsParagraph
-           [@fadeIn]="{ value: isSectionActive('skills'), params: { delay: contentAnimationDelay }, opacity : 1}"
-           (@fadeIn.done)="setAfterAnimationStyles(skillsParagraph, 'skills')"
-           innerHTML="{{'skills.content' | translate}}">
-      </div>
-    </section>-->
-
     <section id="contact">
       <div class="view-port-trigger" appIntersectionObserver (onIntersection)="onIntersection('contact')">
       </div>
       <h2 #contactHeader
-          [@fadeInRight]="{ value: isSectionActive('contact'), params: { delay: headerAnimationDelay }, opacity : 1 }"
+          [@fadeInRight]="{ value: isSectionActive('contact'), params: {duration: sectionHeaderAnimationSpeed, delay: headerAnimationDelay }, opacity : 1 }"
           (@fadeInRight.done)="setAfterAnimationStyles(contactHeader, 'contact')">{{ 'contact.header' | translate }}</h2>
       <div class="content" #contactParagraph
            [@fadeIn]="{ value: isSectionActive('contact'), params: { delay: contentAnimationDelay }, opacity : 1}"
@@ -137,10 +185,11 @@
                rel="noreferrer">
               <fa-icon size="2x" [icon]="['fab', 'linkedin']"></fa-icon>
             </a>
-            <a class="icon-contact" title="Senscritique" target="_blank"
+
+            <!--<a class="icon-contact" title="Senscritique" target="_blank"
                href="https://www.senscritique.com/Civetdelapin" rel="noreferrer">
               <fa-icon size="2x" [icon]="['fas', 'bookmark']"></fa-icon>
-            </a>
+            </a>-->
 
             <a class="icon-contact" title="Itch.io" target="_blank"
                href="https://civetdelapin.itch.io/" rel="noreferrer">
@@ -160,7 +209,9 @@
       </div>
     </div>
     <div fxLayout="row" fxLayoutAlign="center center">
-      <div>Baptiste Rey © 2019 - Background image by <a target="_blank" href="https://www.reddit.com/user/ThatPixelArtDude/" rel="noreferrer">ThatPixelDude</a></div>
+      <div>Baptiste Rey © 2019 - Background image by <a target="_blank"
+                                                        href="https://www.reddit.com/user/ThatPixelArtDude/"
+                                                        rel="noreferrer">ThatPixelDude</a></div>
     </div>
   </footer>
 </div>

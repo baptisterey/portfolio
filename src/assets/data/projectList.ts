@@ -1,4 +1,4 @@
-import {ProjectData} from './home/models/project-data.model';
+import {ProjectData} from '../../app/main/home/models/project-data.model';
 
 export const ProjectList: Array<ProjectData> = [
   {
@@ -80,8 +80,10 @@ export const ProjectList: Array<ProjectData> = [
       }]
   }
 ];
+export const OldProjectList: Array<ProjectData> = [];
 
-export const OldProjectList: Array<ProjectData> = [
+
+export const OldProjectList2: Array<ProjectData> = [
   {
     name: 'crazy-eights',
     images: [

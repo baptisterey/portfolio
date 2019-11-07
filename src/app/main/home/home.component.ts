@@ -18,17 +18,19 @@ import {
   rotateInDownRightOnEnterAnimation
 } from 'angular-animations';
 
-import {ParticleParams, ParticleStyle} from "./particleParams";
+import {ParticleParams, ParticleStyle} from './particleParams';
 
 import {TextAnimation} from 'ngx-teximate';
 import {flipInY} from 'ng-animate';
 
-import {ProjectList} from "../projectList";
-import {OldProjectList} from "../projectList";
+import {ProjectList} from '../../../assets/data/projectList';
+import {OldProjectList} from '../../../assets/data/projectList';
+import {SkillList} from '../../../assets/data/skillList';
 
-import {TranslateService} from "@ngx-translate/core";
-import {ProjectData} from "./models/project-data.model";
-import {DeviceDetectorService} from "ngx-device-detector";
+import {TranslateService} from '@ngx-translate/core';
+import {ProjectData} from './models/project-data.model';
+import {DeviceDetectorService} from 'ngx-device-detector';
+import {SkillData} from './models/skill-data.model';
 
 @Component({
   selector: 'app-home',
@@ -49,7 +51,7 @@ import {DeviceDetectorService} from "ngx-device-detector";
 export class HomeComponent implements OnInit, AfterViewInit {
 
   @ViewChild('mainDiv') mainDiv;
-  @ViewChild('headerDiv') headerDiv: ElementRef
+  @ViewChild('headerDiv') headerDiv: ElementRef;
 
   showHeaderText: boolean = false;
 
@@ -60,7 +62,11 @@ export class HomeComponent implements OnInit, AfterViewInit {
   };
 
   headerAnimationDelay: number = 0;
-  contentAnimationDelay: number = 1150;
+  subHeaderAnimationDelay: number = 550;
+  headerIconsAnimationDelay: number = 1600;
+
+  sectionHeaderAnimationSpeed: number = 650;
+  contentAnimationDelay: number = 800;
 
   myParticleStyle: object = ParticleStyle;
   myParticleParams: object = ParticleParams;
@@ -68,7 +74,9 @@ export class HomeComponent implements OnInit, AfterViewInit {
   projectList: Array<ProjectData> = ProjectList;
   oldProjectList: Array<ProjectData> = OldProjectList;
 
-  sectionList = ['about', 'work', 'skills', 'contact'];
+  skillList: Array<SkillData> = SkillList;
+
+  sectionList = ['about', 'skills', 'work', , 'contact'];
   activeSections = [];
 
   showOldProjects = false;
@@ -86,10 +94,10 @@ export class HomeComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
 
     const _this = this;
-    setTimeout(function () {
+    setTimeout(function() {
       _this.showHeaderText = true;
       _this.changeDetector.detectChanges();
-    }, 1000);
+    }, this.subHeaderAnimationDelay);
 
 
     if (this.deviceService.isMobile()) {
@@ -111,7 +119,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   getSubHeader(): string {
-    return this.translate.instant('sub-header')
+    return this.translate.instant('sub-header');
   }
 
   setAfterAnimationStyles(element, section: string) {
@@ -121,11 +129,11 @@ export class HomeComponent implements OnInit, AfterViewInit {
     }
   }
 
-  toggleLang(){
+  toggleLang() {
     this.translate.use('fr');
   }
 
-  printEvent(event){
+  printEvent(event) {
     console.log(event);
   }
 }

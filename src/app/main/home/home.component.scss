@@ -42,7 +42,7 @@ a {
 
   font-weight: bold;
 
-  font-family: Roboto,"Helvetica Neue",sans-serif;;
+  font-family: Roboto, "Helvetica Neue", sans-serif;;
 
   &:after {
     display: block;
@@ -74,7 +74,7 @@ h2 {
     width: 0;
     background-color: $accent-color;
 
-    transition: width ease-in-out 0.3s;
+    transition: width ease-in-out 0.2s;
   }
 }
 
@@ -193,6 +193,9 @@ header {
     //-webkit-background-clip: text;
     //-webkit-text-fill-color: transparent;
 
+    //-webkit-text-stroke-width: 4px;
+    //-webkit-text-stroke-color: black;
+
     color: $header-color;
 
     font-size: 3.25em;
@@ -232,6 +235,8 @@ main {
 footer {
   margin-top: 20px;
   padding: 20px;
+
+  text-align: center;
 }
 
 section {
@@ -276,49 +281,63 @@ section#about {
   }
 }
 
+
+.projects-wrapper {
+  width: 1125px;
+  max-width: 90vw;
+
+  text-align: left;
+}
+
+.skills-wrapper {
+  width: 925px;
+  max-width: 90vw;
+
+  text-align: left;
+}
+
+.card-wrapper {
+  opacity: 0;
+
+  h4 {
+    margin: 0;
+    font-size: 1.25em;
+  }
+
+  p {
+    padding: 0;
+  }
+
+  p:first-of-type {
+    margin-top: 0;
+  }
+}
+
+.project-div {
+  opacity: 0;
+
+  height: 320px;
+  width: 395px;
+
+  margin: 18px;
+
+  position: relative;
+
+  @media (max-width: 660px) {
+    width: 80vw;
+    height: 56.25vw;
+  }
+}
+
+
+section#skills {
+  padding-bottom: 22px;
+}
+
 section#work {
 
   padding-bottom: 22px;
 
-  .project-wrapper {
-    width: 1125px;
-    max-width: 90vw;
-
-    text-align: left;
-
-    .card-wrapper {
-      opacity: 0;
-
-      h4 {
-        margin: 0;
-        font-size: 1.25em;
-      }
-
-      p {
-        padding: 0;
-      }
-
-      p:first-of-type {
-        margin-top: 0;
-      }
-    }
-
-    .project-div {
-      opacity: 0;
-
-      height: 320px;
-      width: 395px;
-
-      margin: 18px;
-
-      position: relative;
-
-      @media (max-width: 660px) {
-        width: 80vw;
-        height: 56.25vw;
-      }
-    }
-  }
 
   button {
     margin-top: 20px;
@@ -348,6 +367,22 @@ section#contact {
 
   &:hover {
     color: $accent-color;
+  }
+}
+
+.icon-header {
+  color: white;
+  text-decoration: none;
+
+
+  transition: color ease-in-out 0.2s;
+
+  &:hover {
+    color: $accent-color;
+  }
+
+  fa-icon {
+    font-size: 2.5em;
   }
 }
 

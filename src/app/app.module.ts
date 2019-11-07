@@ -1,20 +1,20 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
 
-import { FlexLayoutModule } from '@angular/flex-layout';
-import { MainModule } from "./main/main.module";
+import {FlexLayoutModule} from '@angular/flex-layout';
+import {MainModule} from './main/main.module';
 
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
 
-import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
-import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
-import { HttpClient, HttpClientModule } from "@angular/common/http";
-import { TranslateLoader, TranslateModule } from "@ngx-translate/core";
+import {SWIPER_CONFIG} from 'ngx-swiper-wrapper';
+import {SwiperConfigInterface} from 'ngx-swiper-wrapper';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
@@ -22,7 +22,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   scrollbar: true,
   navigation: true,
   pagination: true,
-  loop : true
+  loop: true
 };
 
 export function createTranslateLoader(http: HttpClient) {
@@ -48,11 +48,11 @@ export function createTranslateLoader(http: HttpClient) {
       }
     })
   ],
-  exports: [],
   providers: [{
     provide: SWIPER_CONFIG,
     useValue: DEFAULT_SWIPER_CONFIG
   }],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

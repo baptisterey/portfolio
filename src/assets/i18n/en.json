@@ -1,6 +1,6 @@
 {
   "about": {
-    "content": "<p>I am currently completing a <b>master's degree</b> in <b>computer science</b> with a focus in <b>Video Games development</b> at the <b>UQAC</b> (Université du Quèbec à Chicoutimi) in <b>Canada</b>. </p> <p>I am deeply passionate about programming as I spend most of my time <b>building things</b>.</br>Currently, I am working on <b>games</b>, you can take a look at them below!</p>",
+    "content": "<p>I am currently completing a <b>master's degree</b> in <b>computer science</b> with a focus in <b>Video Games development</b> at the <b>UQAC</b> (Université du Quèbec à Chicoutimi) in <b>Canada</b>. </p><p>I have a <b>deep interest</b> in anything programming related but more especially in <b>video game development</b>. </br> I try to create fun games and learn a lot along the journey!</p> <p>I am looking to start a career in the game industry via an <b>internship</b> of 6 months starting <b>July 2020</b>.</p>",
     "header": "About"
   },
   "app-title": "Baptiste Rey",
@@ -19,7 +19,7 @@
   },
   "skills": {
     "content": "",
-    "header": "Skills"
+    "header": "Technical skills"
   },
   "sub-header": "Passionate & Polyvalent developer",
   "work": {

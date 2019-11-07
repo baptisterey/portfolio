@@ -1,0 +1,21 @@
+@import "~src/styles";
+
+:host {
+  display: flex;
+  width: 100%;
+}
+
+.skill-card {
+  width: 100%;
+  padding: 8px 12px;
+
+  font-size: 1.15em;
+
+  color: $text-color;
+
+  font-family: 'Lato', sans-serif;
+
+  fa-icon {
+    font-size: 1.25em;
+  }
+}

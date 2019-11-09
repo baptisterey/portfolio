@@ -8,9 +8,17 @@
 
   <div class="content-wrapper" fxLayout.lt-md="column" fxLayout="row" fxLayoutAlign="center start" fxLayoutGap="15px">
 
-    <div class="swiper-div" fxFlex.lt-md="1 1 auto" fxFlex="65">
+    <div class="swiper-div" fxFlex.lt-md="1 1 auto" fxFlex="60">
       <swiper #swiperComponent [config]="swiperConfig" [(index)]="swiperIndex">
-        <div *ngFor="let img of projectData.images; let index = index">
+
+        <!--<iframe *ngIf="projectData.youtubeURL != null"
+                [src]="domSanitizer.bypassSecurityTrustResourceUrl(projectData.youtubeURL)" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+
+        </iframe>-->
+
+        <div class="img-holder" *ngFor="let img of projectData.images; let index = index">
           <img [src]="'assets/images/projects/'+projectData.name+'/dialog/'+img.url" [alt]="img.alt">
         </div>
       </swiper>
@@ -45,7 +53,7 @@
     </div>-->
 
 
-    <div fxFlex.lt-md="1 1 auto" fxFlex="35" class="paragraph-wrapper">
+    <div fxFlex.lt-md="1 1 auto" fxFlex="40" class="paragraph-wrapper">
       <div [innerHTML]="'projects.' + projectData.name + '.modal.body' | translate"></div>
     </div>
 

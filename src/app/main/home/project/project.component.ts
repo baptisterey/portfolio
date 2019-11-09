@@ -28,7 +28,7 @@ export class ProjectComponent implements OnInit {
 
   openModal() {
     const dialogRef = this.dialog.open(ProjectModalComponent, {
-      width: '1050px',
+      width: '1200px',
       minHeight: '550px',
       maxHeight: '80vh',
       maxWidth: '90vw',

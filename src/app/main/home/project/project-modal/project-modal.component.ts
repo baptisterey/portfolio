@@ -12,6 +12,8 @@ import {MAT_DIALOG_DATA} from '@angular/material';
 import {ProjectData} from "../../models/project-data.model";
 import {SwiperComponent, SwiperConfigInterface} from "ngx-swiper-wrapper";
 
+import { DomSanitizer } from '@angular/platform-browser';
+
 @Component({
   selector: 'app-project-modal',
   templateUrl: './project-modal.component.html',
@@ -44,7 +46,10 @@ export class ProjectModalComponent implements OnInit, AfterViewInit {
   };
 
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: any, private renderer: Renderer2, private changeDetectorRef: ChangeDetectorRef) { }
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any,
+              private renderer: Renderer2,
+              private changeDetectorRef: ChangeDetectorRef,
+              public domSanitizer: DomSanitizer) { }
 
   ngOnInit() {
     this.projectData = this.data.projectData;

@@ -33,10 +33,6 @@ export const ProjectList: Array<ProjectData> = [
       {
         url: '2.png',
         alt: 'KYHAW ScreenShot 2'
-      },
-      {
-        url: '3.png',
-        alt: 'KYHAW ScreenShot 3'
       }]
   },
   {
@@ -118,7 +114,10 @@ export const ProjectList2: Array<ProjectData> = [
       }]
   }, {
     name: 'portfolio',
-    images: []
+    images: [{
+      url: '2.png',
+      alt: 'Portfolio multiple devices'
+    }]
   },
   {
     name: 'filmder',

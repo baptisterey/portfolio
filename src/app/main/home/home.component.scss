@@ -423,4 +423,8 @@ swiper > .swiper.s-wrapper .swiper-wrapper .swiper-slide {
   columns: 2;
 }
 
+.swiper-pagination-handle {
+  cursor: default !important;
+}
+
 // ----------------------------------------

@@ -1,6 +1,6 @@
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
-import {Title} from '@angular/platform-browser';
+import {Meta, Title} from '@angular/platform-browser';
 import {ActivatedRoute} from '@angular/router';
 
 @Component({
@@ -13,7 +13,8 @@ export class AppComponent implements OnInit {
 
   constructor(private translateService: TranslateService,
               private titleService: Title,
-              private route: ActivatedRoute) {
+              private route: ActivatedRoute,
+              private meta: Meta) {
 
   }
 
@@ -28,6 +29,7 @@ export class AppComponent implements OnInit {
       }
     });
 
+    this.meta.addTag({name: 'description', content: 'Personal portfolio website made with Angular 2+.'});
 
     this.translateService.get('app-title').subscribe(result => {
       this.titleService.setTitle(result);

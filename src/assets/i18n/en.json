@@ -128,6 +128,15 @@
         "body": "<p><b>Filmder</b> is an application for both Android and iOS that allows users to find easily movies to watch.</p><p><b>Key features</b> : <ul><li>Save or discard movies by swapping right or left</li><li>Discover movies based on custom search criteria.</li><li>Get a quick overview of movies by showing users score, director, casting and more.</li><li>Keep track of movies to watch and movies watched.</li></ul></p> <p>This was a school project made by Nicolas Guevara and me.</p><p>We developed two versions of the app, using <b>Android Studio</b> for the Android version and <b>xCode</b> for the iOS version. </p><p>Finally, we used the <a target=\"_blank\" href='https://www.themoviedb.org/?language=en-US'>The Movie DB</a> API to populate the app with movies.</p>"
       },
       "period": "Nov. 2018 - Jan. 2019"
+    },
+    "eol": {
+      "title": "Elixir Of Love",
+      "sub-title": "Top-down action game with crafting and magic.",
+      "tags": "AI - Behavior Tree - Unity - C# - School Project",
+      "modal": {
+        "body": "<p><b>Elixir of Love</b> is a top-down action game where players explore dungeons and craft powerful potions!</br>The game features a crafting system, multiple magic spells, multiple enemies with unique behaviours and one boss to fight.</p><p>The game is a school project made at the <b>UQAC</b> using an agile approach. We also wrote a Game Design Document before the actual development.</p><p><b>The team</b> : <ul class=\"two-columns\",><li>Baptiste Rey</li><li>Jean Farines</li><li>Maëva Trivino</li><li>Damien Galochet</li></ul></p><p>I worked on core mechanics of the game, including :<ul><li>Player movement and combat system.</li><li>Enemies' behaviour using Final State Machines and a Behaviour Tree for the boss.</li><li>Inventory system using Scriptable Objects.</li><li>Simple crafting system.</li></ul></p><p>Made with <b>Unity</b> in <b>C#</b>.</p>"
+      },
+      "period": "Oct. 2019 - Dec. 2019"
     }
   }
 }

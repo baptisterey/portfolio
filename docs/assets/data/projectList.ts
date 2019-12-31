@@ -1,7 +1,48 @@
 import {ProjectData} from '../../app/main/home/models/project-data.model';
 
 export const ProjectList: Array<ProjectData> = [
-
+  {
+    name: 'eol',
+    images: [{
+      url: '0.png',
+      alt: 'Elixir of Love ScreenShot 0'
+    }, {
+      url: '1.png',
+      alt: 'Elixir of Love ScreenShot 1'
+    },
+      {
+        url: '2.png',
+        alt: 'Elixir of Love ScreenShot 2'
+      },
+      {
+        url: '3.png',
+        alt: 'Elixir of Love ScreenShot 3'
+      },
+      {
+        url: '4.png',
+        alt: 'Elixir of Love ScreenShot 4'
+      },
+      {
+        url: '5.png',
+        alt: 'Elixir of Love ScreenShot 5'
+      },
+      {
+        url: '6.png',
+        alt: 'Elixir of Love ScreenShot 6'
+      },
+      {
+        url: '7.png',
+        alt: 'Elixir of Love ScreenShot 7'
+      },
+      {
+        url: '8.png',
+        alt: 'Elixir of Love ScreenShot 8'
+      },
+      {
+        url: '9.png',
+        alt: 'Elixir of Love ScreenShot 9'
+      }]
+  },
   {
     name: 'chicken-panic',
     youtubeURL: 'https://www.youtube.com/embed/Zf4m8rSr51M',

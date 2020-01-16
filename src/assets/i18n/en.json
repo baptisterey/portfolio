@@ -30,6 +30,15 @@
     "header": "Other projects"
   },
   "projects": {
+    "bounty-island": {
+      "title": "Bounty Island!",
+      "sub-title": "Couch versus game about digging chests.",
+      "tags": "Local Multi-player - Pirates - Unity - C# - Game Jam",
+      "modal": {
+        "body": "<p><b>Bounty Island!</b> is a fun local multi-player game (2 to 4 players) where the goal is to dig and bring back as many chests possible to your team's base. But beware, because you can also dig up bombs! </br>You can also steal the other team's chests, hit them with your shovel to make them drop their chests, throw the bombs at them before they explode and push your enemies into the water.</p><p>The game was made in 72h for a game jam around the theme \"Bounty\".</p><p><b>The team</b> : <ul class=\"two-columns\",><li>Victor Delenclos</li><li>Laura Bouzeraud</li><li>Baptiste Rey</li><li>Clément Ramat</li><li>Elie Ensuque</li><li>Clémence Petit</li><li>Raphaëlle Garcia</li></ul></p><p>My contribution includes developing core mechanics (movements, interaction system) and debugging.</br> As I was the most experienced with Unity in the team, I helped the other members on their functionalities and managed the project in a coherent whole.</p><p>Made with <b>Unity</b> in <b>C#</b>.</p><p><a href=\"https://www.youtube.com/watch?v=63P8r9mI3iM&feature=emb_logo\" rel=\"noreferrer\" target=\"_blank\">See the gameplay video on Youtube</a></p><p><a rel=\"noreferrer\" href=\"https://kathaersys.itch.io/bounty-island\" target=\"_blank\">See more and download on itch.io</a></p>"
+      },
+      "period": "Jan. 2020"
+    },
     "chicken-panic": {
       "title": "Chicken Panic! \uD83E\uDD9C",
       "sub-title": "Couch versus game with pirates and chickens!",

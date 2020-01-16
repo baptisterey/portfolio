@@ -1,6 +1,22 @@
 import {ProjectData} from '../../app/main/home/models/project-data.model';
 
-export const ProjectList: Array<ProjectData> = [
+export const ProjectList: Array<ProjectData> = [{
+  name: 'bounty-island',
+  images: [
+    {
+      url: '0.png',
+      alt: 'Bounty Island ScreenShot 0'
+    },
+    {
+      url: '1.png',
+      alt: 'Bounty Island ScreenShot 0'
+    },
+    {
+      url: '2.png',
+      alt: 'Bounty Island ScreenShot 0'
+    }
+  ]
+},
   {
     name: 'eol',
     images: [{
@@ -62,20 +78,20 @@ export const ProjectList: Array<ProjectData> = [
         alt: 'Chicken Panic! ScreenShot 3'
       }]
   },
-  {
-    name: 'keep-your-head-above-water',
-    images: [{
-      url: '0.png',
-      alt: 'KYHAW ScreenShot 0'
-    }, {
-      url: '1.png',
-      alt: 'KYHAW ScreenShot 1'
-    },
-      {
-        url: '2.png',
-        alt: 'KYHAW ScreenShot 2'
-      }]
-  },
+  // {
+  //   name: 'keep-your-head-above-water',
+  //   images: [{
+  //     url: '0.png',
+  //     alt: 'KYHAW ScreenShot 0'
+  //   }, {
+  //     url: '1.png',
+  //     alt: 'KYHAW ScreenShot 1'
+  //   },
+  //     {
+  //       url: '2.png',
+  //       alt: 'KYHAW ScreenShot 2'
+  //     }]
+  // },
   {
     name: 'infinite-torpor',
     images: [{

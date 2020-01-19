@@ -11,19 +11,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
 
-import {SWIPER_CONFIG} from 'ngx-swiper-wrapper';
-import {SwiperConfigInterface} from 'ngx-swiper-wrapper';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
-
-const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
-  direction: 'horizontal',
-  slidesPerView: 1,
-  scrollbar: true,
-  navigation: true,
-  pagination: true,
-  loop: true
-};
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -48,10 +37,6 @@ export function createTranslateLoader(http: HttpClient) {
       }
     })
   ],
-  providers: [{
-    provide: SWIPER_CONFIG,
-    useValue: DEFAULT_SWIPER_CONFIG
-  }],
   bootstrap: [AppComponent]
 })
 export class AppModule {

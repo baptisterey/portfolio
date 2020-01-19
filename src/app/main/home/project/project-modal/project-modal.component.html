@@ -9,49 +9,31 @@
   <div class="content-wrapper" fxLayout.lt-md="column" fxLayout="row" fxLayoutAlign="center start" fxLayoutGap="15px">
 
     <div class="swiper-div" fxFlex.lt-md="1 1 auto" fxFlex="60">
-      <swiper #swiperComponent [config]="swiperConfig" [(index)]="swiperIndex">
 
-        <!--<iframe *ngIf="projectData.youtubeURL != null"
-                [src]="domSanitizer.bypassSecurityTrustResourceUrl(projectData.youtubeURL)" frameborder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
+      <mat-carousel
+        timings="250ms ease-in"
+        [autoplay]="true"
+        interval="5000"
+        color="accent"
+        maxWidth="auto"
+        proportion="56.25"
+        [slides]="projectData.images.length"
+        [loop]="true"
+        [hideArrows]="false"
+        [hideIndicators]="false"
+        [useKeyboard]="true"
+        [useMouseWheel]="false"
+        orientation="ltr">
 
-        </iframe>-->
-
-        <div class="img-holder" *ngFor="let img of projectData.images; let index = index">
-          <img [src]="'assets/images/projects/'+projectData.name+'/dialog/'+img.url" [alt]="img.alt">
-        </div>
-      </swiper>
-
-
-      <div class="swiper-button-prev" (click)=" swiperComponent.index = Math.max(swiperComponent.index - 1, 0)">
-        <fa-icon size="3x" [icon]="['fas', 'chevron-left']"></fa-icon>
-      </div>
-      <div class="swiper-button-next"
-           (click)="swiperComponent.index = Math.min(swiperComponent.index + 1, projectData.images.length - 1)">
-        <fa-icon size="3x" [icon]="['fas', 'chevron-right']"></fa-icon>
-      </div>
+        <mat-carousel-slide
+            #matCarouselSlide
+            *ngFor="let img of projectData.images; let i = index"
+            [image]="'assets/images/projects/'+projectData.name+'/dialog/'+img.url"
+            overlayColor="#00000012"
+            [hideOverlay]="false"
+        ></mat-carousel-slide>
+      </mat-carousel>
     </div>
-
-
-    <!-- CANT USE THE DIRECTIVE AS IT TRHOWS AN ERROR WHEN THE DIALOG IS CLOSED -->
-    <!--<div fxFlex.lt-md="1 1 auto" fxFlex="60" class="swiper-container" [swiper]="swiperConfig" [(index)]="swiperIndex">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide" *ngFor="let img of projectData.images; let index = index">
-          <img [src]="'assets/images/projects/'+projectData.name+'/dialog/'+img.url" [alt]="img.alt">
-        </div>
-      </div>
-
-      <div class="swiper-button-prev">
-        <fa-icon size="3x" [icon]="['fas', 'chevron-left']"></fa-icon>
-      </div>
-      <div class="swiper-button-next">
-        <fa-icon size="3x" [icon]="['fas', 'chevron-right']"></fa-icon>
-      </div>
-
-      <div class="swiper-pagination"></div>
-    </div>-->
-
 
     <div fxFlex.lt-md="1 1 auto" fxFlex="40" class="paragraph-wrapper">
       <div [innerHTML]="'projects.' + projectData.name + '.modal.body' | translate"></div>

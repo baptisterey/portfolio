@@ -9,8 +9,7 @@ import {
   ViewEncapsulation
 } from '@angular/core';
 import {MAT_DIALOG_DATA} from '@angular/material';
-import {ProjectData} from "../../models/project-data.model";
-import {SwiperComponent, SwiperConfigInterface} from "ngx-swiper-wrapper";
+import {ProjectData} from '../../models/project-data.model';
 
 import { DomSanitizer } from '@angular/platform-browser';
 
@@ -24,26 +23,12 @@ import { DomSanitizer } from '@angular/platform-browser';
 export class ProjectModalComponent implements OnInit, AfterViewInit {
 
   @ViewChild('modalTitle') modalTitle: ElementRef;
-  @ViewChild('swiperComponent') swiperComponent: SwiperComponent;
 
   Array = Array;
   Math = Math;
 
   projectData: ProjectData;
   swiperIndex: number;
-
-
-  public swiperConfig: SwiperConfigInterface = {
-    lazy: true,
-    direction: 'horizontal',
-    slidesPerView: 1,
-    keyboard: true,
-    mousewheel: true,
-    scrollbar: false,
-    navigation: false,
-    pagination: true,
-    loop: true
-  };
 
 
   constructor(@Inject(MAT_DIALOG_DATA) public data: any,
@@ -58,7 +43,6 @@ export class ProjectModalComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     this.renderer.addClass(this.modalTitle.nativeElement, 'active');
-    this.swiperComponent.index = 0;
 
     this.changeDetectorRef.detectChanges();
   }

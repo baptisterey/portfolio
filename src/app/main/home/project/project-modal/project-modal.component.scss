@@ -1,5 +1,4 @@
 @import "~src/styles";
-@import '~swiper/dist/css/swiper.min.css';
 
 .project-modal {
 
@@ -66,14 +65,15 @@
     width: 100%;
 
     border: 1px solid #ececec;
+    background-color: #fff5ed;
 
-    &:before {
-      content: "";
-      width: 1px;
-      float: left;
-      height: 0;
-      padding-top: 56.25%;
-    }
+    //&:before {
+    //  content: "";
+    //  width: 1px;
+    //  float: left;
+    //  height: 0;
+    //  padding-top: 56.25%;
+    //}
 
     &:after {
 
@@ -81,44 +81,27 @@
       clear: both;
     }
 
+    mat-carousel {
+      height: 100%;
 
-    swiper {
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
 
-      background-color: #f7f7f7;
+      $icon-size: 42px;
+
+      .mat-icon {
+        font-size: $icon-size !important;
+        width: $icon-size !important;
+        height: $icon-size !important;
+        line-height: $icon-size !important;
+      }
+
+      .carousel-indicators > button {
+        width: 13px !important;
+        height: 13px !important;
+      }
+
     }
-  }
 
-  .swiper-button-prev {
-    background: none;
-
-    color: $accent-color;
-  }
-
-  .swiper-button-next {
-    background: none;
-    color: $accent-color;
-  }
-
-
-  .swiper-pagination-bullet {
-    width: 10px;
-    height: 10px;
-    display: inline-block;
-    border-radius: 100%;
-    background: transparent;
-    border: 2px solid $accent-color !important;
-    opacity: 1 !important;
-
-    transition: all ease-in-out 0.2s;
-  }
-
-  .swiper-pagination-bullet-active {
-    background: $accent-color;
   }
 }
+
 

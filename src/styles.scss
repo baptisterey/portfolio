@@ -1,10 +1,89 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+$primary-color: #011640;
 $accent-color: #d2b46d;
+
 
 $link-color: #00669e;
 
-$text-color: #011640;
+$text-color: $primary-color;
 $header-color: white;
 $background-color: #fff5ed;
 
+// define a real custom palette (using http://mcg.mbitson.com)
+$bv-primary: (
+  50 : #e1e3e8,
+    100 : #b3b9c6,
+    200 : #808ba0,
+    300 : #4d5c79,
+    400 : #27395d,
+    500 : #011640,
+    600 : #01133a,
+    700 : #011032,
+    800 : #010c2a,
+    900 : #00061c,
+    A100 : #5a66ff,
+    A200 : #2737ff,
+    A400 : #0012f3,
+    A700 : #0010da,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #ffffff,
+        A200 : #ffffff,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
 
+$bv-accent: (
+    50 : #faf6ed,
+    100 : #f2e9d3,
+    200 : #e9dab6,
+    300 : #e0cb99,
+    400 : #d9bf83,
+    500 : #d2b46d,
+    600 : #cdad65,
+    700 : #c7a45a,
+    800 : #c19c50,
+    900 : #b68c3e,
+    A100 : #ffffff,
+    A200 : #ffefd3,
+    A400 : #ffdda0,
+    A700 : #ffd486,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
 
+// mandatory stuff for theming
+$bv-palette-primary: mat-palette($bv-primary);
+$bv-palette-accent:  mat-palette($bv-accent);
+
+// include the custom theme components into a theme object
+$bv-theme: mat-light-theme($bv-palette-primary, $bv-palette-accent);
+
+// include the custom theme object into the angular material theme
+@include angular-material-theme($bv-theme);

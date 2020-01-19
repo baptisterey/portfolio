@@ -5,6 +5,8 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
 
+import { MatIconModule } from '@angular/material/icon';
+
 import {MainComponent} from './main.component';
 import {HomeComponent} from './home/home.component';
 import {ProjectComponent} from './home/project/project.component';
@@ -13,7 +15,6 @@ import {ParticlesModule} from 'angular-particle';
 import {TeximateModule} from 'ngx-teximate';
 import {ParallaxScrollModule} from 'ng2-parallaxscroll';
 import {ProjectModalComponent} from './home/project/project-modal/project-modal.component';
-import {SwiperModule} from 'ngx-swiper-wrapper';
 import {TranslateModule} from '@ngx-translate/core';
 
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
@@ -40,6 +41,7 @@ import {DeviceDetectorModule} from 'ngx-device-detector';
 import {IntersectionObserverDirective} from '../directives/intersection-observer.directive';
 import {MatCardModule} from '@angular/material';
 import {SkillComponent} from './home/skill/skill.component';
+import {MatCarouselModule} from '@ngmodule/material-carousel';
 
 @NgModule({
   declarations: [MainComponent, HomeComponent, ProjectComponent, ProjectModalComponent, IntersectionObserverDirective, SkillComponent],
@@ -51,12 +53,13 @@ import {SkillComponent} from './home/skill/skill.component';
     TeximateModule,
     ParallaxScrollModule,
     MatDialogModule,
-    SwiperModule,
     TranslateModule,
     FontAwesomeModule,
     MatButtonModule,
     DeviceDetectorModule.forRoot(),
     MatCardModule,
+    MatCarouselModule,
+    MatIconModule
 
   ],
   entryComponents: [ProjectModalComponent]

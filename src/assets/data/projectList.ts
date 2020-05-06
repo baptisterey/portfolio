@@ -1,6 +1,52 @@
 import {ProjectData} from '../../app/main/home/models/project-data.model';
 
-export const ProjectList: Array<ProjectData> = [{
+export const ProjectList: Array<ProjectData> = [
+  {
+
+    name: 'the-last-frame',
+    images: [
+{
+      url: '0.png',
+      alt: 'The Last Frame ScreenShot 0'
+    }, {
+      url: '1.png',
+      alt: 'The Last Frame ScreenShot 1'
+    },
+      {
+        url: '2.png',
+        alt: 'The Last Frame ScreenShot 2'
+      },
+      {
+        url: '3.png',
+        alt: 'The Last Frame ScreenShot 3'
+      }
+    ]
+
+  },
+
+   {
+
+    name: 'city-wheel',
+    images: [
+{
+      url: '0.png',
+      alt: 'City Wheel ScreenShot 0'
+    }, {
+      url: '1.png',
+      alt: 'City Wheel ScreenShot 1'
+    },
+      {
+        url: '2.png',
+        alt: 'City Wheel ScreenShot 2'
+      },
+      {
+        url: '3.png',
+        alt: 'City Wheel ScreenShot 3'
+      }
+    ]
+
+  },
+  {
   name: 'bounty-island',
   images: [
     {

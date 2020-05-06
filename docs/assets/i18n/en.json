@@ -1,6 +1,6 @@
 {
   "about": {
-    "content": "<p>I am currently completing a Master's Degree in computer science with a focus in Video Games development at the <b>UQAC</b> (Université du Québec à Chicoutimi) in <b>Canada</b>. </p><p>I have a deep interest in anything programming related but more especially in video game development. </br>I try to create fun games and I learn a lot along the journey!</p> <p>I am looking for an 6 months internship starting August 2020 or later.</p>",
+    "content": "<p>I am currently completing a Master's Degree in computer science with a focus in Video Games development at the <b>UQAC</b> (Université du Québec à Chicoutimi) in <b>Canada</b>. </p><p>I have a deep interest in anything programming related but more especially in video game development. </br>I try to create fun games and I learn a lot along the journey!</p> <p>I am looking for an 6 months internship starting July 2020 or later.</p>",
     "header": "About"
   },
   "app-title": "Baptiste Rey",
@@ -30,6 +30,24 @@
     "header": "Other projects"
   },
   "projects": {
+        "the-last-frame": {
+      "title": "The Last Frame",
+      "sub-title": "Cooperative puzzle game with an asymmetric gameplay with spooky vibes!",
+      "tags": "Coop - Puzzle - Asymmetrical - Unity - Ubisoft Game Lab Competition",
+      "modal": {
+        "body": "<p><i>Steph, a young adult, returns to her family's mansion looking for what she believes is the family's treasure, but all is not the way she remembered. It seems she will not be alone in her quest to find her family's legacy...</i></p><p>The Last Frame is a cooperative puzzle game with an asymmetric gameplay. It was created as part of the Ubisoft Game Lab Competition, an annual competition organised by Ubisoft challenging students in groups of 8 to create a game in 10 weeks, with several constraints to fulfil.</p><p>Sadly, due to covid-19 complications, the Ubisoft Game Lab Competition was cancelled on March 16, only 9 days before it was due. We decided to carry on nonetheless and finish our game.</p><p><b>The team</b> : <ul class=\"two-columns\",><li>Victor Delenclos</li><li>Laura Bouzeraud</li><li>Baptiste Rey</li><li>Clément Ramat</li><li>Elie Ensuque</li><li>Clémence Petit</li><li>Raphaëlle Garcia</li><li>Dorian Antoinet</li></ul></p><p><a href=\"https://www.youtube.com/watch?v=AD_oeGcAHvY&feature=emb_logo\" rel=\"noreferrer\" target=\"_blank\">See the trailer on Youtube</a></p><p><a rel=\"noreferrer\" href=\"https://uqac2.itch.io/the-last-frame\" target=\"_blank\">See more and download on itch.io</a></p>"
+      },
+      "period": "Jan. 2020 - April 2020"
+    },
+        "city-wheel": {
+      "title": "City Wheel",
+      "sub-title": "Race game in a wheelchair and a city full of obstacles.",
+      "tags": "Serious Game - Race - Unity - C#",
+      "modal": {
+        "body": "<p><b>City-Wheel</b> is a serious game in which you control a delivery guy in a wheelchair and travel through town to complete several quests.</br> While designing the game, we wanted to to make the player understand the struggles a person in a wheelchair can face in public spaces and how he can change his behaviour to facilitate the movement of disabled persons.</p><p><b>The team</b> : <ul class=\"two-columns\",><li>Benjamin Perez</li><li>Baptiste Rey</li><li>Pierre Patard</li><li>Jérôme Désoutter</li><li>Vincent Varlet</li></ul></p><p>I developed and design all the UI of the game (dialogue system, animations, layout, navigation indications...). </br> I also helped the team with the core architecture of the game, introducing them with the approach of Ryan Hipple in his GDC talk, <a href=\" https://www.youtube.com/watch?v=raQ3iHhE_Kk \" rel=\"noreferrer\" target=\"_blank\">Game Architecture with Scriptable Object</a>. This approach consists of using Scriptable Objects to make a game more Modular (less inter-dependency),  more Editable (focus on data) and more Debuggable (easy to isolate components).</p><p>Made with <b>Unity</b> in <b>C#</b>.</p><p><a href=\"https://www.youtube.com/watch?v=HU25v8lNElY&feature=emb_logo\" rel=\"noreferrer\" target=\"_blank\">See the gameplay video on Youtube</a></p><p><a rel=\"noreferrer\" href=\"https://vins404.itch.io/city-wheel\" target=\"_blank\">See more and download on itch.io</a></p>"
+      },
+      "period": "Feb. 2020 - Apr. 2020"
+    },
     "bounty-island": {
       "title": "Bounty Island!",
       "sub-title": "Couch versus game about digging chests.",
@@ -104,7 +122,7 @@
     },
     "monopoly": {
       "title": "Monopoly",
-      "sub-title": "Recreated the famous board game in Java.",
+      "sub-title": "Recreated the famous board game in Java",
       "tags": "School Project - Java - GUI",
       "modal": {
         "body": "<p>Destroy friendship while playing Monopoly against your friends! <br/>All the mechanics of the original game are included.</p><p>It was a school project with a team of 3 people.</p><p>The code uses the MVC pattern and is object-oriented.</p><p>Made in <b>Java</b> and <b>Swing</b> for the GUI.</p>"
@@ -113,7 +131,7 @@
     },
     "portfolio": {
       "title": "Portfolio",
-      "sub-title": "Personal portfolio made with Angular 7.",
+      "sub-title": "Personal portfolio made with Angular 7",
       "tags": "Front-End - TypeScript - Angular",
       "modal": {
         "body": "<p>For my portfolio, I chose to make it myself with <b>Angular</b> because I like the framework and wanted to experiment with the animation system.</p><p>I designed the website and made most of the <b>HTML</b> and <b>CSS</b> using <b>flexbox</b> for its awesome layout system. </br> The website is fully responsive and works on desktops, phones and tablets.</p> <p>After some failures with the native animations system, I finally used <a target=\"_blank\" href='https://github.com/filipows/angular-animations'>angular-animations</a>. This library is very great and works very well with the Angular's eco-system.</p><p>To trigger the animations at the right time, I initially did it via Javascript but I wasn't satisfied with the result.</br> I ended up using the <a target=\"_blank\" href='https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API'>Intersection Observer API</a> via a custom directive.</p>"
@@ -122,7 +140,7 @@
     },
     "jsjs": {
       "title": "JeSaisJeSais",
-      "sub-title": "Platform for consulting and creating online courses with serious games mechanics.",
+      "sub-title": "Platform for consulting and creating online courses with serious games mechanics",
       "tags": "Full-Stack - Angular - Django",
       "modal": {
         "body": "<p>I worked on <b>JeSaisJeSais</b> as intern Full-Stack developer for 6 months. </br> <b>JeSaisJeSais</b> is an online platform that allows users to create and consult courses enhanced with serious games mechanics.</p><p>My main goals were to maintain and extend the current Back-End code using <b>Django</b> and to implement new Front-End functionalities and visuals (both desktop and mobile) with <b>Angular 2+</b>.</p><p><b>Key features I worked on</b> : <ul><li>Dialogue activity, user can interact with NPC and get a score based on his answers.</li><li>Dialogue editor with a custom node-based system.</li><li>Quiz activity and editor that handle text, images, videos and embedded contents.</li><li>Multimedia library for importing custom content that can be used in activities.</li><li>The shopping cart and the payment system using the Braintree API for transactions.</li><li>And more!</li></ul></p><p>As the team was small, I was greatly involved in the development process, working closely with the designer and artist as well at the other developers when making core decisions.</p> <p>You can visit the site <a target=\"_blank\" href='https://jesaisjesais.com/'>here</a>.</p>"
@@ -140,7 +158,7 @@
     },
     "eol": {
       "title": "Elixir Of Love",
-      "sub-title": "Top-down action game with crafting and magic.",
+      "sub-title": "Top-down action game with crafting and magic",
       "tags": "AI - Behavior Tree - Unity - C# - School Project",
       "modal": {
         "body": "<p><b>Elixir of Love</b> is a top-down action game where players explore dungeons and craft powerful potions!</br>The game features a crafting system, multiple magic spells, multiple enemies with unique behaviours and one boss to fight.</p><p>The game is a school project made at the <b>UQAC</b> using an agile approach. We also wrote a Game Design Document before the actual development.</p><p><b>The team</b> : <ul class=\"two-columns\",><li>Baptiste Rey</li><li>Jean Farines</li><li>Maëva Trivino</li><li>Damien Galochet</li></ul></p><p>I worked on core mechanics of the game, including :<ul><li>Player movement and combat system.</li><li>Enemies' behaviour using Final State Machines and a Behaviour Tree for the boss.</li><li>Inventory system using Scriptable Objects.</li><li>Simple crafting system.</li></ul></p><p>Made with <b>Unity</b> in <b>C#</b>.</p>"

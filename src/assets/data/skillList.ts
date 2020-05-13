@@ -31,7 +31,7 @@ export const SkillList: Array<SkillData> = [
       }
     },
     {
-      content: 'SVN / Git',
+      content: 'Perforce / Git / SVN',
       icon: {
         category: 'fas',
         name: 'code-branch'

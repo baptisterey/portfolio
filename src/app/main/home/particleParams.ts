@@ -1,7 +1,7 @@
 export const ParticleParams = {
   "particles": {
     "number": {
-      "value": 220,
+      "value": 250,
       "density": {
         "enable": true,
         "value_area": 800
@@ -11,7 +11,7 @@ export const ParticleParams = {
       "value": "#a5a5a5"
     },
     "shape": {
-      "type": "edge",
+      "type": "circle",
       "stroke": {
         "width": 0,
         "color": "#000000"
@@ -22,7 +22,7 @@ export const ParticleParams = {
       "image": {
         "src": "img/github.svg",
 
-        
+
         "width": 100,
         "height": 100
       }
@@ -33,7 +33,7 @@ export const ParticleParams = {
       "anim": {
         "enable": true,
         "speed": 1,
-        "opacity_min": 0,
+        "opacity_min": 0.5,
         "sync": false
       }
     },
@@ -50,8 +50,8 @@ export const ParticleParams = {
     "line_linked": {
       "enable": false,
       "distance": 150,
-      "color": "#686868",
-      "opacity": 0.4,
+      "color": "#fff",
+      "opacity": 1,
       "width": 1
     },
     "move": {

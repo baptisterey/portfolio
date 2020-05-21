@@ -17,7 +17,7 @@ export const SkillList: Array<SkillData> = [
       }
     },
     {
-      content: 'Unity',
+      content: 'Unity / Unreal 4',
       icon: {
         category: 'fas',
         name: 'cogs'

@@ -30,6 +30,15 @@
     "header": "Other projects"
   },
   "projects": {
+    "insanity-brush": {
+      "title": "insanity brush",
+      "sub-title": "little arcade game about painting with psychedelic effects",
+      "tags": "Arcade Game - Game Jam - 48h deadline - Unity - C#",
+      "modal": {
+        "body": "<p><i>insanity brush</i> is a small arcade game where the player must clean the maximum of painting spots before going crazy by their smell in a close painting room.</p><p>The game was created in 48h in part of the GMTKJam with the theme <b>Out of Control</b>. </br>I was in charge of all the technical aspect of the game including character movement and logic; UI animations and transitions; attack patterns; etc...</br>The game includes a tutorial section with dialogues for a complete experience. </br> We also did all the art for the game, it was quite a challenge to create, rig and animate 3D models at it's was our first time doing it. </p><p><b>Credits : </b><ul><li>Baptiste REY, programmer</li><li>Paul REY, game artist</li> </ul></p><p><a rel=\"noreferrer\" href=\"https://civetdelapin.itch.io/insanity-brush\" target=\"_blank\">See more and download on itch.io</a></p>"
+      },
+      "period": "July 2020"
+    },
         "the-last-frame": {
       "title": "The Last Frame",
       "sub-title": "Cooperative puzzle game with an asymmetric gameplay with spooky vibes!",

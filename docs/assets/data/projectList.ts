@@ -1,6 +1,28 @@
 import {ProjectData} from '../../app/main/home/models/project-data.model';
 
 export const ProjectList: Array<ProjectData> = [
+    {
+
+    name: 'insanity-brush',
+    images: [
+{
+      url: '0.jpg',
+      alt: 'insanity brush ScreenShot 0'
+    }, {
+      url: '1.jpg',
+      alt: 'insanity brush ScreenShot 1'
+    },
+      {
+        url: '2.jpg',
+        alt: 'insanity brush ScreenShot 2'
+      },
+      {
+        url: '3.jpg',
+        alt: 'insanity brush ScreenShot 3'
+      }
+    ]
+
+  },
   {
 
     name: 'the-last-frame',

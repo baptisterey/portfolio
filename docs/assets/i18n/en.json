@@ -1,6 +1,6 @@
 {
   "about": {
-    "content": "<p>I am currently completing a Master's Degree in computer science with a focus in Video Games development at the <b>UQAC</b> (Université du Québec à Chicoutimi) in <b>Canada</b>. </p><p>I have a deep interest in anything programming related but more especially in video game development. </br>I try to create fun games and I learn a lot along the journey!</p> <p>I am looking for an 6 months internship starting September 2020 or later.</p>",
+    "content": "<p>I am currently completing a Master's Degree in computer science with a focus in Video Games development at the <b>UQAC</b> (Université du Québec à Chicoutimi) in <b>Canada</b>. </p><p>I have a deep interest in anything programming related but more especially in video game development. </br>I am deeply passionate and polyvalent and always looking to learn new ways of doing things and new technologies.<br>Users oriented, I try in all my projects to create complete and fun experiences.</p><p>I am looking for an 6 months internship starting September 2020 or later.</p>",
     "header": "About"
   },
   "app-title": "Baptiste Rey",
@@ -24,22 +24,31 @@
   "sub-header": "Passionate & Polyvalent game developer",
   "work": {
     "header": "Games",
-    "show-older-projects": "Show old projects"
+    "show-older-projects": "Show other projects"
   },
   "work2": {
     "header": "Other projects"
   },
   "projects": {
+    "sheikah-runes": {
+      "title": "Zelda Botw Sheikah Runes",
+      "sub-title": "Recreation of the four Sheikah Runes in the Unreal Engine 4.",
+      "tags": "Gameplay mechanics - Zelda BOTW - Unreal Engine",
+      "modal": {
+        "body": "<p>During the lockdown, I started to learn the Unreal Engine to create small games and prototypes.<br> At the end of summer, I challenged myself to make a bigger project and <b>recreate</b> the four <b>Sheikah Runes abilities</b> from <b>The Legend of Zelda Breath of the Wild</b>.</p><p>The project features : <ul><li>Four distinct <b>Sheikah Runes</b> (Remote Bombs, Cryonis, Stasis, Magnesis) working gameplay mechanics.</li><li>Complete <b>User Interface</b> working like the full game for each rune.</li><li><b>Basic melee combo system</b> for interacting with stasis objects.</li><li>A <b>demo level</b> in the form of a Shrine, where you can test the abilities in four rooms and collect orbs.</li><li><b>Basic animations</b> and <b>VFX</b> made by a programmer.</li></ul></p><p>Before working on the actual project, I rewrote the asset <b>Advanced Locomotion System V4</b> to learn and understand the <b>Animation Blueprint</b> system.</br>For this project, I used for the first time <b>visual scripting</b> to create all the gameplay mechanics as I was very curious to compare it with classic code. In the end, I think I still prefer the old way, I find it more productive and easier to track changes.</p><p><a rel=\"noreferrer\" href=\"https://github.com/baptisterey/UE4_ZeldaBotw_SheikahRunes\" target=\"_blank\">See more and download the project on Github</a></p>"
+      },
+      "period": "August 2020"
+    },
     "insanity-brush": {
       "title": "insanity brush",
-      "sub-title": "little arcade game about painting with psychedelic effects",
+      "sub-title": "little arcade game about painting with psychedelic effects.",
       "tags": "Arcade Game - Game Jam - 48h deadline - Unity - C#",
       "modal": {
         "body": "<p><i>insanity brush</i> is a small arcade game where the player must clean the maximum of painting spots before going crazy by their smell in a close painting room.</p><p>The game was created in 48h in part of the GMTKJam with the theme <b>Out of Control</b>. </br>I was in charge of all the technical aspect of the game including character movement and logic; UI animations and transitions; attack patterns; etc...</br>The game includes a tutorial section with dialogues for a complete experience. </br> We also did all the art for the game, it was quite a challenge to create, rig and animate 3D models at it's was our first time doing it. </p><p><b>Credits : </b><ul><li>Baptiste REY, programmer</li><li>Paul REY, game artist</li> </ul></p><p><a rel=\"noreferrer\" href=\"https://civetdelapin.itch.io/insanity-brush\" target=\"_blank\">See more and download on itch.io</a></p>"
       },
       "period": "July 2020"
     },
-        "the-last-frame": {
+    "the-last-frame": {
       "title": "The Last Frame",
       "sub-title": "Cooperative puzzle game with an asymmetric gameplay with spooky vibes!",
       "tags": "Coop - Puzzle - Asymmetrical - Unity - Ubisoft Game Lab Competition",
@@ -48,7 +57,7 @@
       },
       "period": "Jan. 2020 - April 2020"
     },
-        "city-wheel": {
+    "city-wheel": {
       "title": "City Wheel",
       "sub-title": "Race game in a wheelchair and a city full of obstacles.",
       "tags": "Serious Game - Race - Unity - C#",
@@ -167,7 +176,7 @@
     },
     "eol": {
       "title": "Elixir Of Love",
-      "sub-title": "Top-down action game with crafting and magic",
+      "sub-title": "Top-down action game with crafting and magic.",
       "tags": "AI - Behavior Tree - Unity - C# - School Project",
       "modal": {
         "body": "<p><b>Elixir of Love</b> is a top-down action game where players explore dungeons and craft powerful potions!</br>The game features a crafting system, multiple magic spells, multiple enemies with unique behaviours and one boss to fight.</p><p>The game is a school project made at the <b>UQAC</b> using an agile approach. We also wrote a Game Design Document before the actual development.</p><p><b>The team</b> : <ul class=\"two-columns\",><li>Baptiste Rey</li><li>Jean Farines</li><li>Maëva Trivino</li><li>Damien Galochet</li></ul></p><p>I worked on core mechanics of the game, including :<ul><li>Player movement and combat system.</li><li>Enemies' behaviour using Final State Machines and a Behaviour Tree for the boss.</li><li>Inventory system using Scriptable Objects.</li><li>Simple crafting system.</li></ul></p><p>Made with <b>Unity</b> in <b>C#</b>.</p>"

@@ -5,19 +5,23 @@ export const ProjectList: Array<ProjectData> = [
     name: 'sheikah-runes',
     images: [
       {
-        url: '0.jpg',
+        url: '0.png',
         alt: 'sheikah runes ScreenShot 0'
       }, {
-        url: '1.jpg',
+        url: '1.png',
         alt: 'sheikah runes ScreenShot 1'
       },
       {
-        url: '2.jpg',
+        url: '2.png',
         alt: 'sheikah runes ScreenShot 2'
       },
       {
-        url: '3.jpg',
+        url: '3.png',
         alt: 'sheikah runes ScreenShot 3'
+      },
+      {
+        url: '4.png',
+        alt: 'sheikah runes ScreenShot 4'
       }
     ]
   },

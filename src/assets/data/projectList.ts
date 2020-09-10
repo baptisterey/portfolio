@@ -1,17 +1,36 @@
 import {ProjectData} from '../../app/main/home/models/project-data.model';
 
 export const ProjectList: Array<ProjectData> = [
-    {
-
+  {
+    name: 'sheikah-runes',
+    images: [
+      {
+        url: '0.jpg',
+        alt: 'sheikah runes ScreenShot 0'
+      }, {
+        url: '1.jpg',
+        alt: 'sheikah runes ScreenShot 1'
+      },
+      {
+        url: '2.jpg',
+        alt: 'sheikah runes ScreenShot 2'
+      },
+      {
+        url: '3.jpg',
+        alt: 'sheikah runes ScreenShot 3'
+      }
+    ]
+  },
+  {
     name: 'insanity-brush',
     images: [
-{
-      url: '0.jpg',
-      alt: 'insanity brush ScreenShot 0'
-    }, {
-      url: '1.jpg',
-      alt: 'insanity brush ScreenShot 1'
-    },
+      {
+        url: '0.jpg',
+        alt: 'insanity brush ScreenShot 0'
+      }, {
+        url: '1.jpg',
+        alt: 'insanity brush ScreenShot 1'
+      },
       {
         url: '2.jpg',
         alt: 'insanity brush ScreenShot 2'
@@ -27,13 +46,13 @@ export const ProjectList: Array<ProjectData> = [
 
     name: 'the-last-frame',
     images: [
-{
-      url: '0.png',
-      alt: 'The Last Frame ScreenShot 0'
-    }, {
-      url: '1.png',
-      alt: 'The Last Frame ScreenShot 1'
-    },
+      {
+        url: '0.png',
+        alt: 'The Last Frame ScreenShot 0'
+      }, {
+        url: '1.png',
+        alt: 'The Last Frame ScreenShot 1'
+      },
       {
         url: '2.png',
         alt: 'The Last Frame ScreenShot 2'
@@ -45,46 +64,6 @@ export const ProjectList: Array<ProjectData> = [
     ]
 
   },
-
-   {
-
-    name: 'city-wheel',
-    images: [
-{
-      url: '0.png',
-      alt: 'City Wheel ScreenShot 0'
-    }, {
-      url: '1.png',
-      alt: 'City Wheel ScreenShot 1'
-    },
-      {
-        url: '2.png',
-        alt: 'City Wheel ScreenShot 2'
-      },
-      {
-        url: '3.png',
-        alt: 'City Wheel ScreenShot 3'
-      }
-    ]
-
-  },
-  {
-  name: 'bounty-island',
-  images: [
-    {
-      url: '0.png',
-      alt: 'Bounty Island ScreenShot 0'
-    },
-    {
-      url: '1.png',
-      alt: 'Bounty Island ScreenShot 0'
-    },
-    {
-      url: '2.png',
-      alt: 'Bounty Island ScreenShot 0'
-    }
-  ]
-},
   {
     name: 'eol',
     images: [{
@@ -178,25 +157,7 @@ export const ProjectList: Array<ProjectData> = [
         alt: 'Infinite Torpor ScreenShot 3'
       }]
   },
-  {
-    name: 'this-is-the-life',
-    images: [{
-      url: '1.gif',
-      alt: 'This is the Life GIF 1'
-    },
-      {
-        url: '1.png',
-        alt: 'This is the Life ScreenShot 1'
-      },
-      {
-        url: '2.png',
-        alt: 'This is the Life ScreenShot 2'
-      },
-      {
-        url: '3.png',
-        alt: 'This is the Life ScreenShot 3'
-      }]
-  },
+
   {
     name: 'magicless',
     images: [{
@@ -221,7 +182,64 @@ export const ProjectList: Array<ProjectData> = [
       }]
   }
 ];
-export const OldProjectList: Array<ProjectData> = [];
+export const OldProjectList: Array<ProjectData> = [
+  {
+
+    name: 'city-wheel',
+    images: [
+      {
+        url: '0.png',
+        alt: 'City Wheel ScreenShot 0'
+      }, {
+        url: '1.png',
+        alt: 'City Wheel ScreenShot 1'
+      },
+      {
+        url: '2.png',
+        alt: 'City Wheel ScreenShot 2'
+      },
+      {
+        url: '3.png',
+        alt: 'City Wheel ScreenShot 3'
+      }
+    ]
+
+  },
+  {
+    name: 'bounty-island',
+    images: [
+      {
+        url: '0.png',
+        alt: 'Bounty Island ScreenShot 0'
+      },
+      {
+        url: '1.png',
+        alt: 'Bounty Island ScreenShot 0'
+      },
+      {
+        url: '2.png',
+        alt: 'Bounty Island ScreenShot 0'
+      }
+    ]
+  }, {
+    name: 'this-is-the-life',
+    images: [{
+      url: '1.gif',
+      alt: 'This is the Life GIF 1'
+    },
+      {
+        url: '1.png',
+        alt: 'This is the Life ScreenShot 1'
+      },
+      {
+        url: '2.png',
+        alt: 'This is the Life ScreenShot 2'
+      },
+      {
+        url: '3.png',
+        alt: 'This is the Life ScreenShot 3'
+      }]
+  }];
 
 export const ProjectList2: Array<ProjectData> = [
   {

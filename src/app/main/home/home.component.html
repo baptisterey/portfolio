@@ -21,6 +21,12 @@
 
     <div class="front-div" fxFlex="1 1 auto" fxLayout="column" fxLayoutAlign="center center">
       <div fxLayout="column" fxLayoutAlign="start center">
+        <div>
+          <div class="head-profile" [@tadaOnEnter] [@tada]="animateStateHeadProfile"
+               (mouseenter)="animateStateHeadProfile = true" (mouseleave)="animateStateHeadProfile = false">
+            <img src="../../../assets/images/head-profile.jpg">
+          </div>
+        </div>
         <h1 [@bounceInOnEnter]>{{'name' | translate}}</h1>
         <div class="sub-title-wrapper">
           <teximate *ngIf="showHeaderText" [enter]="enterTextAnimation" [text]="getSubHeader()"></teximate>

@@ -15,13 +15,13 @@ import {
   fadeInOnEnterAnimation,
   fadeInRightAnimation,
   fadeInUpAnimation,
-  rotateInDownRightOnEnterAnimation
+  rotateInDownRightOnEnterAnimation, tadaAnimation, tadaOnEnterAnimation
 } from 'angular-animations';
 
 import {ParticleParams, ParticleStyle} from './particleParams';
 
 import {TextAnimation} from 'ngx-teximate';
-import {flipInY} from 'ng-animate';
+import {flipIn, flipInY, tada} from 'ng-animate';
 
 import {ProjectList} from '../../../assets/data/projectList';
 import {OldProjectList} from '../../../assets/data/projectList';
@@ -50,6 +50,8 @@ import {SkillData} from './models/skill-data.model';
     fadeInLeftAnimation({anchor: 'fadeInLeft'}),
     fadeInRightAnimation({anchor: 'fadeInRight'}),
     rotateInDownRightOnEnterAnimation({anchor: 'rotateInDownRightOnEnter'}),
+    tadaOnEnterAnimation({}),
+    tadaAnimation({direction: "=>"})
   ]
 })
 export class HomeComponent implements OnInit, AfterViewInit {
@@ -88,6 +90,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   showOldProjects = false;
   showOldProjects2 = false;
+
+  animateStateHeadProfile = false;
 
   constructor(public translate: TranslateService,
               private changeDetector: ChangeDetectorRef,

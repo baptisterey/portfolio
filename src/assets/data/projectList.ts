@@ -46,28 +46,26 @@ export const ProjectList: Array<ProjectData> = [
     ]
 
   },
-  {
-
-    name: 'city-wheel',
-    images: [
-      {
-        url: '0.png',
-        alt: 'City Wheel ScreenShot 0'
-      }, {
-        url: '1.png',
-        alt: 'City Wheel ScreenShot 1'
-      },
-      {
-        url: '2.png',
-        alt: 'City Wheel ScreenShot 2'
-      },
-      {
-        url: '3.png',
-        alt: 'City Wheel ScreenShot 3'
-      }
-    ]
-
-  },
+// {
+//    name: 'city-wheel',
+//    images: [
+//      {
+//        url: '0.png',
+//        alt: 'City Wheel ScreenShot 0'
+//      }, {
+//        url: '1.png',
+//        alt: 'City Wheel ScreenShot 1'
+//      },
+//      {
+//        url: '2.png',
+//        alt: 'City Wheel ScreenShot 2'
+//     },
+//     {
+//       url: '3.png',
+//        alt: 'City Wheel ScreenShot 3'
+//      }
+//    ]
+//  },
   {
 
     name: 'the-last-frame',
@@ -90,23 +88,23 @@ export const ProjectList: Array<ProjectData> = [
     ]
 
   },
-  {
-    name: 'bounty-island',
-    images: [
-      {
-        url: '0.png',
-        alt: 'Bounty Island ScreenShot 0'
-      },
-      {
-        url: '1.png',
-        alt: 'Bounty Island ScreenShot 0'
-      },
-      {
-        url: '2.png',
-        alt: 'Bounty Island ScreenShot 0'
-      }
-    ]
-  },
+ // {
+ //   name: 'bounty-island',
+ //   images: [
+ //     {
+ //       url: '0.png',
+ //      alt: 'Bounty Island ScreenShot 0'
+ //     },
+ //     {
+ //       url: '1.png',
+ //       alt: 'Bounty Island ScreenShot 0'
+ //    },
+ //     {
+ //       url: '2.png',
+ //       alt: 'Bounty Island ScreenShot 0'
+ //     }
+ //   ]
+ // },
   {
     name: 'eol',
     images: [{
@@ -149,25 +147,25 @@ export const ProjectList: Array<ProjectData> = [
         alt: 'Elixir of Love ScreenShot 9'
       }]
   },
-  {
-    name: 'chicken-panic',
-    youtubeURL: 'https://www.youtube.com/embed/Zf4m8rSr51M',
-    images: [{
-      url: '0.png',
-      alt: 'Chicken Panic! ScreenShot 0'
-    }, {
-      url: '1.png',
-      alt: 'Chicken Panic! ScreenShot 1'
-    },
-      {
-        url: '2.png',
-        alt: 'Chicken Panic! ScreenShot 2'
-      },
-      {
-        url: '3.png',
-        alt: 'Chicken Panic! ScreenShot 3'
-      }]
-  },
+//   {
+//    name: 'chicken-panic',
+//     youtubeURL: 'https://www.youtube.com/embed/Zf4m8rSr51M',
+//     images: [{
+//       url: '0.png',
+//       alt: 'Chicken Panic! ScreenShot 0'
+//     }, {
+//       url: '1.png',
+//       alt: 'Chicken Panic! ScreenShot 1'
+//     },
+//       {
+//         url: '2.png',
+//         alt: 'Chicken Panic! ScreenShot 2'
+//       },
+//       {
+//         url: '3.png',
+//         alt: 'Chicken Panic! ScreenShot 3'
+//       }]
+//   },
   // {
   //   name: 'keep-your-head-above-water',
   //   images: [{
@@ -200,25 +198,25 @@ export const ProjectList: Array<ProjectData> = [
         alt: 'Infinite Torpor ScreenShot 3'
       }]
   },
-  {
-    name: 'this-is-the-life',
-    images: [{
-      url: '1.gif',
-      alt: 'This is the Life GIF 1'
-    },
-      {
-        url: '1.png',
-        alt: 'This is the Life ScreenShot 1'
-      },
-      {
-        url: '2.png',
-        alt: 'This is the Life ScreenShot 2'
-      },
-      {
-        url: '3.png',
-        alt: 'This is the Life ScreenShot 3'
-      }]
-  },
+//   {
+//     name: 'this-is-the-life',
+ //    images: [{
+  //   url: '1.gif',
+  //   alt: 'This is the Life GIF 1'
+   //  },
+   //    {
+   //      url: '1.png',
+   //      alt: 'This is the Life ScreenShot 1'
+   //    },
+   //    {
+   //      url: '2.png',
+   //      alt: 'This is the Life ScreenShot 2'
+   //    },
+   //    {
+   //      url: '3.png',
+   //      alt: 'This is the Life ScreenShot 3'
+   //    }]
+ // },
   {
     name: 'magicless',
     images: [{

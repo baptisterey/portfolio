@@ -1383,7 +1383,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SkillList", function() { return SkillList; });
 var SkillList = [
     {
-        content: 'C++ / C# / Java / Python',
+        content: 'C++ / C#',
         icon: {
             category: 'fas',
             name: 'comment-alt'
@@ -1418,14 +1418,14 @@ var SkillList = [
         }
     },
     {
-        content: 'Angular / Backbone / Django',
+        content: 'Angular',
         icon: {
             category: 'fas',
             name: 'project-diagram'
         }
     },
     {
-        content: 'Visual Studio 2019 / Pycharm',
+        content: 'JetBrains Rider / Visual Studio',
         icon: {
             category: 'fas',
             name: 'file-code'

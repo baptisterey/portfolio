@@ -3,7 +3,7 @@ import {faCode} from '@fortawesome/free-solid-svg-icons';
 
 export const SkillList: Array<SkillData> = [
     {
-      content: 'C++ / C# / Java / Python',
+      content: 'C++ / C#',
       icon: {
         category: 'fas',
         name: 'comment-alt'
@@ -39,7 +39,7 @@ export const SkillList: Array<SkillData> = [
     },
 
     {
-      content: 'Angular / Backbone / Django',
+      content: 'Angular',
       icon: {
         category: 'fas',
         name: 'project-diagram'
@@ -47,7 +47,7 @@ export const SkillList: Array<SkillData> = [
     },
 
     {
-      content: 'Visual Studio 2019 / Pycharm',
+      content: 'JetBrains Rider / Visual Studio',
       icon: {
         category: 'fas',
         name: 'file-code'

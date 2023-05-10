@@ -1275,45 +1275,46 @@ var ProjectList = [
 ];
 var OldProjectList = [];
 var ProjectList2 = [
+    //   {
+    //     name: 'jsjs',
+    //     images: [{
+    //       url: '1.png',
+    //       alt: 'JSJS ScreenShot 1'
+    //     }, {
+    //       url: '2.png',
+    //       alt: 'JSJS ScreenShot 2'
+    //     },
+    //       {
+    //         url: '3.jpg',
+    //         alt: 'JSJS ScreenShot 3'
+    //       }]
+    //   },
     {
-        name: 'jsjs',
-        images: [{
-                url: '1.png',
-                alt: 'JSJS ScreenShot 1'
-            }, {
-                url: '2.png',
-                alt: 'JSJS ScreenShot 2'
-            },
-            {
-                url: '3.jpg',
-                alt: 'JSJS ScreenShot 3'
-            }]
-    }, {
         name: 'portfolio',
         images: [{
                 url: '2.png',
                 alt: 'Portfolio multiple devices'
             }]
-    },
-    {
-        name: 'filmder',
-        images: [{
-                url: '1.png',
-                alt: 'Filmder ScreenShot 1'
-            },
-            {
-                url: '2.png',
-                alt: 'Filmder ScreenShot 2'
-            },
-            {
-                url: '3.png',
-                alt: 'Filmder ScreenShot 3'
-            },
-            {
-                url: '4.png',
-                alt: 'Filmder ScreenShot 4'
-            }]
     }
+    //   {
+    //     name: 'filmder',
+    //     images: [{
+    //       url: '1.png',
+    //       alt: 'Filmder ScreenShot 1'
+    //     },
+    //       {
+    //         url: '2.png',
+    //         alt: 'Filmder ScreenShot 2'
+    //       },
+    //       {
+    //         url: '3.png',
+    //         alt: 'Filmder ScreenShot 3'
+    //       },
+    //       {
+    //         url: '4.png',
+    //         alt: 'Filmder ScreenShot 4'
+    //       }]
+    //   }
 ];
 var OldProjectList2 = [
     {
